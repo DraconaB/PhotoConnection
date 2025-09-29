@@ -1,0 +1,1874 @@
+/*CSS For Home Page-Halle Knape*/
+
+/*The ul and li css must also go in the other sections since the header and footer will also be in those pages*/
+
+/*Header and Footer for all my pages.*/
+
+.Logo {/*I have added the class Logo to the img element that has our logo in it in the html*/
+
+    float:left;/*takes the img element of our logo and positions it to the left side of its container*/
+
+}
+
+
+.hKnavStyle ul, li{/*I have added the class hKnavStyle to the ul tags in my header and footer so that we can differentiate the nav styles between my pages and my group members rather than having to shuffle everythign around if we all went about styling the nav bar differently in regard to how we did it using CSS.*/
+
+    display: inline-flex;/*makes the list items display like an inline element putting them all on one horizontal line, the flex part controls how the children of this element (if there are any) appear*/
+    list-style-type: none;/*takes away the bullet points on each list item*/
+    padding: 40px;/*adds padding around each list item*/
+    padding-left: 100px;/*adds padding so that the list items are spaced out nicely*/
+    font-weight: bold;/*makes the text bold*/
+    
+}
+
+/*Main*/
+
+/*Introduction seciton, brief introduction statement to what our website is for.*/
+
+#intro{/*I have added the ID intro for the div that holds the introduction section of this page*/
+
+    background-color: #FDECEF;/*changes the background color*/
+    padding-top: 10px;/*adds padding internally from the top so that elements aren't so close to the top of the div container*/
+    padding-bottom: 10px;/*adds padding internally from the bottom so that elements have space from the bottom of the div container*/
+    
+}
+
+#introHead{/*I have added the ID introHead to the h1 in the introduction section of this page*/
+
+    text-align: center;/*aligns the text for #introHead to the center of the element*/
+    font-size: 96px;/*makes the font larger for #introHead*/
+    padding-top: 30px;/*provides internal padding above the words in #introHead to make it more visually spaced out and less cramped*/
+    padding-bottom: 30px;/*provides internal padding below the words in #introHead to make it more visually spaced out and less cramped*/
+    margin: 0;/*removes margin around the #introHead*/
+
+}
+
+#introSubHead{/*I have added the ID introSubHead in the h2 element in the introduction section of this page*/
+
+    text-align: center;/*aligns the text in the #introSubHead in the center of the element*/
+    font-size: 45px;/*makes the font larger for #introSubHead*/
+    padding-top: 30px;/*provides internal padding above the words in #introHead to make it more visually spaced out and less cramped*/
+    padding-bottom: 30px;/*provides internal padding below the words in #introHead to make it more visually spaced out and less cramped*/
+    margin: 0;/*removes margin around the #introSubHead*/
+
+}
+
+/*Main content of the page, has CTA and breif information about where each link will (technically, since we still need to link all our pages to the correct html files) take visitors*/
+
+#bodyHead1{/*I have added the ID bodyHead1 to the first div in the main content section of the page*/
+
+    text-align: center;/*aligns the text for #bodyHead1 in the center of the element*/
+    font-size: 35px;/*makes the font size of #bodyHead1 larger*/
+    padding-bottom: 50px;/*provides internal padding below the words in #bodyHead1 to make it more visually spaced out and less cramped on the page*/
+
+}
+
+#bodyContent1{/*I have added the ID bodyContent1 to the first p element in the main content section of the page*/
+
+    text-align: center;/*aligns the text for #bodyContent1 to the center of the element*/
+    font-size: 20px;/*makes the font size for #bodyContent1 larger*/
+    background-color:#FDECEF;/*changes the background color of #bodyContent1*/
+    display: inline-block;/*makes the text flow as if the p element was an inline element while allowing it to behave like a block element*/
+    margin-left: 300px;/*adds space to the left of the element for #bodyContent1*/
+    padding: 10px;/*adds internal space around #bodyContent1*/
+
+}
+
+#contImg1{/*I have added the ID contImg1 to the first img element in the main content section of the page(not to be confused with the element <main>)*/
+
+    float:right;/*takes the img in #contImg1 and poitions it to the right of its container*/
+    margin-right: 400px;/*adds space to the right of #contImg1*/
+    margin-top: -10px;/*adds space to the top of #contImg1*/
+}
+
+#getStarted{/*I have added the ID getStarted to the first a element of the main content section*/
+
+    text-align: center;/*aligns the text for #getStarted in the center of the element*/
+    background-color: #612940;/*changes the background color for #getStarted*/
+    padding: 10px;/*adds internal space around the text in #getStarted*/
+    border-radius: 4px;/*rounds the edges of the element*/
+    color: #FFFFFF;/*changes the text color for #getStarted*/
+    position: relative;/*positions the link relative to its normal position in the html document flow*/
+    left: 100px;/*moves the element for #getStarted to the left in the page*/
+    top: 80px;/*moves the element for #getStarted lower in the page*/
+
+}
+
+#bodyHead2{/*I have added the ID #bodyHead2 to the div that represents the title for the second subsection of the main content section*/
+
+    text-align: center;/*aligns the text for #bodyHead2 in the center of the element*/
+    margin-top: 150px;/*adds space to the top of the #bodyHead2 element*/
+    font-size: 35px;/*makes the font for #bodyHead2 bigger*/
+    padding-bottom: 50px;/*adds space internally to the bottom of #bodyHead2*/
+
+}
+
+#bodyContent2{/*I have added the ID #bodyContent2 to the div tag containing the text for the second subsection of body content in the main content section*/
+
+    text-align: center;/*aligns the text for #bodyContent2 in the center of the element*/
+    font-size: 20px;/*makes the font for #bodyContent2 larger*/
+    background-color:#FDECEF;/*changes the background color for #bodyContent2*/
+    display: inline-block;/*makes the text flow as if the p element was an inline element while allowing it to behave like a block element*/
+    margin-left: 875px;/*adds space to the left of the #bodyContent2 element*/
+    padding: 10px;/*adds space internally around the text for #bodyContent2*/
+
+}
+
+#contImg2{/*I added the ID contIm2 to the second image for the main content section*/
+
+    float:left;/*takes the img element for #contImg2 and positions it to the left side of its container*/
+    margin-left: 375px;/*adds space to the left of the #contImg2 element*/
+    margin-top: -150px;/*adds space from the top of the #contImg2 element*/
+    padding-bottom: 100px;/*adds space internally from the bottom of #contImg2*/
+}
+
+#createPost{/*I added the id createPost to the second button (represented by an a element) in the main content section*/
+
+    text-align: center;/*aligns the text for #createPost in the center of the element*/
+    background-color: #612940;/*changes the color of the background for #createPost*/
+    padding: 10px;/*adds internal space around the text for #createPost*/
+    border-radius: 4px;/*rounds the edges of the element*/
+    color: #FFFFFF;/*changes the text color of #createPost*/
+    position: relative;/*positions the link relative to its normal position in the html document flow*/
+    right: 680px;/*moves #createPost to the right in the page*/
+    top: 80px;/*moves #createPost lower on the page*/
+}
+
+#bodyHead3{/*I have added the ID #bodyHead3 to the div that represents the title for the third subsection of the main content section*/
+
+    text-align: center;/*aligns the text for #bodyHead3 in the center of the element*/
+    margin-top: 150px;/*adds space above #bodyHead3*/
+    font-size: 35px;/*makes the font for #bodyHead3 larger*/
+    padding-bottom: 50px;/*adds space to the bottom internally for #bodyHead3*/
+
+}
+
+#bodyContent3{/*I added the ID bodyContent3 to the div tag containing the text for the third subsection of the main content for this page*/
+
+    text-align: center;/*aligns the text for #bodyContent3 in the center of the element*/
+    font-size: 20px;/*makes the font for #bodyContent3 larger*/
+    background-color:#FDECEF;/*changes the background color for #bodyContent3*/
+    display: inline-block;/*makes the text flow as if the p element was an inline element while allowing it to behave like a block element*/
+    margin-left: 300px;/*adds space to the left of #bodyContent3*/
+    padding: 10px;/*adds space internally around the text of #bodyContent3*/
+
+}
+
+#contImg3{/*I added the ID contImg3 to the third image in the main content for this page*/
+
+    float:right;/*takes the img in #contImg1 and poitions it to the right of its container*/
+    margin-right: 400px;/*adds space to the right of #contImg3*/
+    margin-top: -10px;/*takes away space from the top externally for #contImg3*/
+}
+
+#shareHere{/*I added the ID shareHere to the third buttion (represented by another a element) in the main content section*/
+
+    text-align: center;/*aligns the text in #shareHere in the center of the element*/
+    background-color: #612940;/*changes the background color for #shareHere*/
+    padding: 10px;/*adds space internally around the text for #shareHere*/
+    border-radius: 4px;/*rounds the edges of the element*/
+    color: #FFFFFF;/*changes the text color for #shareHere*/
+    position: relative;/*positions the link relative to its normal position in the html document flow*/
+    left: 150px;/*moves #shareHere left in the page*/
+    top: 100px;/*moves #shareHere lower in the page*/
+
+}
+
+/*New to Photography and Networking section*/
+
+#finalSection{/*I added the ID finalSection to the section tag for the last section of the main content in this page*/
+
+    background-color:#FDECEF;/*changes the background color of #finalSection*/
+    margin: 0;/*removes the margin*/
+}
+
+#finalHead{/*I added the ID finalHead to the h2 element in this section of the page*/
+
+    text-align: left;/*aligns the text for #finalHead to the left*/
+    font-size: 45px;/*makes the font for #finalHead larger*/
+    margin: 10px 5px;/*adds a margin on the top and bottom of 10px and 5px to the left and right of the #finalHead element*/
+
+}
+
+#finalSubHead{/*I added the ID finalSubHead to the h3 element in this section element on the page*/
+
+    text-align: left;/*aligns the text for #finalSubHead to the left in the element*/
+    font-size: 35px;/*makes the font for #finalSubHead bigger*/
+    padding-bottom: 20px;/*adds internal space from the bottom of the element to #finalSubHead*/
+
+}
+
+#finalContent{/*I added the ID finalContent to the p element of the last div in the final section*/
+
+    text-align: center;/*aligns the text for #finalContent to the center of the element*/
+    font-size: 25px;/*makes the font for #finalContent larger*/
+    padding-bottom: 150px;/*adds internal space from the bottom of hte element for #finalContent*/
+
+}
+
+#ntwk{/*I added the ID ntwk to the button (currently represented by an a element) in the final section for the main content of this page*/
+
+    text-align: center;/*aligns the text for #ntwk in the center*/
+    font-size: 35px;/*makes the font for #ntwk larger*/
+    background-color: #612940;/*changes the background color for #ntwk*/
+    padding: 20px;/*adds padding internally around the text for #ntwk*/
+    padding-left: 150px;/*adds extra padding to the left internally for #ntwk*/
+    padding-right: 150px;/*adds extra padding to the right internally for #ntwk*/
+    border-radius: 4px;/*rounds the edges of the element*/
+    color: #FFFFFF;/*changes the text color of #ntwk*/
+    position: relative;/*positions the link relative to its normal position in the html document flow*/
+    left: 1000px;/*moves #ntwk left on the page*/
+    bottom: 100px;/*moves #ntwk up on the page*/
+    
+}
+
+/*CSS For Networking Page- Halle Knape*/
+
+/*Other user profile previews*/
+
+#profilePreviews{/*I added the ID profilePreviews to the section tag for the portion of the page that has the profile previews*/
+
+    background-color:#9D6381;/*this changes the background color for #profilePreviews*/
+
+}
+
+#leeThomp{/*I added the ID leeThomp to the first img tag in this section*/
+
+    position: relative;/*positions the image relative to its normal position in the html document flow*/
+    left: 250px;/*moves #leeThomp to the left on the page*/
+    top: 50px;/*moves #leeThomp down on the page*/
+    margin: 0;/*removes the margin around #leeThomp*/
+
+}
+
+#kayVar{/*I added the ID kayVar to the second img tag in this section*/
+
+    position: relative;/*positions the image relative to its normal position in the html document flow*/
+    left: 650px;/*moves #kayVar to the left on the page*/
+    top: 50px;/*moves #kayVar down on the page*/
+    margin: 0;/*removes the margin around #kayVar*/
+
+}
+
+#photographerPreviewsHead{/*I added the ID photographerPreviewsHead to the div tag that each photographer name is in*/
+
+    font-size: 45px;/*changes the font size of #photographerPreviewsHead*/
+    color: white;/*changes the text color of #photographerPreviewsHead*/
+    margin: 0;/*removes the margin around #photographerPreviewsHead*/
+
+}
+
+#prevDescript1{/*I added the ID prevDescript1 to the div for the first biography example*/
+
+    text-align: center;/*aligns the text for #prevDescript1 to the center*/
+    font-size: 20px;/*makes the font for #prevDescript1 larger*/
+    display: inline;/*makes the text display as though it were an inline element*/
+    margin: 0;/*removes the margin around #prevDescript1*/
+
+}
+
+#prevDescript2{/*I added the ID prevDescript2 to the div for the second biography example*/
+
+    text-align: center;/*aligns the text for #prevDescript2 to the center*/
+    font-size: 20px;/*makes the font for #prevDescript2 larger*/
+    display: inline;/*makes the text display as though it were an inline element*/
+    margin: 0;/*removes the margin around #prevDescript2*/
+
+}
+
+#previewButton1{/*I added the ID #previewButtion for the a element that aligns with the first photographer biography example*/
+
+    text-align: center;/*aligns the text for #previewButton1 in the center*/
+    background-color: #612940;/*changes the background color for #previewButton1*/
+    padding: 10px;/*adds padding around the text for #previewButton1*/
+    border-radius: 4px;/*rounds the edges of the element*/
+    color: #FFFFFF;/*changes the text color for #previewButton1*/
+    position: relative;/*positions the link relative to its normal position in the html document flow*/
+    right: -65px;/*moves #previewButton1 to the left on the page*/
+    top: -235px;/*moves #previewButton1 up on the page*/    
+
+}
+
+#previewButton2{/*I added the ID #previewButtion2 for the a element that aligns with the section photographer biography example*/
+
+    text-align: center;/*aligns the text for #previewButton2 in the center*/
+    background-color: #612940;/*changes the background color for #previewButton2*/
+    padding: 10px;/*adds padding around the text for #previewButton 2*/
+    border-radius: 4px;/*rounds the edges of the element*/
+    color: #FFFFFF;/*changes the text color for #previewButton2*/
+    position: relative;/*positions the link relative to its normal position in the html document flow*/
+    left: 325px;/*moves #previewButton2 to the left on the page*/
+    top: -235px;/*moves #previewButton2 up on the page*/    
+
+}
+
+/*Arrows to click through the slideshow of profiles. If we have JavaScript later in the semester, these will hopefully become functional.*/
+
+#leftArrow{/*I added the ID leftArrow to the penultimate p element in this section*/
+
+    text-align: center;/*aligns the image of the arrow for #leftArrow in the center*/
+    font-size: 80px;/*changes the size of #leftArrow*/
+    background-color: #612940;/*changes the background color for #leftArrow*/
+    display: inline;/*makes the p element display as though it were an inline element*/
+    padding-bottom: 7px;/*adds space internally from the bottom for #leftArrow*/
+    padding-left: 20px;/*adds space internally from the left for #leftArrow*/
+    padding-right: 20px;/*adds space internally from the right for #leftArrow*/
+    border: 4px solid black;/*adds a border around the element*/
+    position: relative;/*positions the arrow relative to its normal position in the html document flow*/
+    right: 750px;/*moves #leftArrow to the right on the page*/
+    bottom: 400px;/*moves #leftArrow up on the page*/
+
+}
+
+#rightArrow{/*I added the ID rightArrow to the final p element in this section*/
+
+    text-align: center;/*aligns the image of the arrow for #rightArrow in the center*/
+    font-size: 80px;/*changes the size of #rightArrow*/
+    background-color: #612940;/*changes the background color for #rightArrow*/
+    display: inline;/*makes the p element display as though it were an inline element*/
+    padding-bottom: 7px;/*adds space internally from the bottom for #rightArrow*/
+    padding-left: 20px;/*adds space internally from the left for #rightArrow*/
+    padding-right: 20px;/*adds space internally from the right for #rightArrow*/
+    border: 4px solid black;/*adds a border around the element*/
+    position: relative; /*positions the arrow relative to its normal position in the html document flow*/
+    left: 350px;/*moves #rightArrow to the left on the page*/
+    bottom: 400px;/*moves #rightArrow up on the page*/
+
+}
+
+/*Making a post*/
+
+#postInput{/*I added the ID postInput to the opening section tag for this portion of the web page*/
+
+    background-color:#FDECEF;/*changes the background for #postInput*/
+    margin: 0;/*removes the margin around #postInput*/
+
+}
+
+#makePost{/*I added the ID makePost to the input tag in this section of the web page*/
+
+    position: relative; /*positions the link relative to its normal position in the html document flow*/
+    left: 175px;/*moves #makePost to the left on the page*/
+    bottom: 90px;/*moves #makePost up on the page*/
+    margin: 0;/*removes the margin around #makePost*/
+
+}
+
+#postBttn{/*I added the ID postBttn to the a element in this section of the web page*/
+
+    text-align: center;/*aligns text for #postBttn in the center*/
+    font-size: 25px;/*makes the text for #postBttn larger*/
+    background-color: #612940;/*changes the background color for #postBttn*/
+    padding: 25px;/*adds padding around the text for #postBttn*/
+    padding-left: 50px;/*adds extra space to the left of the text for #postBttn*/
+    padding-right: 50px;/*adds extra space to the right of the text for #postBttn*/
+    border-radius: 4px;/*makes the edges of the element rounded*/
+    color: #FFFFFF;/*changes the text color for #postBttn*/
+    position: relative; /*positions the link relative to its normal position in the html document flow*/
+    left: 950px;/*moves #postBttn left on the page*/
+    bottom: 40px;/*moves #postBttn up on the page*/
+
+}
+
+/*Previous conversations and posts*/
+
+#actPosts{/*I added the id actPosts to the section tag for this section of the web page*/
+
+    background-color: #6C534E;/*changes the background color for #actPosts*/
+    margin: 0;/*removes the margin around #actPosts*/
+
+}
+
+#post1{/*I added the id post1 to the first div in this section*/
+
+    padding: 50px;/*adds space internally around the content in #post1*/
+
+}
+
+#post2{/*I added the id post2 to the second div in this section*/
+
+    padding: 50px;/*adds space internally around the content in #post2*/
+
+}
+
+#post3{/*I added the id post3 to the third div in this section*/
+
+    padding: 50px;/*adds space internally around the content in #post3*/
+
+}
+
+#post4{/*I added the id post4 to the  fourth div in this section*/
+
+    padding: 50px;/*adds space internally around the content in #post4*/
+
+}
+
+/*CSS For example of profile page- Halle Knape*/
+
+/*Heading for profile*/
+
+#profileHead{/*I added the id profileHead to the opening section tag for this section of the web page*/
+
+    background-color:#6C534E;/*changes the background color for #profileHead*/
+    color: white;/*changes the text color for #profileHead*/
+    font-size: 35px;/*makes the font size for #profileHead larger*/
+    margin: 0;/*removes the margin around #profileHead*/
+
+}
+
+/*Main content including breif biography and profile photo for the photographer*/
+
+#profileContent{/*I added the id profileContent to the second section tag for this web page*/
+
+    background-color:#9D6381;/*changes the background color of #profileContent*/
+    border: 4px solid darkgrey;/*adds a border around #profileContent that is styled to be dark grey, a solid line all the way around, and be 4 pixles in width*/
+    margin: 0;/*removes the margin around #profileContent*/
+
+}
+
+/*Photographer portfolio, only allows for 5 photos to be displayed. This makes it so that photographers have to really think about what they want to have associated with their profile on the site.*/
+
+#portfolio{/*I added the id portfolio to the third section tag for this web page*/
+
+    background-color:#9D6381;/*changes the background color of #portfolio*/
+    padding: 40px;/*adds space internally around the content of #portfolio*/
+
+}
+
+/*Mei Lan Bargas CSS*/
+
+/*Getting Started Introduction Section*/
+#title{
+    margin: /*t*/0px /*r*/10px/*b*/0px/*l*/160px;
+}
+#getting{
+    position: absolute;/*title not dependent on other elements*/
+    font-weight: 400;/*slim down font weight*/
+    font-size: 98px;/*increase font size*/
+    background: linear-gradient(90deg, #0F110C 3%, #6C534E 45.71%);/*custom gradient plum and brown*/
+    -webkit-text-fill-color: transparent;/*fill color transparent for the gradient*/
+    background-clip: text;/*clip the text to gradient*/
+    transform: translate(50px, 90px);/*custom title move along the x and y axis*/
+}
+#started{
+    position: absolute;/*title not dependent on other elements*/
+    font-weight: 400;/*slim down font weight*/
+    color: #6C534E;/*custom color plum*/
+    font-size: 128px;/*increase font size*/
+    transform: translate(70px, 155px);/*custom title move along the x and y axis*/
+}
+.camera_logo{
+    transform: translate(500%, 160%);/*custom png move along the x and y axis*/
+}
+#pad_title_state{
+    position: absolute;/*p not dependent on other elements*/
+    margin: 0px 0px 0px 5px;/*right margin increase*/
+    transform: translate(290px, 250px);/* p element move along the x and y axis*/
+}
+#title_statement{
+    padding-right: 60%;/*padding right by 60%*/
+    font-size: 18px;/*font size 18px*/
+    font-weight: lighter;/*thinning the font*/
+    color:#0F110C;/*custom black font color*/
+}
+#page_nav_box{
+    position: absolute;/*box not dependent on other elements*/
+    border: 5px solid #FDECEF;/*5px thick solid border with a custom pink white color*/
+    background-color: #FDECEF;/*custom pink white color border*/
+    margin: 5px;/*5px margin all around*/
+    padding: 5px;/*5px padding all around*/
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);/*creation of a box shadow*/
+    border-radius: 12px;/*rounding the edges by 12 px*/
+    width: 270px;/*increasing box width*/
+    height: 30px;/*box height increase*/
+    transform: translate(1300px, 33px);/* div element move along the x and y axis*/
+}
+
+#page_nav_box h3{
+    font-weight: 200;/*thin font weight*/
+    text-align: center;/* aligning text center*/
+    font-size: 26px;/*font size change to 20px*/
+    color: #612940;/*custom plum color*/
+}
+#page_nav ul{
+    position: absolute;/*ul not dependent on other elements*/
+    display: block;/*uniform style for ul*/
+    list-style: none;/*no bullet points*/
+}
+#page_nav ul li{
+    transform: translate(1300px, 100px);/* li element move along the x and y axis*/
+    font-size: 18px;/*font size change*/
+    padding: 10px 0px;/*increase top and bottom padding by 10px*/
+}
+#page_nav ul li a{
+    text-decoration: none;/*remove text decoration for links*/
+    color: #612940;/*custom plum color*/
+}
+#page_nav ul li a:hover{
+    color: #FDECEF;/*custom pink white*/
+    border: 4px solid #612940;/*4px solid border with a custom plum color*/
+    background-color: #612940;/*custom plum color background*/
+    border-radius: 2px;/*rounded border radius*/
+    transition: 0.5s;/*0.5s transition for box when hovering*/
+}
+
+/*What Camera Should I Use?*/
+#gs_section_1{
+    transform: translate(0px, 600px);/*class element move along the x and y axis*/
+}
+#intro_sec_1 h1{
+    font-size: 50px;/*font size change*/
+    font-weight: lighter;/*font weight change to slimmer*/
+    text-align: center;/*aligning text to center*/
+}
+#intro_sec_1 p{
+    font-size: 16px;/*font size change to 16px*/
+    text-align: center;/*aligning text to the center*/
+    position: absolute;/*p not dependent on other elements*/
+    border: 5px;/*border 5px increase*/
+    width: 1000px;/*width of p changeed to 1000px*/
+    transform: translate(450px, 0px);/*p element move along the x and y axis*/
+}
+
+#camera_rows{
+    position: absolute;
+    transform: translate(150px, 150px);/*id element move along the x and y axis*/
+    width: 1500px;/*increase wdith 1500px*/
+    justify-content: center;/*centering content in the id*/
+}
+#camera_identifier{
+    font-size: 20px;/*modifying font size*/
+}
+#desc_cameras{
+    font-size: 16px;/*modifying font size*/
+    margin: 5px 0px;/*margin top and bottom increase while left and right stay at 0*/
+    padding: 0px 50px;/*padding top and bottom stay the same while left and right stay at 50px*/
+    text-align: center;/*aligning text to center*/
+}
+#desc_cameras1 td, #desc_cameras2 td{
+    padding: 0px 50px 0px 50px;/*td has increased in left and right padding*/
+    text-align: center;/*aligning text to center*/
+}
+#top_row img, #bottom_row img{
+    align-items: center;/*aligning items to center*/
+    width: 180px;/*increasing width of img*/
+}
+#bottom_row th, #camera_identifier2 th, #desc_cameras2 td{
+    justify-content: center;/*centering content in the id*/
+    transform: translate(250px, 80px);/*id element move along the x and y axis*/
+}
+/*What Photo Editing App Should I Use?*/
+.edit_app_use {
+    position: absolute;/*content is not dependent on other page elements*/
+    align-items: center;/*aligning items to center*/
+    transform: translate(0px, 1900px);/*class element move along the x and y axis*/
+}
+.edit_app_title{
+    font-size: 20px;/*modifying font size*/
+    position: absolute;/*content is not dependent on other page elements*/
+    text-align: center;/*aligning text to center*/
+    color: #0F110C;/*custom font black color*/
+    transform: translate(450px, 0px);/*class element move along the x and y axis*/
+}
+/*What Photo Editing App Should I Use? - Title*/
+.edit_app_use .edit_app_title h2{
+    font-size: 50px;/*modifying font size*/
+    font-weight: 400;/*increasing font weight*/
+    text-align: center;/*alignign text to center*/
+}
+.edit_app_use .edit_app_title p{
+    font-weight: 400;/*font weight to slim down text*/
+    font-size: 16px;/*modifying font size*/
+    line-height: 26px;/*line height to give space*/
+    text-align: center;/*aligning text to center*/
+}
+/*App Suggestions*/
+.edit_app_rows  {
+    display: flex;/*create a flexible content row*/
+    justify-content: space-between;/*giving space between rows*/
+    align-items: center;/*aligning items to center*/
+    gap: 50%;/*giving a 50% gap*/
+    transform: translate(100px, 220px);/*class element move along the x and y axis*/
+}
+.edit_app_rows .edit_app_col h3{
+    text-align: center;/*aligning text to center*/
+    font-size: 24px;/*modifying font size*/
+    font-weight: 600;/*increasing font weight to 600*/
+}
+.edit_app_rows .edit_app_col img{
+    display: block;/*uniform images*/
+    margin-left: auto;/*automated margin*/
+    margin-right: auto;/*automated margin*/
+    width: 100px;/*img width 100px*/
+
+}
+.edit_app_rows .edit_app_col p{
+    text-align: center;/*text aligning items to center*/
+    margin-top: 2%;/*adding a 2% margin top*/
+    font-size: 16px;/*modifying font size*/
+    line-height: 25px;/*line height 25px for line space*/
+    font-weight: 400;/*font weight slimmed down*/
+    width: 500px;/*widith of p is 500px*/
+}
+/*Second Editing App Row*/
+.edit_app_rows2{
+    display: flex;/*flexible contents*/
+    justify-content: space-between;/*space between elements*/
+    gap: 50%;/*gap of 50% for elements*/
+    align-items: center;/*aligning items to center*/
+    width: 100%;/*increasing the width to 100%*/
+    transform: translate(650px, 220px);/*class element move along the x and y axis*/
+}
+.edit_app_rows2 .edit_app_col2 img{
+    display: block;/*img as a block for uniformity*/
+    margin-left: auto;/*automated margin*/
+    margin-right: auto;/*automated margin*/
+    width: 100px;/*img width 100px*/
+}
+.edit_app_rows2 .edit_app_col2 h3{
+    text-align: center;/*aligning text to center*/
+    font-size: 24px;/*modifying font size*/
+    font-weight: 600;/*increasing font weight to 600*/
+}
+.edit_app_rows2 .edit_app_col2 p{
+    text-align: center;/*text aligning items to center*/
+    margin-top: 2%;/*adding a 2% margin top*/
+    font-size: 16px;/*adding a 2% margin top*/
+    line-height: 25px;/*modifying font size*/
+    font-weight: 400;/*font weight slimmed down*/
+    width: 500px;/*widith of p is 500px*/
+}
+
+/*Important Practices and Tips*/
+.imp_prac_tips {
+    position: absolute;/*content is not dependent on other page elements*/
+    align-items: center;/*aligning items to center*/
+    font-size: 20px;/*modifying font size*/
+    transform: translate(150px, 2990px);/*class element move along the x and y axis*/
+}
+
+.imp_prac_tips_title{
+    text-align: center;/*aligning text to center*/
+    color: #0F110C;/*custom black color*/
+}
+/*Important Practices and Tips - Title*/
+.imp_prac_tips .imp_prac_tips_title h2{
+    font-size: 50px;/*font size modification*/
+    font-weight: 400;/*font weight slimmed down*/
+    line-height: 55px;/*55px line height to give space for text*/
+    text-align: center;/*aligning text to center*/
+}
+.imp_prac_tips .imp_prac_tips_title p{
+    margin-top: 45px;/*margin top increase by 45px*/
+    font-weight: 400;/*font weight slimmed down*/
+    font-size: 16px;/*font size modification*/
+    text-align: center;/*aligning text to center*/
+    width: 1000px;/*increasing p width*/
+    transform: translate(300px, 0px);/*class element move along the x and y axis*/
+}
+/*Tips and Practices*/
+.imp_prac_tips_col_left, .imp_prac_tips_col_left{
+    transform: translate(50px, 0px);/*class element move along the x and y axis*/
+}
+/*left*/
+.imp_prac_tips_rows_left {
+    display: flex;/*creating a flexible container*/
+    justify-content: space-between;/*space between elements*/
+    width: 100%;/*increasing class width*/
+    transform: translate(0px, 100px);/*class element move along the x and y axis*/
+    margin: 20px 0px;/*increase in overall margin top/bottom not left/right*/
+    padding: 20px;/*increase in overall padding top/bottom left/right*/
+}
+.imp_prac_tips_rows_left .imp_prac_tips_col_left h3{
+    text-align: left;/*aligning text left*/
+    font-size: 20px;/*font size increase 20px*/
+    font-weight: 600;/*font weight increase*/
+    margin-bottom: 1%;/*increase bottom margin 1%*/
+}
+.imp_prac_tips_rows_left .imp_prac_tips_col_left img{
+    float: left;/*float images to the left*/
+    width: auto;/*width is automatic to image*/
+    margin: 10px;/*increase in overall margin top/bottom left/right*/
+    padding: 10px;/*increase in overall padding top/bottom left/right*/
+}
+.imp_prac_tips_rows_left .imp_prac_tips_col_left p{
+    text-align: left;/*aligning text to the left*/
+    font-size: 18px;/*font size modification*/
+    line-height: 25px;/*line height increased for space*/
+    font-weight: 400;/*font weight slim*/
+    width: 1200px;/*wdith 1200px for p*/
+    transform: translate(90px, 0px);/*class element move along the x and y axis*/
+    margin: 20px;/*increase in overall margin top/bottom left/right*/
+    padding: 20px;/*increase in overall padding top/bottom left/right*/
+}
+/*right*/
+.imp_prac_tips_rows_right {
+    display: flex;/*creating a flexible container*/
+    justify-content: space-between;/*space between elements*/
+    width: 100%;/*increasing class width*/
+    transform: translate(0px, 600px);/*class element move along the x and y axis*/
+    margin: 20px 0px;/*increase in overall margin top/bottom not left/right*/
+    padding: 20px;/*increase in overall padding top/bottom left/right*/
+}
+.imp_prac_tips .imp_prac_tips_rows_right h3{
+    text-align: right;/*aligning text to right*/
+    font-size: 20px;/*modifying fotn size*/
+    font-weight: 600;/*changing font weight to 600*/
+}
+.imp_prac_tips_rows_right .imp_prac_tips_col_right img{
+    float: right;/*floating items to the right*/
+    display: block;/*uniform blocking for images*/
+    width: auto;/*auto image wifth*/
+}
+.imp_prac_tips .imp_prac_tips_rows_right p{
+    text-align: left;/*aligning text to left*/
+    font-size: 18px;/*modifying font size*/
+    line-height: 25px;/*line height increased for space*/
+    font-weight: 400;/*changing font weight to 400*/
+    width: 1200px;/*wdith 1200px for p*/
+    margin: 20px;/*increase in overall margin top/bottom left/right*/
+    padding: 20px;/*increase in overall padding top/bottom left/right*/
+    transform: translate(-90px, 0px);/*class element move along the x and y axis*/
+}
+
+/*Model Job Form page css code*/
+/*Model Job Form Title*/
+.mjf_title h1{
+    position: absolute;/*keeps page title fixed to its nearest ancestor to allow overlapping*/
+    color: #612940;/*changing font color to a deep purple*/
+    letter-spacing: 28px;/*spacing out the letters by 28px for design aesthetics*/
+    font-size: 40px;/*modifying font size for the title*/
+    transform: translate(200px, 150px);/*aligning the title specifically where I want it by translating the x and y coordinates*/
+
+}
+.req_stat{
+    position: absolute;/*changing the position to absolute so it can move wherever it wants on the page without depending on the title element*/
+    font-style: italic;/*keeps page title fixed to its nearest ancestor to allow overlapping*/
+    transform: translate(90px, 320px);/*aligning the form description specifically where I want it by translating the x and y coordinates*/
+}
+/*Form*/
+.form_container{
+    position: absolute;/*the form container is bases its position based on its ancestor, by itself*/
+    top: 600px;/*placing the form box margin 600px top*/
+    left: 700px;/*placing the form box margin 700px left*/
+}
+/*Overview*/
+.overview_input{
+    width: 50%;/*expanding the title input box to 50%*/
+    margin-top: 5%;/*giving margin space of 5% all around*/
+}
+.overview label{
+    position: relative;/*expanding the title input box to 50%*/
+    font-size: 20px;/*expanding the title input box to 50%*/
+    display:block;/*expanding the title input box to 50%*/
+    font-weight: 550;/*increasing the weight of the font*/
+    left: 400px;/*offsetting the label left 400px*/
+}
+.overview p{
+    margin: 2% 0%;/*adding a 2% buffer on bottom and top with margin*/
+    width: 250px;/*increasing the line width of the p element*/
+    font-size: 14px;/*changing font size to 14px for the p element*/
+    font-style:italic;/*italicizing the p element*/
+    position: relative;/*placing the p element relative to its parent*/
+    left: 400px;/*offsetting the p element 400px to the left of the box margin*/
+}
+.overview_input input{
+    position: relative;/*placing the input relative to its parent*/
+    width: 390px;/*increasing the width of the input box*/
+    left: 400px;/*offsetting the inputt 400px to the left of the box margin*/
+    background-color: #F4F4F4;/*changing the box background color to a lighter gray, almost white*/
+    border: 1px solid #B4B4B4;/*changing the box broder to a light gray with a solid border that is 1px*/
+    border-radius: 3px;/*rounding out the box edges by 3px*/
+}
+.overview_input textarea{ 
+    position: relative;/*placing the textarea relative to its parent*/
+    background-color: #F4F4F4;/*changing the box background color to a lighter gray, almost white*/
+    border: 1px solid #B4B4B4;/*changing the box border to a light gray with a solid border that is 1px*/
+    border-radius: 3px; /*rounding out the box edges by 3px*/
+    left: 400px;/*offsetting the textarea 400px to the left of the box margin*/
+ 
+}
+
+/*Location*/
+.location{
+    position: relative;/*placing the location class relative to its parent*/
+    top: 100px;/*offsetting the class 100px top of the box margin*/
+    display: flex;/*the class will turn it into a flex container and so will its children*/
+    column-gap: 25px;/*column gap between items*/
+}
+.location label{
+    font-size: 20px;/*changing labels to 20px*/
+    display: block;/*to create an organized form by changing these elements to the width of its container*/
+    position: relative;/*changing the contents to be relative to its parent*/
+    left: 400px;/*offsetting the label 400px to the left of the box margin*/
+}
+.location_input input{
+    position: relative;/*changing the input to be relative to its parent*/
+    height: 20px;/*changing the height of the input to 20px*/   
+    width: 80%;/*modifying the input width to 80%*/
+    background-color: #F4F4F4;/*changing the box background color to a lighter gray, almost white*/
+    border: 1px solid #B4B4B4;/*changing the box border to a light gray with a solid border that is 1px*/
+    border-radius: 3px;/*rounding out the box edges by 3px*/
+    left: 400px;/*offsetting the input 400px to the left of the box margin*/
+}
+.date_input{
+    font-size: 20px;/*changing the font size to 20px*/
+    position: relative;/*changing the date to be relative to its parent*/
+    width: 12%;/*modifying the date width to 12%*/
+    top: 150px;/*offsetting the date 150px top of the box margin*/
+    margin-top: 5%;/*increasing the top of the margin box by 5%*/
+    left: 400px;/*offsetting the date 400px to the left of the box margin*/
+
+}
+.date_input input{
+    height: 20px; /*changing the height of the input to 20px*/ 
+    bottom: 500px;  /*offsetting the date 500px at the bottom of the box margin*/
+    width: 150px;/*modiofying input width to 150px*/
+    background-color: #F4F4F4;/*changing the box background color to a lighter gray, almost white*/
+    border: 1px solid #B4B4B4;/*changing the box border to a light gray with a solid border that is 1px*/
+    border-radius: 3px;/*rounding out the box edges by 3px*/
+}
+
+/*SPECIFICATIONS*/
+
+.specifications{
+    position: relative;/*changing the class to be relative to its parent*/
+    top: 200px;/*offsetting the date 200px top of the box margin*/
+    padding-top: 12%;/*increasing thickness of top padding area by 12%*/
+    padding-bottom: 20%;/*increasing thickness of bottom padding area by 20%*/
+    display: flex;/*the class will turn it into a flex container and so will its children*/
+    column-gap: 25px;/*column gap between items by 25px*/
+}
+.specifications label{
+    display: block;/*to create an organized form by changing these elements to the width of its container*/
+    font-size: 20px;/*modifying font size to 20px*/
+    position: relative;/*changing the label to be relative to its parent*/
+    left: 400px;/*offsetting the spec label 400px to the left of the box margin*/
+}
+.specifications p{
+    position: relative;/*changing the p element to be relative to its parent*/
+    transform: translate(400px, 10px);/*translating the p element across the x and y coordinates*/
+}
+.specifications_input input{
+    position: relative;/*changing the spec input to be relative to its parent*/
+    width: 150px;/*modifying the input width to 150px*/
+    background-color: #F4F4F4;/*changing the box background color to a lighter gray, almost white*/
+    border: 1px solid #B4B4B4;/*changing the box border to a light gray with a solid border that is 1px*/
+    border-radius: 3px;/*rounding out the box edges by 3px*/
+    transform: translate(400px, 20px);/*translating the input across the x and y coordinates*/
+}
+.experience_input p{
+    position: relative;/*changing the experience p to be relative to its parent*/
+    left: 400px;/*offsetting the p element 400px to the left of the box margin*/ 
+    padding-bottom: 1%;/*increasing thickness of bottom padding area by 1%*/
+    font-size: 20px;/*modifying font size to 20px*/
+    left:-50px;/*offsetting the p -50px to the left of the box margin*/ 
+
+}
+.experience_input{
+    padding: 5px;/*increase all around padding by 50px to give it space from the other inputs*/
+    width: 100%;/*increase the width of the class to 100%*/
+    position: relative;/*changing the experience class to be relative to its parent*/
+    transform: translate(400px, 160px);/*translating the experience radio input by 400px - x and 160 px -y*/
+    margin: 5px; /*increasing margin to 5px all around*/
+
+}
+
+.mj_form .submission{
+    position: absolute;/*changing the submission class class to be relative to its parent*/
+    transform: translate(700px, 300px);/*translating the submission across the x and y coordinates*/
+    font-size: 20px;/*modifying font size to 20px*/
+    margin: 5px;/*modifying margin by 5px*/
+
+}
+.mj_form .submission input{
+    font-size: 20px;/*modifying font size to 20px*/
+    position: relative;/*modifying the input to be relative to its parent*/
+    background: #FDECEF;/*modifying the background color*/
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);/*creating a shadow for the box button*/
+    border-radius: 5px;/*rounding the box edge by 5px*/
+    width: 100px;/*increasing the box width to 100px*/
+    border: 1px solid #FDECEF;/*creating a 1px solid border with a custom color*/
+    
+}
+/* Titles */
+.over_title {
+    position: absolute;/*changing the position to absolute so it can move wherever it wants on the page without depending on other elements*/
+    transform: translate(100px, 400px);/*translating the overview title across the x and y coordinates*/
+}
+.over_title p{
+    font-size: 36px;/*changing the title to a 36px font*/
+    color:#612940;/*changing the font color to a custom deep purple*/
+    font-weight: 300;/*changing the title to a font weight of 300px for a thinner look*/
+}
+.loc_title {
+    position: absolute;/*changing the position to absolute so it can move wherever it wants on the page without depending on other elements*/
+    transform: translate(100px, 720px);/*translating the location title across the x and y coordinates*/
+}
+.loc_title p{
+    font-size: 36px;/*changing the title to a 36px font*/
+    color:#612940;/*changing the font color to a custom deep purple*/
+    font-weight: 300;/*changing the title to a font weight of 300px for a thinner look*/
+}
+.spec_title {
+    position: absolute;/*changing the position to absolute so it can move wherever it wants on the page without depending on other elements*/
+    transform: translate(100px, 1000px);/*translating the specifications title across the x and y coordinates*/
+}
+.spec_title p{
+    font-size: 36px;/*changing the title to a 36px font*/
+    color:#612940;/*changing the font color to a custom deep purple*/
+    font-weight: 300;/*changing the title to a font weight of 300px for a thinner look*/
+}
+
+/*Modeling Connections page css code*/
+/*Modeling Connections Form Title*/
+.mc_title_back img{
+    height: 500px;/*developing height area to 500px*/
+    width: 100%;/*developing width area to 100%*/
+    background-size: cover;/*making the image cover the background*/
+    background-position: center;/*centering the image position*/
+    top: 190px;/*offsetting image 190 px of the margin box top*/
+}
+.modeling{
+    position: absolute;/*allowing my title to not be tied down to other page elements*/
+    font-weight: 300;/*slimming down the font weight*/
+    font-size: 94px;/*changing font size*/
+    line-height: 55px;/*increasing line height for title*/
+    letter-spacing: 36px;/*spacing out letters for stylistic purposes*/
+    top: 350px;/*offsetting title 350 px of the margin box top*/
+    left: 625px;/*offsetting title 625 px of the margin box left*/
+    color: #FDECEF;/*changing color of title to a custom pink white*/
+}
+.connections{
+    position: absolute;/*allowing my title to not be tied down to other page elements*/
+    font-weight: 500;/*increasing the font weight to 500*/
+    font-size: 96px;/*changing font size*/
+    line-height: 55px;/*increasing line height for title*/
+    top: 580px;/*offsetting title 580 px of the margin box top*/
+    left: 620px;/*offsetting title 620 px of the margin box left*/
+    color: #FDECEF;/*changing color of title to a custom pink white*/
+    line-height: 55px;/*increasing line height for title*/
+    letter-spacing: 0.5px;/*spacing out letters for stylistic purposes*/
+}
+
+/*page numbers*/
+.page_n{
+    width: 30vw;/*width of block increased to 30vw*/
+    height: 80px;/*height of block increased to 80px*/
+    line-height: 80px;/*line-height set at 80px*/
+    background-color: #9D6381;/*background color of box is a custom pink*/
+    position: absolute;/*aboslute position so my page navigation won't be tied down by other elements*/
+    top: 190%;/*offsetting title 190% of the margin box top*/
+    left: 62%;/*offsetting title 62% px of the margin box left*/
+    margin: -25px 0 0 -25vw;/*changing the margin box top and right by -25 vw*/
+}
+.page_n ul{
+    display: flex;/*creating a flex display to develop flexibilty with my ul items*/
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);/*creating a box shadow effect*/
+}
+.page_n ul li{
+    flex: 1;/*increasing grow factor by 1*/
+    list-style: none;/*removing list style*/
+    text-align: center;/*keeping text centered*/
+    position: relative;/*keeping my li relative to the parent*/
+    font-size: 20px;/*changing font size to 20px*/
+    color:#0F110C;/*changing font color to custom black*/
+    font-weight: bold;/*modifying font weight to bold*/
+    transition: 0.5s ease;/*transition the list item by 0.5s with an ease effect*/
+    cursor: pointer;/*the pointer effects the element*/
+    user-select: none;/*sets the user selection to nothing*/
+}
+.page_n ul li:hover{
+    background-color: rgba(255,255,255,0.25);/*hover has a glass tint*/
+}
+
+.job_boxes{
+    position:absolute;/*keeps jobs boxes absolute*/
+    top:90%;/*offsetting title 90% of the margin box top*/
+    left:10%;/*offsetting title 10% px of the margin box left*/
+}
+.job_boxes .user{
+    font-size: 13px;/*changing the font size to 13px*/
+    font-style: italic;/*font is now italicized*/
+    font-weight: 300;/*weight of font is 300px*/
+    position: absolute;/*box is not dependent on other page elements*/
+    line-height: 15px;/*height of text line is 15px*/
+    top:7%;/*offsetting title 7% of the margin box top*/
+    left:14%;/*offsetting title 14% px of the margin box left*/
+}
+.job_boxes .job_title h3{
+    font-size: 20px;/*changing the font size to 20px*/
+    top:15%;/*offsetting title 15% of the margin box top*/
+    left:10%;/*offsetting title 10% px of the margin box left*/
+    font-weight: 400;/*weight of font is 400px*/
+    position: absolute;/*title is not dependent on other page elements*/
+    line-height: 15px;/*height of text line is 15px*/
+}
+.job_boxes .job_desc p{
+    font-size: 13px;/*changing the font size to 13px*/
+    font-style: italic;/*font is now italicized*/
+    font-weight: 300;/*weight of font is 300px*/
+    position: absolute;/*desc is not dependent on other page elements*/
+    line-height: 15px;/*height of text line is 15px*/
+    top:30%;/*offsetting desc 30% of the margin box top*/
+    left:10%;/*offsetting desc 10% px of the margin box left*/
+}
+.job_boxes .job_dets ul li{
+    font-size: 12px;/*changing the font size*/
+    font-weight: 300;/*changing the font weight to a slimmer style*/
+    text-align: left;/*aligning text left*/
+    line-height: 15px;/*changing the line height to 15px*/
+    letter-spacing: 0.5px;/*spacing out letterings for aesthetics*/
+    position: relative;/*keeping the li relative to the parent*/
+    display: block;/*display as block to make the element uniform*/
+    bottom:120px;/*offsetting title 120 px of the margin box bottom*/
+    left:10%;/*offsetting title 10% of the margin box left*/
+    line-height: 0.5px;/*height of text line is 0.5px*/
+}
+
+.b1{
+    position: absolute;/*box is not dependent on other page elements*/
+    top:90%;/*offsetting 90% of the margin box top*/
+    left:40%;/*offsetting 40% px of the margin box left*/
+}
+.b2{
+    position: absolute;/*box is not dependent on other page elements*/
+    top:90%;/*offsetting 90% of the margin box top*/
+    left:70%;/*offsetting 40% px of the margin box left*/
+}
+.b3{
+    position: absolute;/*box is not dependent on other page elements*/
+    top:140%;/*offsetting 140% of the margin box top*/
+    left:40%;/*offsetting 40% px of the margin box left*/
+}
+.b4{
+    position: absolute;/*box is not dependent on other page elements*/
+    top:140%;/*offsetting 140% of the margin box top*/
+    left:10%;/*offsetting 40% px of the margin box left*/
+}
+.b5{
+    position: absolute;/*box is not dependent on other page elements*/
+    top:140%;/*offsetting 140% of the margin box top*/
+    left:70%;/*offsetting 40% px of the margin box left*/
+}
+
+
+/*Bottom Box Form*/
+
+.box_model_req{
+    position: absolute;/*box is not dependent on other page elements*/
+    margin-left:30%;/*increasing left margin size by 30%*/
+    margin-top: 80%;/*increasing top margin size by 80%*/
+    align-items: center;/*aligning items center*/
+    justify-content: center;/*justifying content to the center with the use of flex*/
+    display: flex;/*allowing my container to be flexible*/
+}
+.header_box p{
+    position:relative;/*the p element is relative to its parent*/
+    font-size: 64px;/*font size is increased to 64px*/
+    color: #6C534E ;/*custom plum color*/
+    font-weight: 600;/*font weight increased*/
+    margin-left:32%;/*increasing left margin size by 32%*/
+    margin-top: 80%;/*increasing top margin size by 80%*/
+}
+.de_box p{
+    position:relative;/*the p element is relative to its parent*/
+    font-size: 24px;/*font size is increased to 24px*/
+    color: #6C534E;/*custom plum color*/
+    margin-left:33%;/*increasing left margin size by 33%*/
+    margin-top: -0.5%;/*increasing top margin size by -0.5%*/
+
+}
+.mc_div1 {
+    position: absolute;/*box is not dependent on other page elements*/
+    margin-top: 1350px;
+    width:85%;
+    margin-left: 5%;
+    height: 1px;
+    background: #36343B;
+    background-size: cover;
+    background-position: center;
+}
+.model_form{
+    position: absolute;/*box is depending on itself and not other page elements*/
+    top: 254%;/*offset the margin top by 254%*/
+    left:55%;/*offset the margin left by 55%*/
+    font-size: 20px ;/*change font size to 20px*/
+
+}
+.model_form button{
+    font-size: 20px ;/*changing font size*/
+    font-weight: 600;/*changing font weight*/
+    position: relative;
+    background: #9D6381;/*background custom plum color*/
+    height: 70px;/*increasing the height of the button*/
+    width: 180px;/*modifying button width*/
+    border: 1px solid #9D6381;/*1px border that is solid with a custom plum color*/
+    color:#FDECEF;/*font color custom pink white*/
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);/*custom box shadow*/
+    border-radius: 13px;/*changing border radius*/
+ 
+}
+
+/* Deb Bhaumik, Halle Knape, Mei Lan Bargas */
+/* Date: 9/24/25 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+    color: #333333;
+    line-height: 1.6;
+    padding-top: 80px; /* Accounts for fixed nav */
+}
+
+/* COLORS */
+:root {
+    --primary-purple: #8B5A8C;
+    --light-purple: #C8A8C9;
+    --dark-purple: #6B4C6D;
+    --plum: #612940;
+    --brown: #6C534E;
+    --light-brown: #9D6381;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --dark-gray: #333333;
+    --accent-pink: #D4A5B3;
+    --pink-white: #FDECEF;
+    --custom-black: #0F110C;
+    --medium-gray: #36343B;
+}
+
+/* NAVIGATION - GLOBAL */
+
+/* Logo */
+.Logo {
+    float: left;
+}
+
+/* Navigation style */
+.hKnavStyle ul, 
+.hKnavStyle li {
+    display: inline-flex;
+    list-style-type: none;
+    padding: 40px;
+    padding-left: 100px;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-purple);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+    border-bottom: 3px solid var(--dark-purple);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    background-color: var(--dark-purple);
+    transform: translateY(-2px);
+}
+
+
+/* LAYOUT */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.header {
+    background-color: var(--light-purple);
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-purple);
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.header::before {
+    content: "📸";
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 60px;
+    opacity: 0.2;
+    transform: rotate(15deg);
+}
+
+/* HOME PAGE */
+
+/* Intro */
+#intro {
+    background-color: var(--pink-white);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#introHead {
+    text-align: center;
+    font-size: 96px;
+    padding: 30px 0;
+    margin: 0;
+}
+
+#introSubHead {
+    text-align: center;
+    font-size: 45px;
+    padding: 30px 0;
+    margin: 0;
+}
+
+/* Main */
+#bodyHead1, #bodyHead2, #bodyHead3 {
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 50px;
+}
+
+#bodyHead2 {
+    margin-top: 150px;
+}
+
+#bodyHead3 {
+    margin-top: 150px;
+}
+
+#bodyContent1, #bodyContent2, #bodyContent3 {
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--pink-white);
+    display: inline-block;
+    padding: 10px;
+}
+
+#bodyContent1, #bodyContent3 {
+    margin-left: 300px;
+}
+
+#bodyContent2 {
+    margin-left: 875px;
+}
+
+/* Images */
+#contImg1, #contImg3 {
+    float: right;
+    margin-right: 400px;
+    margin-top: -10px;
+}
+
+#contImg2 {
+    float: left;
+    margin-left: 375px;
+    margin-top: -150px;
+    padding-bottom: 100px;
+}
+
+/* Buttons */
+#getStarted, #createPost, #shareHere {
+    text-align: center;
+    background-color: var(--plum);
+    padding: 10px;
+    border-radius: 4px;
+    color: var(--white);
+    position: relative;
+    top: 80px;
+}
+
+#getStarted {
+    left: 100px;
+}
+
+#createPost {
+    right: 680px;
+    top: 80px;
+}
+
+#shareHere {
+    left: 150px;
+    top: 100px;
+}
+
+/* Final */
+#finalSection {
+    background-color: var(--pink-white);
+    margin: 0;
+}
+
+#finalHead {
+    text-align: left;
+    font-size: 45px;
+    margin: 10px 5px;
+}
+
+#finalSubHead {
+    text-align: left;
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+#finalContent {
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 150px;
+}
+
+#ntwk {
+    text-align: center;
+    font-size: 35px;
+    background-color: var(--plum);
+    padding: 20px 150px;
+    border-radius: 4px;
+    color: var(--white);
+    position: relative;
+    left: 1000px;
+    bottom: 100px;
+}
+
+/* NETWORKING PAGE */
+
+#profilePreviews {
+    background-color: var(--light-brown);
+}
+
+#leeThomp {
+    position: relative;
+    left: 250px;
+    top: 50px;
+    margin: 0;
+}
+
+#kayVar {
+    position: relative;
+    left: 650px;
+    top: 50px;
+    margin: 0;
+}
+
+#photographerPreviewsHead {
+    font-size: 45px;
+    color: white;
+    margin: 0;
+}
+
+#prevDescript1, #prevDescript2 {
+    text-align: center;
+    font-size: 20px;
+    display: inline;
+    margin: 0;
+}
+
+#previewButton1 {
+    text-align: center;
+    background-color: var(--plum);
+    padding: 10px;
+    border-radius: 4px;
+    color: var(--white);
+    position: relative;
+    right: -65px;
+    top: -235px;
+}
+
+#previewButton2 {
+    text-align: center;
+    background-color: var(--plum);
+    padding: 10px;
+    border-radius: 4px;
+    color: var(--white);
+    position: relative;
+    left: 325px;
+    top: -235px;
+}
+
+/* Navigation */
+#leftArrow, #rightArrow {
+    text-align: center;
+    font-size: 80px;
+    background-color: var(--plum);
+    display: inline;
+    padding: 7px 20px 7px 20px;
+    border: 4px solid black;
+    position: relative;
+    bottom: 400px;
+}
+
+#leftArrow {
+    right: 750px;
+}
+
+#rightArrow {
+    left: 350px;
+}
+
+/* Post section */
+#postInput {
+    background-color: var(--pink-white);
+    margin: 0;
+}
+
+#makePost {
+    position: relative;
+    left: 175px;
+    bottom: 90px;
+    margin: 0;
+}
+
+#postBttn {
+    text-align: center;
+    font-size: 25px;
+    background-color: var(--plum);
+    padding: 25px 50px;
+    border-radius: 4px;
+    color: var(--white);
+    position: relative;
+    left: 950px;
+    bottom: 40px;
+}
+
+/* Activity */
+#actPosts {
+    background-color: var(--brown);
+    margin: 0;
+}
+
+#post1, #post2, #post3, #post4 {
+    padding: 50px;
+}
+
+/* PROFILE PAGE */
+
+#profileHead {
+    background-color: var(--brown);
+    color: white;
+    font-size: 35px;
+    margin: 0;
+}
+
+#profileContent {
+    background-color: var(--light-brown);
+    border: 4px solid darkgrey;
+    margin: 0;
+}
+
+#portfolio {
+    background-color: var(--light-brown);
+    padding: 40px;
+}
+
+/* GETTING STARTED */
+
+/* Title */
+#title {
+    margin: 0px 10px 0px 160px;
+}
+
+#getting {
+    position: absolute;
+    font-weight: 400;
+    font-size: 98px;
+    background: linear-gradient(90deg, var(--custom-black) 3%, var(--brown) 45.71%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: translate(50px, 90px);
+}
+
+#started {
+    position: absolute;
+    font-weight: 400;
+    color: var(--brown);
+    font-size: 128px;
+    transform: translate(70px, 155px);
+}
+
+.camera_logo {
+    transform: translate(500%, 160%);
+}
+
+#pad_title_state {
+    position: absolute;
+    margin: 0px 0px 0px 5px;
+    transform: translate(290px, 250px);
+}
+
+#title_statement {
+    padding-right: 60%;
+    font-size: 18px;
+    font-weight: lighter;
+    color: var(--custom-black);
+}
+
+/* Page navigation */
+#page_nav_box {
+    position: absolute;
+    border: 5px solid var(--pink-white);
+    background-color: var(--pink-white);
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    width: 270px;
+    height: 30px;
+    transform: translate(1300px, 33px);
+}
+
+#page_nav_box h3 {
+    font-weight: 200;
+    text-align: center;
+    font-size: 26px;
+    color: var(--plum);
+}
+
+#page_nav ul {
+    position: absolute;
+    display: block;
+    list-style: none;
+}
+
+#page_nav ul li {
+    transform: translate(1300px, 100px);
+    font-size: 18px;
+    padding: 10px 0px;
+}
+
+#page_nav ul li a {
+    text-decoration: none;
+    color: var(--plum);
+}
+
+#page_nav ul li a:hover {
+    color: var(--pink-white);
+    border: 4px solid var(--plum);
+    background-color: var(--plum);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+/* Camera */
+#gs_section_1 {
+    transform: translate(0px, 600px);
+}
+
+#intro_sec_1 h1 {
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#intro_sec_1 p {
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    border: 5px;
+    width: 1000px;
+    transform: translate(450px, 0px);
+}
+
+#camera_rows {
+    position: absolute;
+    transform: translate(150px, 150px);
+    width: 1500px;
+    justify-content: center;
+}
+
+#camera_identifier {
+    font-size: 20px;
+}
+
+#desc_cameras {
+    font-size: 16px;
+    margin: 5px 0px;
+    padding: 0px 50px;
+    text-align: center;
+}
+
+#desc_cameras1 td, #desc_cameras2 td {
+    padding: 0px 50px;
+    text-align: center;
+}
+
+#top_row img, #bottom_row img {
+    align-items: center;
+    width: 180px;
+}
+
+#bottom_row th, #camera_identifier2 th, #desc_cameras2 td {
+    justify-content: center;
+    transform: translate(250px, 80px);
+}
+
+/* CONTENT SECTION */
+
+#about {
+    background-color: var(--light-gray);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 12px;
+    position: relative;
+    border-left: 6px solid var(--primary-purple);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#about::after {
+    content: "Capturing moments that last forever";
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background-color: var(--accent-pink);
+    color: var(--dark-gray);
+    padding: 12px 16px;
+    border-radius: 20px;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    max-width: 200px;
+}
+
+#services {
+    padding: 30px;
+    margin: 30px 0;
+    border: 2px solid var(--light-purple);
+    border-radius: 12px;
+    background-color: var(--white);
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#services h3 {
+    background-color: var(--light-gray);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 15px 0 10px 0;
+    position: relative;
+    border-left: 4px solid var(--primary-purple);
+    transition: all 0.3s ease;
+}
+
+#services h3:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact {
+    background-color: var(--accent-pink);
+    padding: 40px 30px;
+    border-radius: 12px;
+    margin: 30px 0;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+#contact::before {
+    content: "💌";
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 24px;
+}
+
+#contact::after {
+    content: "📞";
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+}
+
+/* UTILITY */
+
+.text-center {
+    text-align: center;
+    position: relative;
+}
+
+.highlight {
+    background-color: var(--light-purple);
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 2px solid var(--primary-purple);
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.highlight::before {
+    content: "✨";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 16px;
+}
+
+.highlight::after {
+    content: "✨";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    font-size: 16px;
+}
+
+/* BUTTON STYLE */
+
+button {
+    background-color: var(--primary-purple);
+    color: var(--white);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 90, 140, 0.3);
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+button:hover {
+    background-color: var(--dark-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(107, 76, 109, 0.4);
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+/* FOOTER STYLES */
+
+.footer {
+    background-color: var(--dark-purple);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    position: relative;
+    border-top: 4px solid var(--primary-purple);
+}
+
+.footer::before {
+    content: "📸";
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.footer::after {
+    content: "✨";
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        padding-top: 70px;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 10px;
+        padding: 12px;
+    }
+    
+    /* decorative elements on mobile */
+    h2::before,
+    #about::after,
+    #services h3::after,
+    .highlight::before,
+    .highlight::after,
+    .header::before,
+    .header::after,
+    #contact::before,
+    #contact::after,
+    .footer::before,
+    .footer::after {
+        display: none;
+    }
+    
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    #about, #services, #contact {
+        padding: 20px 15px;
+        margin: 20px 0;
+    }
+    
+    /* mobile styles */
+    #bodyContent1, #bodyContent2, #bodyContent3 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    #contImg1, #contImg2, #contImg3 {
+        float: none;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    /* mobile styles */
+    #getting, #started {
+        font-size: 48px;
+        transform: translate(20px, 50px);
+    }
+    
+    #page_nav_box {
+        transform: translate(20px, 200px);
+        width: 200px;
+    }
+}
