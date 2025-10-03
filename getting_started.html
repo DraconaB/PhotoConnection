@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Getting Started</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CollaborativePhotoConnectionStyle_update.css" rel="stylesheet">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins');</style>
+    <title>Getting Started</title>
+    <style>
+        body {
+            color: #0F110C;
+            display:flex;
+        }
+        /*navigation box on the side of the page*/
+        #page_nav_gs{
+            position: absolute;
+            display: block;
+            transform: translate(1250px, -170px);
+        }
+        #page_nav_box_gs{
+            border: 5px solid #FDECEF;/*5px thick solid border with a custom pink white color*/
+            background-color: #FDECEF;/*custom pink white color border*/
+            margin: 5px;/*5px margin all around*/
+            padding: 5px;/*5px padding all around*/
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);/*creation of a box shadow*/
+            border-radius: 12px;/*rounding the edges by 12 px*/
+            width: 270px;/*increasing box width*/
+            height: 60px;
+        }
+
+        #page_nav_box_gs h3{
+            font-weight: 200;/*thin font weight*/
+            text-align: center;/* aligning text center*/
+            font-size: 26px;/*font size change to 20px*/
+            color: #612940;/*custom plum color*/
+        }
+        #page_nav_gs ul{
+            list-style: none;/*no bullet points*/
+            width: 350px;/*width change to keep the list in a column rather than spanning across the entire page*/
+        }
+        #page_nav_gs ul li{
+            font-size: 18px;/*font size change*/
+            padding: 5px 0px;/*increase top and bottom padding by 10px*/
+        }
+        #page_nav_gs ul li a{
+            font-weight: 100;
+            text-decoration: none;/*remove text decoration for links*/
+            color: #612940;/*custom plum color*/
+        }
+        #page_nav_gs ul li a:hover{
+            color: #FDECEF;/*custom pink white*/
+            border: 4px solid #612940;/*4px solid border with a custom plum color*/
+            background-color: #612940;/*custom plum color background*/
+            border-radius: 4px;/*rounded border radius*/
+            transition: 0.5s;/*0.5s transition for box when hovering*/
+        }
+    </style>
+</head>
+    <body>
+        <div id="container">
+            <div id="main">
+                <section class="navigation_bar">
+                    <nav>
+                        <a href="getting_started.html"><img src="images/photologo.svg" alt="logo"></a>
+                        <!--navbar links-->
+                        <div class="nav_links">
+                            <ul class="tag_list">
+                                <li><a href="">Networking</a></li>
+                                <li><a href="">Getting Started</a></li>
+                                <li><a href="">Portfolios</a></li>
+                                <li><a href="">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="rightside">
+                            <div>
+                            <img src="images/mail.png" alt="contact mail icon">
+                            <a href="" class="contact">Contact Us</a>
+                            </div>
+                            <div class="searchbar">
+                                <input type="text" placeholder="search">
+                            </div>
+                        </div>
+                    </nav>
+                    <!--Closing tag for section "navigation_bar"-->
+                </section>
+
+                <!--Getting Started Section 1-->
+                <section>
+                    <div id="title_gs">
+                        <h1 id="getting_gs">Getting</h1>
+                        <h1 id="started_gs">Started</h1>
+                    </div>
+                    <img src="images/camera_gs.png" alt="camera picture for logo" class="camera_logo">
+                    <div id="pad_title_state">
+                        <p id="title_statement">It is important to have the right tools when and practices when capturing your shots. This page will guide you on the best cameras, apps and tips to succeed in photography.
+                        </p>
+                    </div>
+                    <div id="page_nav_gs">
+                        <div id="page_nav_box_gs">
+                            <h3>Page Navigation</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#camera_use">What Camera Should I Use?</a></li>
+                            <li><a href="#edit_app_use">What Photo Editing App Should I Use?</a></li>
+                            <li><a href="#imp_prac_tips">Important Practices and Tips</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--divider-->
+                <div class="divider1_gs">
+                    <img src="images/divider1_gs.svg" style="top: 75%;">
+                </div>
+                <!--What Camera Should I Use? Section 2-->
+                <section id="camera_use">
+                    <div id="intro_sec_1">
+                        <h1>What Camera Should I Use?</h1>
+                        <p>The most essential part of photography is the camera. While using your phone is a good option when starting out, you should branch out to more niche devices that will truly put you into the photographer life.</p>
+                    </div>
+
+                    <table id="camera_rows">
+                        <tr id="top_row">
+                            <th><img src="images/Fujifilm_X-T50.png" alt="picture of a Fujifilm X-T50 camera"></th>
+                            <th><img src="images/Fujifilm_X-T5.png" alt="picture of a Fujifilm X-T5 camera"></th>
+                            <th><img src="images/Nikon_ZF.png" alt="picture of a Nikon_ZF camera"></th>
+                        </tr>
+                        <tr id="camera_identifier1">
+                            <th>Fujifilm X-T50</th>
+                            <th>Fujifilm X-T5</th>
+                            <th>Nikon ZF</th>
+                        </tr>
+                        <tr id="desc_cameras1">
+                            <td>More classic and affordable than the Fujifilm X-T5, with a 40.2MP X-Trans CMOS 5 sensor.</td>
+                            <td>High-end APS-C multimedia mirrorless camera, with the highly sought feature of a 40MP APS-C X-Trans 5 BSI sensor.</td>
+                            <td>Old-school ergonomic FX-format camera with improved auto-focus tracking.</td>
+                        </tr>
+                        <!--Bottom Camera Row-->
+                        <tr id="bottom_row">
+                            <th><img src="images/Leica_Q3.png" alt="picture of a Leica Q3 camera"></th>
+                            <th><img src="images/Ricoh_GR_III.png" alt="picture of a Ricoh GR III camera"></th>
+                        </tr>
+                        <tr id="camera_identifier2">
+                            <th>Leica Q3</th>
+                            <th>Ricoh GR III</th>
+                        </tr>
+                        <tr id="desc_cameras2">
+                            <td>If you are looking to splurge, this luxury camera sits with a 60MP full-frame sensor with MAESTRO IV image processing.</td>
+                            <td>Pocket sized camera with a fixed lens, SLR-quality images and an updated 24.2 MP CMOS sensor.</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!--divider-->
+                <div class="divider1_gs">
+                    <img src="images/divider2_gs.png" style="top: 205%;">
+                <!--What photo editing app should I Use?-->
+                <section id="edit_app_use">
+                    <div class="edit_app_title">
+                        <h2>What Photo Editing App Should I Use?</h2>
+                        <p>Photo editing apps are a great software a photographer can use to set the mood and concept they want to convey towards their audience and themselves. It is important to utilize such apps to push your photography to the next level.</p>
+                    </div>
+                    <div id="edit_app">
+                        <div id="app_lit">
+                            <h3>Lightroom</h3>
+                            <img src="images/lightroom_logo.svg">
+                            <p>Lightweight app, equipped with a myriad of tools such as filters, masking, selection and AI healing tools.</p>
+                        </div>
+                        <div id="app_pol">
+                            <h3>polarr</h3>
+                            <img src="images/polarr_logo.svg">
+                            <p>Desktop quality tools that have the popular features of AI filters and editing.</p>
+                        </div>
+                        <div id="app_phot">
+                            <h3>Photoshop</h3>
+                            <img src="images/photoshop_logo.svg">
+                            <p>While this app is more expensive than its competition, it is the industry standard, equipped with a lot more options than your typical photo editing app and higher res photos.</p>
+                        </div>
+                    </div>      
+                </section>
+                <!--Divider 3-->
+                <div class="divider1_gs"><img src="images/divider3_gs.png" style="top: 320%;"></div>    
+                
+                <section id="imp_prac_tips">
+                    <div id="imp_prac_tips_title">
+                        <h2>Important Practices and Tips</h2>
+                        <p>Having the best camera and photo editing app in the world might help tremendously, but it won’t magically grant you those cherished pictures you seek. It is important to be knowledgeable about tips from experienced photographers and stick with best practices to capture those coveted photos.</p>
+                    </div>  
+                         
+                    <div id="imp_prac_tips_rows">
+                        <div id="imprac_text">
+                            <h3>Know Your Camera</h3>
+                            <img src="images/camera_gs.png" alt="a png of a non-specific camera">
+                            <p>Before jumping into taking photos, it is important to know the camera you are working with. Read the manual, analyze the features and get comfortable with the device. A tip from a national geographic photographer is to put the camera in “program” mode.</p>
+                        </div>
+                        <div id="imprac_text">
+                            <p>Cameras are notoriously expensive and that creates a barrier for those starting in photography to develop their passion. Both online and brick and mortars offer stunning cameras for rent at a fraction of the original cost! A well known site to offer such services is <strong>lensrentals</strong>.</p>
+                            <h3>Rent First, You can Buy Later</h3>
+                            <img src="images/camera2_buylater.png" alt="choose to rent a camera before buying one visual">
+                        </div>
+                        <div id="imprac_text">
+                            <h3>Understand the basics of composition</h3>
+                            <img src="images/composition.png" alt="three bars representing composition">
+                            <p>It is essential to balance all of the elements you want to capture. This can be done by using negative space and distributing weight organically in photos with the rule of thirds. When taking in a frame, divide it horizontally in thirds to see where your photo can be obtained with the most value.</p>
+                        </div>
+                        <div id="imprac_text">
+                            <p>Most modern cameras have the ISO feature. This feature helps with exposure and it is essential when taking photos. For the best quality, put your camera in automatic-mode which is the “native ISO”.</p>
+                            <h3>Use auto ISO</h3>
+                            <img src="images/useiso.png" alt="camera ISO png">
+                        </div>
+                        <div id="imprac_text">
+                            <h3>Have Fun!</h3>
+                            <img src="images/Smile.png" alt="smiley face">
+                            <p>While photography is highly regarded as a professional hobby, it doesn't mean you can't have fun in the process. So many undiscovered photos are yet to be taken through playing around with your subject. Take shots from angles you wouldn’t usually consider, fill in spaces you ought to leave empty and try to get a reaction out of yourself when you take these photos.</p>
+                        
+                        </div>
+                </section>
+                <!--Closing tag for div "main"-->
+            </div>                    
+    <!--Closing tag for div "container"-->
+        </div>
+    <footer id="footer">
+        <div class="col">
+            <div class="col"></div>
+        </div>
+        <div class="col">
+            <h3>Resources</h3>
+                <ul>
+                    <li><a href="">Getting Started</a></li>
+                    <li><a href="">Model Job Post</a></li>
+                    <li><a href="">Portfolio Creation</a></li>
+                    <li><a href="">Photographer Networking</a></li>
+                    <li><a href="">Photogrpaher Reccomendations</a></li>
+                </ul>
+        </div>
+        <div class="col">
+            <h3>About Us</h3>
+        </div>    
+        <div class="col">
+            <h3>Contact Us</h3>
+        </div>
+        <div class="col">
+            <div class="ss_links">
+                <a href=""><img src="images/x.png"></a>
+                <a href=""></a><img src="images/youtube.png"></a>
+                <a href=""></a><img src="images/instagram.png"></a>
+                <a href=""></a><img src="images/linkedin.png"></a>
+            </div>
+
+        </div>
+        <hr>
+        <p class="copyright">Photo Connection &copy 2025</p>
+    </footer>
+    </body>
+</html>

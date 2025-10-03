@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="CollaborativePhotoConnectionStyle_update.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins');
+    .mjf_div{
+        position: relative;
+        width: 1400px;
+        left: 200px;
+        height: 1px;
+        background: #36343B;
+        background-size: cover;
+        background-position: center;
+    }
+    /*font size for the labels*/
+    #location, #overview, #specifications label{
+        font-size: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="main">
+            <header>
+                <section class="navigation_bar">
+                    <nav>
+                        <a href="getting_started.html"><img src="images/photologo.svg" alt="logo"></a>
+                            <!--navbar links-->
+                            <div class="nav_links">
+                                <ul class="tag_list">
+                                    <li><a href="">Networking</a></li>
+                                    <li><a href="">Getting Started</a></li>
+                                    <li><a href="">Portfolios</a></li>
+                                    <li><a href="">About Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="rightside">
+                                <div>
+                                    <img src="images/mail.png" alt="contact mail icon">
+                                    <a href="" class="contact">Contact Us</a>
+                                </div>
+                                <div class="searchbar">
+                                    <input type="text" placeholder="search">
+                                </div>
+                            </div>
+                    </nav>
+                        <!--Closing tag for section "navigation_bar"-->
+                </section>
+            </header>
+            <main>
+<!--MODEL JOB FORM BEGINNING-->
+<!--DIVIDIERs-->
+                <div class="mjf_div" style="top: 440px"></div>
+                <div class="mjf_div" style="top: 890px"></div>
+                <div class="mjf_div" style="top: 1300px"></div>
+                <div class="mjf_div" style="top: 1700px"></div>
+        <!--TITLE-->
+                <div class="mjf_title">
+                    <h1>MODEL JOB FORM</h1>
+                </div>
+                <div class="req_stat">
+                    <p>(*)Required Information</p>
+                </div>
+                    <!--FORM BEGINS-->
+                <section id="form_container">
+                    <form action="#" id="mj_form">
+                            <!--OVERVIEW-->
+                        <div id="overview">
+                            <h2>Overview</h2>
+                            <div id="overview_input">
+                                <label for="title" style="font-weight: bold; letter-spacing: 0.5px;">Title*</label>
+                                <input type="text" placeholder="Title of Photoshoot" required>
+                            </div>
+                            <div id="overview_input" style="transform: translate(900px, 0px);">
+                                <label for="Description" style="font-weight: bold; letter-spacing: 0.5px;">Description*</label>
+                                <p style="width: 400px; font-size: 15px; font-style: italic; letter-spacing: 0.5px;">What does the photshoot entail?</p>
+                                <textarea name="desc" rows="4" cols="50"></textarea required>
+                            </div>
+                        </div>
+                            <!--LOCATION-->
+                        <div id="location">
+                            <h2>Location</h2>
+                            <div id="location_input">
+                                <label for="state" style="font-weight: bold; letter-spacing: 0.5px;">State*</label>
+                                <input type="text" placeholder="State" style="font-size: 20px" required>
+                            </div>
+                            <div id="location_input">
+                                <label for="city" style="font-weight: bold; letter-spacing: 0.5px;">City*</label>
+                                <input type="text" placeholder="City" style="font-size: 20px" required>
+                            </div>
+                            <div id="date_input">
+                                <label for="date" style="font-weight: bold; letter-spacing: 0.5px;">Date*</label>
+                                <input type="date" placeholder="mm/dd/yy" style="font-size: 20px; color: grey" required>
+                            </div>
+                        </div>    
+                            <!--SPECIFICATIONS-->
+                        <div id="specifications">
+                            <h2>Specifications</h2>
+                            <div id="specifications_input">
+                                <label for="total_hours" style="font-weight: bolder; letter-spacing: 0.5px;">Total Job Hours*</label>
+                                <p style="font-style: italic; font-size: 15px;">(can be an estimate)</p>
+                                <input type="number" placeholder="Total Hours" style="font-size: 20px" required>
+                            </div>
+                            <div id="specifications_input">
+                                <label for="total-pay" style="font-weight: bold; letter-spacing: 0.5px;">Total Pay*</label>
+                                <input type="number" placeholder="$0" style="font-size: 20px" required>
+                            </div>
+                        </div>
+                                <!--RADIO-->
+                        <div id="experience_input">
+                                <p style="font-weight: bold; font-size: 20px; letter-spacing: 0.5px;">Experience Level</p>
+                            <div>
+                                <input type="radio" name="experience" value="Beginner" id="beg">
+                                <label for="beginner">Beginner</label>
+                                        
+                            </div>
+                            <div>
+                                <input type="radio" name="experience" value="Intermediate" id="inter">
+                                <label for="intermediate">Intermediate</label>
+                                        
+                            </div>
+                            <div>
+                                <input type="radio" name="experience" value="Expert" id="exp">
+                                <label for="expert">Expert</label>
+                                        
+                            </div>
+                                    <!---->
+                        </div>
+                        <div id="submission">
+                            <input type="submit">
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+        <!--FOOTER-->
+    <footer id="footer">
+        <div class="col">
+        <div class="col"></div>
+        <div class="col"></div>
+        </div>
+        <div class="col">
+            <h3>Resources</h3>
+                <ul>
+                    <li><a href="">Getting Started</a></li>
+                    <li><a href="">Model Job Post</a></li>
+                    <li><a href="">Portfolio Creation</a></li>
+                    <li><a href="">Photographer Networking</a></li>
+                    <li><a href="">Photogrpaher Reccomendations</a></li>
+                </ul>
+        </div>
+        <div class="col">
+            <h3>About Us</h3>
+        </div>    
+        <div class="col">
+            <h3>Contact Us</h3>
+        </div>
+        <div class="col">
+            <div class="ss_links">
+                <a href=""><img src="images/x.png"></a>
+                <a href=""></a><img src="images/youtube.png"></a>
+                <a href=""></a><img src="images/instagram.png"></a>
+                <a href=""></a><img src="images/linkedin.png"></a>
+            </div>
+
+        </div>
+        <hr>
+        <p class="copyright">Photo Connection &copy 2025</p>
+    </footer>
+</body>
+</html>
