@@ -4,7 +4,7 @@
     <title>Getting Started</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="CollaborativePhotoConnectionStyle.css" rel="stylesheet">
+    <link href="CollaborativePhotoConnectionStyle_update.css" rel="stylesheet">
     <style>@import url('https://fonts.googleapis.com/css2?family=Poppins');</style>
     <title>Getting Started</title>
     <style>
@@ -62,25 +62,27 @@
             <div id="main">
                 <section class="navigation_bar">
                     <nav>
-                        <a href="getting_started.html"><img src="images/photologo.svg" alt="logo"></a>
-                        <!--navbar links-->
-                        <div class="nav_links">
-                            <ul class="tag_list">
-                                <li><a href="">Networking</a></li>
-                                <li><a href="">Getting Started</a></li>
-                                <li><a href="">Portfolios</a></li>
-                                <li><a href="">About Us</a></li>
-                            </ul>
-                        </div>
-                        <div class="rightside">
-                            <div>
-                            <img src="images/mail.png" alt="contact mail icon">
-                            <a href="" class="contact">Contact Us</a>
-                            </div>
-                            <div class="searchbar">
+                        <header>
+                            <a href="index.html">
+                                <img class= "Logo" src="PhotoConnectionLogo.png" alt="Our logo. An image of a camera inside a circle surrounded by another circle with text saying Photo Connection and two stars on either side of the camera image in the outer ring." width="95" height="95">
+                            </a>
+                            <ul>
+                                <li>Networking</li>
+                                <li>Getting Started
+                                    <ul id="dropdown">
+                                        <li><a href="#">Portfolio Creation</a></li>
+                                        <li><a href="#">Model Job Post</a></li>
+                                        <li><a href="#">Photography Reccomendations</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li>Portfolios</li>
+                                <li>About Us</li>
                                 <input type="text" placeholder="search">
-                            </div>
-                        </div>
+                                <button type="submit"><img src="searchIcon.jpg" alt="Magnifying glass icon" width="15" height="15"></button>
+                                <li style="display: list-item; margin-left: 1065px; margin-top: -120px">Contact Us</li>
+                            </ul>
+                        </header>
                     </nav>
                     <!--Closing tag for section "navigation_bar"-->
                 </section>
@@ -253,3 +255,4 @@
     </body>
 
 </html>
+
