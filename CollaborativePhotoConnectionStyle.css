@@ -436,118 +436,80 @@
 }
 
 /*Mei Lan Bargas CSS*/
-
 /*Getting Started Introduction Section*/
-#title{
-    margin: /*t*/0px /*r*/10px/*b*/0px/*l*/160px;
+.divider1_gs img {
+    position: absolute;/*keep the dividers in their own positioning, not dependent on other elements*/
+    display: inline;/*the divider image will stay within the default page width*/
+    width: 100%;/*the divider will fit the width of 100% of the page*/
+    background-size: cover;/*the image will cover the background of the page*/
+    background-position: center;/*the image divider will be in the center of the background of the page*/
 }
-#getting{
-    position: absolute;/*title not dependent on other elements*/
+#title_gs{
+    margin: /*t*/0px /*r*/10px/*b*/0px/*l*/160px;/*the title margin is 10 px right and 160 px for positioning*/
+    left: 50px;/*title is moved 50 px from the left*/
+    top:200px;/*title is moved 200 px from the top*/
+    position: relative;/*position is made relative in order to move the title top and left*/
+}
+#getting_gs{
     font-weight: 400;/*slim down font weight*/
     font-size: 98px;/*increase font size*/
     background: linear-gradient(90deg, #0F110C 3%, #6C534E 45.71%);/*custom gradient plum and brown*/
     -webkit-text-fill-color: transparent;/*fill color transparent for the gradient*/
     background-clip: text;/*clip the text to gradient*/
-    transform: translate(50px, 90px);/*custom title move along the x and y axis*/
+    transform: translate(50px, 100px);/*custom title move along the x and y axis*/
 }
-#started{
-    position: absolute;/*title not dependent on other elements*/
+#started_gs{
     font-weight: 400;/*slim down font weight*/
     color: #6C534E;/*custom color plum*/
     font-size: 128px;/*increase font size*/
-    transform: translate(70px, 155px);/*custom title move along the x and y axis*/
+    transform: translate(70px, 20px);/*custom title move along the x and y axis*/
 }
 .camera_logo{
-    transform: translate(500%, 160%);/*custom png move along the x and y axis*/
+    transform: translate(625px, 0px);/*moved the camera img into its custom spot next to the page title*/
 }
 #pad_title_state{
-    position: absolute;/*p not dependent on other elements*/
-    margin: 0px 0px 0px 5px;/*right margin increase*/
-    transform: translate(290px, 250px);/* p element move along the x and y axis*/
+    transform: translate(315px, 125px);/* p element move along the x and y axis*/
 }
 #title_statement{
-    padding-right: 60%;/*padding right by 60%*/
+    width:690px;/*width change in the p element to a custom length*/
     font-size: 18px;/*font size 18px*/
     font-weight: lighter;/*thinning the font*/
     color:#0F110C;/*custom black font color*/
 }
-#page_nav_box{
-    position: absolute;/*box not dependent on other elements*/
-    border: 5px solid #FDECEF;/*5px thick solid border with a custom pink white color*/
-    background-color: #FDECEF;/*custom pink white color border*/
-    margin: 5px;/*5px margin all around*/
-    padding: 5px;/*5px padding all around*/
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);/*creation of a box shadow*/
-    border-radius: 12px;/*rounding the edges by 12 px*/
-    width: 270px;/*increasing box width*/
-    height: 30px;/*box height increase*/
-    transform: translate(1300px, 33px);/* div element move along the x and y axis*/
-}
 
-#page_nav_box h3{
-    font-weight: 200;/*thin font weight*/
-    text-align: center;/* aligning text center*/
-    font-size: 26px;/*font size change to 20px*/
-    color: #612940;/*custom plum color*/
-}
-#page_nav ul{
-    position: absolute;/*ul not dependent on other elements*/
-    display: block;/*uniform style for ul*/
-    list-style: none;/*no bullet points*/
-}
-#page_nav ul li{
-    transform: translate(1300px, 100px);/* li element move along the x and y axis*/
-    font-size: 18px;/*font size change*/
-    padding: 10px 0px;/*increase top and bottom padding by 10px*/
-}
-#page_nav ul li a{
-    text-decoration: none;/*remove text decoration for links*/
-    color: #612940;/*custom plum color*/
-}
-#page_nav ul li a:hover{
-    color: #FDECEF;/*custom pink white*/
-    border: 4px solid #612940;/*4px solid border with a custom plum color*/
-    background-color: #612940;/*custom plum color background*/
-    border-radius: 2px;/*rounded border radius*/
-    transition: 0.5s;/*0.5s transition for box when hovering*/
-}
-
+/*------------------------------------------------*/
 /*What Camera Should I Use?*/
-#gs_section_1{
-    transform: translate(0px, 600px);/*class element move along the x and y axis*/
+#camera_use{
+    position: relative;/*keeping the camera section in its normal positioning compared to the elements before it + allowing for more customization with other declaratives*/
+    margin: 50px 0px;/*adding 50px margin to the top and bottom for breathability*/
+    top: 420px;/*aligning the section where I want it, 420 px from the top of the page*/
 }
 #intro_sec_1 h1{
+    display: inline;/*keeping elements from veering off the page horizontally*/
     font-size: 50px;/*font size change*/
     font-weight: lighter;/*font weight change to slimmer*/
     text-align: center;/*aligning text to center*/
+    position: relative;/*positiion is made relative to utilize the left declarative and keep it with the page flow*/
+    left: 600px;/*moving the h1 600px from the left of the screen*/
 }
 #intro_sec_1 p{
     font-size: 16px;/*font size change to 16px*/
     text-align: center;/*aligning text to the center*/
-    position: absolute;/*p not dependent on other elements*/
     border: 5px;/*border 5px increase*/
     width: 1000px;/*width of p changeed to 1000px*/
     transform: translate(450px, 0px);/*p element move along the x and y axis*/
 }
-
 #camera_rows{
-    position: absolute;
-    transform: translate(150px, 150px);/*id element move along the x and y axis*/
-    width: 1500px;/*increase wdith 1500px*/
-    justify-content: center;/*centering content in the id*/
+   transform: translate(170px, 150px);/*translating the camera rows 170px on the x axis and 150px on the y axis to provide centering and breathability for other elements*/
 }
 #camera_identifier{
-    font-size: 20px;/*modifying font size*/
-}
-#desc_cameras{
-    font-size: 16px;/*modifying font size*/
-    margin: 5px 0px;/*margin top and bottom increase while left and right stay at 0*/
-    padding: 0px 50px;/*padding top and bottom stay the same while left and right stay at 50px*/
-    text-align: center;/*aligning text to center*/
+    font-size: 20px;/*modifying font size to 20px*/
 }
 #desc_cameras1 td, #desc_cameras2 td{
     padding: 0px 50px 0px 50px;/*td has increased in left and right padding*/
     text-align: center;/*aligning text to center*/
+    font-size: 16px;/*modifying font size*/
+    width:500px;/*adjusting the td width to keep the text more boxed up in relation to the camera it is describing*/
 }
 #top_row img, #bottom_row img{
     align-items: center;/*aligning items to center*/
@@ -557,367 +519,240 @@
     justify-content: center;/*centering content in the id*/
     transform: translate(250px, 80px);/*id element move along the x and y axis*/
 }
+
+/*------------------------------------------------*/
 /*What Photo Editing App Should I Use?*/
-.edit_app_use {
-    position: absolute;/*content is not dependent on other page elements*/
-    align-items: center;/*aligning items to center*/
-    transform: translate(0px, 1900px);/*class element move along the x and y axis*/
-}
-.edit_app_title{
-    font-size: 20px;/*modifying font size*/
-    position: absolute;/*content is not dependent on other page elements*/
-    text-align: center;/*aligning text to center*/
-    color: #0F110C;/*custom font black color*/
-    transform: translate(450px, 0px);/*class element move along the x and y axis*/
+#edit_app_use {
+    position: relative;/*keeping the position of the element where it would normally be to also allow for top declarative adjustment*/
+    top: 1000px;/*adjusting the section to be 1100 px from the top of the page*/
 }
 /*What Photo Editing App Should I Use? - Title*/
-.edit_app_use .edit_app_title h2{
-    font-size: 50px;/*modifying font size*/
-    font-weight: 400;/*increasing font weight*/
-    text-align: center;/*alignign text to center*/
-}
-.edit_app_use .edit_app_title p{
-    font-weight: 400;/*font weight to slim down text*/
-    font-size: 16px;/*modifying font size*/
-    line-height: 26px;/*line height to give space*/
+.edit_app_title h2{
+    display: inline;/*formating the H2 to stay within the flow of the page and fit on its line*/
+    font-size: 50px;/*font size change*/
+    font-weight: lighter;/*font weight change to slimmer*/
     text-align: center;/*aligning text to center*/
+    position: relative;/*positiion is made relative to utilize the left declarative and keep it with the page flow*/
+    left: 500px;/*moving the h1 600px from the left of the screen*/
+}
+.edit_app_title p{
+    font-size: 16px;/*font size change to 16px*/
+    text-align: center;/*aligning text to the center*/
+    border: 5px;/*border 5px increase*/
+    width: 1000px;/*width of p changeed to 1000px*/
+    transform: translate(450px, 0px);/*p element move along the x and y axis*/
 }
 /*App Suggestions*/
-.edit_app_rows  {
-    display: flex;/*create a flexible content row*/
-    justify-content: space-between;/*giving space between rows*/
-    align-items: center;/*aligning items to center*/
-    gap: 50%;/*giving a 50% gap*/
-    transform: translate(100px, 220px);/*class element move along the x and y axis*/
+#edit_app{
+    display: grid;/*grid display to block organize photo apps divs*/
+    grid-template-columns: repeat(2, 1fr);/*using grid columns for divs to have 2 columns that have 1 fraction each*/
+    column-gap: 150px;/*150px gap between columns*/
+    transform: translate(170px, 100px);/*moving the div 240px on the x axis and 100px on the y axis*/
 }
-.edit_app_rows .edit_app_col h3{
+#edit_app #app_phot{
+    transform: translate(500px, 30px);/*the photoshop div veered too far the left, so it was translated 500px on the x axis and 30px on the y axis to give the other divs more breathing room*/
+}
+#edit_app h3{
+    position: relative;/*the h3 is now relative to the placement of the div container, making it easier for me to center the text*/
+    text-align: center;/*aligning the h3 text to center*/
+    font-size: 20px;/*modiying the font size to 20px*/
+    right: 180px;/*moving the h3 85px from the right of the page to center it*/
+    padding: 5px 0px;/*adding top and bottom padding to give breathing room from the images*/
+}
+#edit_app p{
     text-align: center;/*aligning text to center*/
-    font-size: 24px;/*modifying font size*/
-    font-weight: 600;/*increasing font weight to 600*/
+    font-size: 16px;/*modifying font size for better readability to 16px*/
+    width: 500px;/*adjusting the p width so it won't span across the page*/
 }
-.edit_app_rows .edit_app_col img{
-    display: block;/*uniform images*/
-    margin-left: auto;/*automated margin*/
-    margin-right: auto;/*automated margin*/
-    width: 100px;/*img width 100px*/
-
-}
-.edit_app_rows .edit_app_col p{
-    text-align: center;/*text aligning items to center*/
-    margin-top: 2%;/*adding a 2% margin top*/
-    font-size: 16px;/*modifying font size*/
-    line-height: 25px;/*line height 25px for line space*/
-    font-weight: 400;/*font weight slimmed down*/
-    width: 500px;/*widith of p is 500px*/
-}
-/*Second Editing App Row*/
-.edit_app_rows2{
-    display: flex;/*flexible contents*/
-    justify-content: space-between;/*space between elements*/
-    gap: 50%;/*gap of 50% for elements*/
-    align-items: center;/*aligning items to center*/
-    width: 100%;/*increasing the width to 100%*/
-    transform: translate(650px, 220px);/*class element move along the x and y axis*/
-}
-.edit_app_rows2 .edit_app_col2 img{
-    display: block;/*img as a block for uniformity*/
-    margin-left: auto;/*automated margin*/
-    margin-right: auto;/*automated margin*/
-    width: 100px;/*img width 100px*/
-}
-.edit_app_rows2 .edit_app_col2 h3{
-    text-align: center;/*aligning text to center*/
-    font-size: 24px;/*modifying font size*/
-    font-weight: 600;/*increasing font weight to 600*/
-}
-.edit_app_rows2 .edit_app_col2 p{
-    text-align: center;/*text aligning items to center*/
-    margin-top: 2%;/*adding a 2% margin top*/
-    font-size: 16px;/*adding a 2% margin top*/
-    line-height: 25px;/*modifying font size*/
-    font-weight: 400;/*font weight slimmed down*/
-    width: 500px;/*widith of p is 500px*/
+#edit_app img{
+    transform: translate(200px, 0px);/*aligning the images 200 px on the x axis since it veered to far left*/
+    position: relative;/*keeps the p element from intersecting with the img elements*/
+    width: auto;/*keeping the auto image width so it won't bloat the page*/
 }
 
+/*------------------------------------------------*/
 /*Important Practices and Tips*/
-.imp_prac_tips {
-    position: absolute;/*content is not dependent on other page elements*/
-    align-items: center;/*aligning items to center*/
-    font-size: 20px;/*modifying font size*/
-    transform: translate(150px, 2990px);/*class element move along the x and y axis*/
+#imp_prac_tips {
+    position: relative;
+    top: 1500px;
+}
+#imp_prac_tips_title h2{
+    font-size: 50px;
+    text-align: center;
+}
+#imp_prac_tips_title p{
+    font-size: 16px;
+    text-align: center;
+    padding: 0px 250px;
+}
+#imprac_text{
+    position: relative;
+    display: grid;
+    margin: 10px 300px;
+    top: 150px;
+    text-align: left;
+    grid-template-columns: 1fr 2fr;/*alternating the fraction space of the columns when alternating tips/practices*/
+    grid-template-rows: repeat(5, 1fr);
+}
+#imprac_text:nth-child(even){
+    text-align: right;/*every nth child with an even positioning will have their text aligned right*/
+    grid-template-columns: 2fr 1fr;/*alternating the fraction space of the columns when alternating tips/practices*/
 }
 
-.imp_prac_tips_title{
-    text-align: center;/*aligning text to center*/
-    color: #0F110C;/*custom black color*/
+#imprac_text h3{
+    transform: translate(0px, -40px);
 }
-/*Important Practices and Tips - Title*/
-.imp_prac_tips .imp_prac_tips_title h2{
-    font-size: 50px;/*font size modification*/
-    font-weight: 400;/*font weight slimmed down*/
-    line-height: 55px;/*55px line height to give space for text*/
-    text-align: center;/*aligning text to center*/
+#imprac_text img{
+    width: auto;
+    transform: translate(20px, 10px);
 }
-.imp_prac_tips .imp_prac_tips_title p{
-    margin-top: 45px;/*margin top increase by 45px*/
-    font-weight: 400;/*font weight slimmed down*/
-    font-size: 16px;/*font size modification*/
-    text-align: center;/*aligning text to center*/
-    width: 1000px;/*increasing p width*/
-    transform: translate(300px, 0px);/*class element move along the x and y axis*/
-}
-/*Tips and Practices*/
-.imp_prac_tips_col_left, .imp_prac_tips_col_left{
-    transform: translate(50px, 0px);/*class element move along the x and y axis*/
-}
-/*left*/
-.imp_prac_tips_rows_left {
-    display: flex;/*creating a flexible container*/
-    justify-content: space-between;/*space between elements*/
-    width: 100%;/*increasing class width*/
-    transform: translate(0px, 100px);/*class element move along the x and y axis*/
-    margin: 20px 0px;/*increase in overall margin top/bottom not left/right*/
-    padding: 20px;/*increase in overall padding top/bottom left/right*/
-}
-.imp_prac_tips_rows_left .imp_prac_tips_col_left h3{
-    text-align: left;/*aligning text left*/
-    font-size: 20px;/*font size increase 20px*/
-    font-weight: 600;/*font weight increase*/
-    margin-bottom: 1%;/*increase bottom margin 1%*/
-}
-.imp_prac_tips_rows_left .imp_prac_tips_col_left img{
-    float: left;/*float images to the left*/
-    width: auto;/*width is automatic to image*/
-    margin: 10px;/*increase in overall margin top/bottom left/right*/
-    padding: 10px;/*increase in overall padding top/bottom left/right*/
-}
-.imp_prac_tips_rows_left .imp_prac_tips_col_left p{
-    text-align: left;/*aligning text to the left*/
-    font-size: 18px;/*font size modification*/
-    line-height: 25px;/*line height increased for space*/
-    font-weight: 400;/*font weight slim*/
-    width: 1200px;/*wdith 1200px for p*/
-    transform: translate(90px, 0px);/*class element move along the x and y axis*/
-    margin: 20px;/*increase in overall margin top/bottom left/right*/
-    padding: 20px;/*increase in overall padding top/bottom left/right*/
-}
-/*right*/
-.imp_prac_tips_rows_right {
-    display: flex;/*creating a flexible container*/
-    justify-content: space-between;/*space between elements*/
-    width: 100%;/*increasing class width*/
-    transform: translate(0px, 600px);/*class element move along the x and y axis*/
-    margin: 20px 0px;/*increase in overall margin top/bottom not left/right*/
-    padding: 20px;/*increase in overall padding top/bottom left/right*/
-}
-.imp_prac_tips .imp_prac_tips_rows_right h3{
-    text-align: right;/*aligning text to right*/
-    font-size: 20px;/*modifying fotn size*/
-    font-weight: 600;/*changing font weight to 600*/
-}
-.imp_prac_tips_rows_right .imp_prac_tips_col_right img{
-    float: right;/*floating items to the right*/
-    display: block;/*uniform blocking for images*/
-    width: auto;/*auto image wifth*/
-}
-.imp_prac_tips .imp_prac_tips_rows_right p{
-    text-align: left;/*aligning text to left*/
-    font-size: 18px;/*modifying font size*/
-    line-height: 25px;/*line height increased for space*/
-    font-weight: 400;/*changing font weight to 400*/
-    width: 1200px;/*wdith 1200px for p*/
-    margin: 20px;/*increase in overall margin top/bottom left/right*/
-    padding: 20px;/*increase in overall padding top/bottom left/right*/
-    transform: translate(-90px, 0px);/*class element move along the x and y axis*/
+#imprac_text img:nth-child(odd){
+    transform: translate(1020px, 0px);
 }
 
+
+/*------------------------------------------------*/
 /*Model Job Form page css code*/
 /*Model Job Form Title*/
 .mjf_title h1{
-    position: absolute;/*keeps page title fixed to its nearest ancestor to allow overlapping*/
+    display: inline-block;
+    position: relative;/*keeps page title fixed to its nearest ancestor to allow overlapping*/
+    top: 300px;
+    left: 200px;
     color: #612940;/*changing font color to a deep purple*/
     letter-spacing: 28px;/*spacing out the letters by 28px for design aesthetics*/
     font-size: 40px;/*modifying font size for the title*/
-    transform: translate(200px, 150px);/*aligning the title specifically where I want it by translating the x and y coordinates*/
-
 }
 .req_stat{
-    position: absolute;/*changing the position to absolute so it can move wherever it wants on the page without depending on the title element*/
+    display: inline-block;
+    position: relative;/*changing the position to absolute so it can move wherever it wants on the page without depending on the title element*/
     font-style: italic;/*keeps page title fixed to its nearest ancestor to allow overlapping*/
-    transform: translate(90px, 320px);/*aligning the form description specifically where I want it by translating the x and y coordinates*/
-}
-/*Form*/
-.form_container{
-    position: absolute;/*the form container is bases its position based on its ancestor, by itself*/
-    top: 600px;/*placing the form box margin 600px top*/
-    left: 700px;/*placing the form box margin 700px left*/
-}
-/*Overview*/
-.overview_input{
-    width: 50%;/*expanding the title input box to 50%*/
-    margin-top: 5%;/*giving margin space of 5% all around*/
-}
-.overview label{
-    position: relative;/*expanding the title input box to 50%*/
-    font-size: 20px;/*expanding the title input box to 50%*/
-    display:block;/*expanding the title input box to 50%*/
-    font-weight: 550;/*increasing the weight of the font*/
-    left: 400px;/*offsetting the label left 400px*/
-}
-.overview p{
-    margin: 2% 0%;/*adding a 2% buffer on bottom and top with margin*/
-    width: 250px;/*increasing the line width of the p element*/
-    font-size: 14px;/*changing font size to 14px for the p element*/
-    font-style:italic;/*italicizing the p element*/
-    position: relative;/*placing the p element relative to its parent*/
-    left: 400px;/*offsetting the p element 400px to the left of the box margin*/
-}
-.overview_input input{
-    position: relative;/*placing the input relative to its parent*/
-    width: 390px;/*increasing the width of the input box*/
-    left: 400px;/*offsetting the inputt 400px to the left of the box margin*/
-    background-color: #F4F4F4;/*changing the box background color to a lighter gray, almost white*/
-    border: 1px solid #B4B4B4;/*changing the box broder to a light gray with a solid border that is 1px*/
-    border-radius: 3px;/*rounding out the box edges by 3px*/
-}
-.overview_input textarea{ 
-    position: relative;/*placing the textarea relative to its parent*/
-    background-color: #F4F4F4;/*changing the box background color to a lighter gray, almost white*/
-    border: 1px solid #B4B4B4;/*changing the box border to a light gray with a solid border that is 1px*/
-    border-radius: 3px; /*rounding out the box edges by 3px*/
-    left: 400px;/*offsetting the textarea 400px to the left of the box margin*/
- 
+    transform: translate(200px, 350px);/*aligning the form description specifically where I want it by translating the x and y coordinates*/
 }
 
+#overview h2{
+    position: relative;
+    display: inline;
+    translate: 0px 10px;
+    font-size: 35px;
+    font-weight: lighter;
+    color: var(--plum);
+    left: 100px;
+}
+#overview{
+    position: relative;
+    top: 400px;
+}
+
+#overview_input{
+    transform: translate(900px, -70px);
+    margin: 10px 0px;
+    padding: 5px 0px;
+    width: 250px;
+}
+
+#overview_input input{
+    width: 450px;
+    background-color: #F4F4F4;
+    background: #F4F4F4;
+    border: 1px solid #B4B4B4;
+    border-radius: 5px;
+}
+#overview_input textarea{
+    width: 450px;
+    background-color: #F4F4F4;
+    background: #F4F4F4;
+    border: 1px solid #B4B4B4;
+    border-radius: 5px;
+    height: 150px;
+    overflow-y: scroll;
+}
 /*Location*/
-.location{
-    position: relative;/*placing the location class relative to its parent*/
-    top: 100px;/*offsetting the class 100px top of the box margin*/
-    display: flex;/*the class will turn it into a flex container and so will its children*/
-    column-gap: 25px;/*column gap between items*/
-}
-.location label{
-    font-size: 20px;/*changing labels to 20px*/
-    display: block;/*to create an organized form by changing these elements to the width of its container*/
-    position: relative;/*changing the contents to be relative to its parent*/
-    left: 400px;/*offsetting the label 400px to the left of the box margin*/
-}
-.location_input input{
-    position: relative;/*changing the input to be relative to its parent*/
-    height: 20px;/*changing the height of the input to 20px*/   
-    width: 80%;/*modifying the input width to 80%*/
-    background-color: #F4F4F4;/*changing the box background color to a lighter gray, almost white*/
-    border: 1px solid #B4B4B4;/*changing the box border to a light gray with a solid border that is 1px*/
-    border-radius: 3px;/*rounding out the box edges by 3px*/
-    left: 400px;/*offsetting the input 400px to the left of the box margin*/
-}
-.date_input{
-    font-size: 20px;/*changing the font size to 20px*/
-    position: relative;/*changing the date to be relative to its parent*/
-    width: 12%;/*modifying the date width to 12%*/
-    top: 150px;/*offsetting the date 150px top of the box margin*/
-    margin-top: 5%;/*increasing the top of the margin box by 5%*/
-    left: 400px;/*offsetting the date 400px to the left of the box margin*/
 
+#location h2{
+    position: relative;
+    display: inline;
+    translate: 0px 10px;
+    font-size: 35px;
+    font-weight: lighter;
+    color: var(--plum);
+    left: 100px;
 }
-.date_input input{
-    height: 20px; /*changing the height of the input to 20px*/ 
-    bottom: 500px;  /*offsetting the date 500px at the bottom of the box margin*/
-    width: 150px;/*modiofying input width to 150px*/
-    background-color: #F4F4F4;/*changing the box background color to a lighter gray, almost white*/
-    border: 1px solid #B4B4B4;/*changing the box border to a light gray with a solid border that is 1px*/
-    border-radius: 3px;/*rounding out the box edges by 3px*/
+#location{
+    position: relative;
+    display: flex;
+    top: 500px; 
 }
 
-/*SPECIFICATIONS*/
-
-.specifications{
-    position: relative;/*changing the class to be relative to its parent*/
-    top: 200px;/*offsetting the date 200px top of the box margin*/
-    padding-top: 12%;/*increasing thickness of top padding area by 12%*/
-    padding-bottom: 20%;/*increasing thickness of bottom padding area by 20%*/
-    display: flex;/*the class will turn it into a flex container and so will its children*/
-    column-gap: 25px;/*column gap between items by 25px*/
+#location_input {
+    transform: translate(735px, 0px);
+    margin: 10px 50px;
+    padding: 5px 0px;
+    width: 200px;
 }
-.specifications label{
-    display: block;/*to create an organized form by changing these elements to the width of its container*/
-    font-size: 20px;/*modifying font size to 20px*/
-    position: relative;/*changing the label to be relative to its parent*/
-    left: 400px;/*offsetting the spec label 400px to the left of the box margin*/
+#location_input input, #date_input input{
+    width: 200px;
+    height: 40px;
+    background-color: #F4F4F4;
+    background: #F4F4F4;
+    border: 1px solid #B4B4B4;
+    border-radius: 5px;
 }
-.specifications p{
-    position: relative;/*changing the p element to be relative to its parent*/
-    transform: translate(400px, 10px);/*translating the p element across the x and y coordinates*/
-}
-.specifications_input input{
-    position: relative;/*changing the spec input to be relative to its parent*/
-    width: 150px;/*modifying the input width to 150px*/
-    background-color: #F4F4F4;/*changing the box background color to a lighter gray, almost white*/
-    border: 1px solid #B4B4B4;/*changing the box border to a light gray with a solid border that is 1px*/
-    border-radius: 3px;/*rounding out the box edges by 3px*/
-    transform: translate(400px, 20px);/*translating the input across the x and y coordinates*/
-}
-.experience_input p{
-    position: relative;/*changing the experience p to be relative to its parent*/
-    left: 400px;/*offsetting the p element 400px to the left of the box margin*/ 
-    padding-bottom: 1%;/*increasing thickness of bottom padding area by 1%*/
-    font-size: 20px;/*modifying font size to 20px*/
-    left:-50px;/*offsetting the p -50px to the left of the box margin*/ 
-
-}
-.experience_input{
-    padding: 5px;/*increase all around padding by 50px to give it space from the other inputs*/
-    width: 100%;/*increase the width of the class to 100%*/
-    position: relative;/*changing the experience class to be relative to its parent*/
-    transform: translate(400px, 160px);/*translating the experience radio input by 400px - x and 160 px -y*/
-    margin: 5px; /*increasing margin to 5px all around*/
-
+#date_input{
+    transform: translate(180px, 200px);
+    width: 200px;
 }
 
-.mj_form .submission{
-    position: absolute;/*changing the submission class class to be relative to its parent*/
-    transform: translate(700px, 300px);/*translating the submission across the x and y coordinates*/
-    font-size: 20px;/*modifying font size to 20px*/
-    margin: 5px;/*modifying margin by 5px*/
+/*Specifications*/
+#specifications h2{
+    position: relative;
+    display: inline;
+    translate: 0px 10px;
+    font-size: 35px;
+    font-weight: lighter;
+    color: var(--plum);
+    left: 100px;
+}
+#specifications{
+    position: relative;
+    display: flex;
+    top: 800px; 
+}
 
+#specifications_input {
+    transform: translate(630px, 0px);
+    margin: 10px 50px;
+    padding: 5px 0px;
+    width: 200px;
 }
-.mj_form .submission input{
-    font-size: 20px;/*modifying font size to 20px*/
-    position: relative;/*modifying the input to be relative to its parent*/
-    background: #FDECEF;/*modifying the background color*/
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);/*creating a shadow for the box button*/
-    border-radius: 5px;/*rounding the box edge by 5px*/
-    width: 100px;/*increasing the box width to 100px*/
-    border: 1px solid #FDECEF;/*creating a 1px solid border with a custom color*/
-    
+#specifications_input input{
+    width: 200px;
+    height: 40px;
+    background-color: #F4F4F4;
+    background: #F4F4F4;
+    border: 1px solid #B4B4B4;
+    border-radius: 5px;
 }
-/* Titles */
-.over_title {
-    position: absolute;/*changing the position to absolute so it can move wherever it wants on the page without depending on other elements*/
-    transform: translate(100px, 400px);/*translating the overview title across the x and y coordinates*/
+#experience_input{
+    position: relative;
+    transform: translate(950px, 850px);
+    margin: 10px 0px;
+    padding: 5px 0px;
+    width: 200px;
 }
-.over_title p{
-    font-size: 36px;/*changing the title to a 36px font*/
-    color:#612940;/*changing the font color to a custom deep purple*/
-    font-weight: 300;/*changing the title to a font weight of 300px for a thinner look*/
+#submission{
+    position: relative;
+    transform: translate(1300px, 950px);
+    width: 300px;
 }
-.loc_title {
-    position: absolute;/*changing the position to absolute so it can move wherever it wants on the page without depending on other elements*/
-    transform: translate(100px, 720px);/*translating the location title across the x and y coordinates*/
-}
-.loc_title p{
-    font-size: 36px;/*changing the title to a 36px font*/
-    color:#612940;/*changing the font color to a custom deep purple*/
-    font-weight: 300;/*changing the title to a font weight of 300px for a thinner look*/
-}
-.spec_title {
-    position: absolute;/*changing the position to absolute so it can move wherever it wants on the page without depending on other elements*/
-    transform: translate(100px, 1000px);/*translating the specifications title across the x and y coordinates*/
-}
-.spec_title p{
-    font-size: 36px;/*changing the title to a 36px font*/
-    color:#612940;/*changing the font color to a custom deep purple*/
-    font-weight: 300;/*changing the title to a font weight of 300px for a thinner look*/
+#submission input{
+    width: 130px;
+    height: 50px;
+    font-size: 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color:#FDECEF;
+    border: 2px solid #FDECEF;
+    border-radius: 5px;
 }
 
 /*Modeling Connections page css code*/
@@ -1873,3 +1708,4 @@ button:hover::before {
     }
 
 }
+
