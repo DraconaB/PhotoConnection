@@ -5,7 +5,7 @@
 /*Header and Footer for all my pages.*/
 
 .Logo {/*I have added the class Logo to the img element that has our logo in it in the html*/
-
+/*commit changes test*/
     float:left;/*takes the img element of our logo and positions it to the left side of its container*/
 
 }
@@ -1871,4 +1871,5 @@ button:hover::before {
         transform: translate(20px, 200px);
         width: 200px;
     }
+
 }
