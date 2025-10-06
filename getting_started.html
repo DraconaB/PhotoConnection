@@ -43,11 +43,11 @@
             width: 75%;
         }
         
-        .nav_links {
+        #nav_links {
             flex: 1;
             text-align: center;
         }
-        .nav_links ul li{
+        #nav_links ul li{
             list-style: none;
             display: inline-block;
             padding: 35px;
@@ -57,26 +57,26 @@
             position: relative;
         }
         
-        .nav_links ul li a{
+        #nav_links ul li a{
             color: #0F110C;
             text-decoration: none;
             font-size: 18px;
             font-weight: 400;
         }
-        .nav_links ul li a:hover{
+        #nav_links ul li a:hover{
             color:#612940;
         }
-        .rightside{
+        #rightside{
            position: absolute;
            margin-left: 1500px;  
         }
-        .rightside img{
+        #rightside img{
             position: relative;
             width:100%;
             left: 60px;
             top:-2px; 
         }
-        .contact{
+        #contact{
             position: absolute;
             text-decoration: none;
             color:#0F110C;
@@ -84,12 +84,12 @@
             bottom: 10px;
             right: -150px;
         }
-        .searchbar{
+        #searchbar{
             position: absolute;
             left: 13px;
             top: 30px;
         }
-        .searchbar input{
+        #searchbar input{
             border: 1px solid #B4B4B4;
             border-radius: 10px;
         }
@@ -141,24 +141,24 @@
     <body>
         <div id="container">
             <div id="main">
-                <section class="navigation_bar">
+                <section id="navigation_bar">
                     <nav>
                         <a href="getting_started.html"><img src="photologo.svg" alt="logo"></a>
                             <!--navbar links-->
-                            <div class="nav_links">
-                                <ul class="tag_list">
+                            <div id="nav_links">
+                                <ul id="tag_list">
                                     <li><a href="">Networking</a></li>
                                     <li><a href="">Getting Started</a></li>
                                     <li><a href="">Portfolios</a></li>
                                     <li><a href="">About Us</a></li>
                                 </ul>
                             </div>
-                            <div class="rightside">
+                            <div id="rightside">
                                 <div>
-                                    <img src="images/mail.png" alt="contact mail icon">
-                                    <a href="" class="contact">Contact Us</a>
+                                    <img src="mail.png" alt="contact mail icon">
+                                    <a href="" id="contact">Contact Us</a>
                                 </div>
-                                <div class="searchbar">
+                                <div id="searchbar">
                                     <input type="text" placeholder="search">
                                 </div>
                             </div>
@@ -324,6 +324,7 @@
     </body>
 
 </html>
+
 
 
 
