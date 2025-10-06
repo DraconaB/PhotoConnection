@@ -18,6 +18,81 @@
             color: #0F110C;
             display:flex;
         }
+        /*navigation bar - mei*/
+        /* NAVIGATION - GLOBAL */
+        .navigation_bar{
+            width: 100%;
+            height: 120px;
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            z-index: 1000;
+        }
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid #ffffff;/*5px thick solid border with a custom pink white color*/
+            background-color: #ffffff;/*custom pink white color border*/
+            border-radius: 4px;
+            box-shadow: 6px 0.5px 20px #cecece;
+            height: 120px;
+        }
+        nav img{
+            width: 75%;
+        }
+        
+        .nav_links {
+            flex: 1;
+            text-align: center;
+        }
+        .nav_links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 35px;
+            margin-top: 1%;
+            margin-left: 2%;
+            margin-right: 5%;
+            position: relative;
+        }
+        
+        .nav_links ul li a{
+            color: #0F110C;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .nav_links ul li a:hover{
+            color:#612940;
+        }
+        .rightside{
+           position: absolute;
+           margin-left: 1500px;  
+        }
+        .rightside img{
+            position: relative;
+            width:100%;
+            left: 60px;
+            top:-2px; 
+        }
+        .contact{
+            position: absolute;
+            text-decoration: none;
+            color:#0F110C;
+            font-weight: bold;
+            bottom: 10px;
+            right: -150px;
+        }
+        .searchbar{
+            position: absolute;
+            left: 13px;
+            top: 30px;
+        }
+        .searchbar input{
+            border: 1px solid #B4B4B4;
+            border-radius: 10px;
+        }
         /*navigation box on the side of the page*/
         #page_nav_gs{
             position: absolute;
@@ -259,6 +334,7 @@
     </body>
 
 </html>
+
 
 
 
