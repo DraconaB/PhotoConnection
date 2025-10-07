@@ -468,7 +468,7 @@
     transform: translate(625px, -20px);/*moved the camera img into its custom spot next to the page title*/
 }
 #pad_title_state{
-    transform: translate(315px, 100px);/* p element move along the x and y axis*/
+    transform: translate(315px, 0px);/* p element move along the x and y axis*/
 }
 #title_statement{
     width:690px;/*width change in the p element to a custom length*/
@@ -1566,6 +1566,7 @@ button:hover::before {
     }
 
 }
+
 
 
 
