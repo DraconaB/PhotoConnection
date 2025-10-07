@@ -964,16 +964,6 @@ body {
     position: relative;
 }
 
-.header {
-    background-color: var(--light-purple);
-    padding: 50px 20px;
-    text-align: center;
-    border-bottom: 3px solid var(--primary-purple);
-    position: relative;
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-
 .header::before {
     content: "📸";
     position: absolute;
@@ -1494,6 +1484,7 @@ button:hover::before {
     }
 
 }
+
 
 
 
