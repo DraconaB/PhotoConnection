@@ -730,25 +730,24 @@
     height: 500px;/*developing height area to 500px*/
     width: 100%;/*developing width area to 100%*/
     background-size: cover;/*making the image cover the background*/
-    background-position: center;/*centering the image position*/
-    top: 190px;/*offsetting image 190 px of the margin box top*/
+    top: 70%;/*offsetting image 190 px of the margin box top*/
 }
 .modeling{
-    position: absolute;/*allowing my title to not be tied down to other page elements*/
-    font-weight: 300;/*slimming down the font weight*/
+    position: relative;/*allowing my title to not be tied down to other page elements*/
     font-size: 94px;/*changing font size*/
     line-height: 55px;/*increasing line height for title*/
     letter-spacing: 36px;/*spacing out letters for stylistic purposes*/
-    top: 350px;/*offsetting title 350 px of the margin box top*/
+    top: 250px;/*offsetting title 350 px of the margin box top*/
     left: 625px;/*offsetting title 625 px of the margin box left*/
     color: #FDECEF;/*changing color of title to a custom pink white*/
 }
 .connections{
-    position: absolute;/*allowing my title to not be tied down to other page elements*/
+
+    position: relative;/*allowing my title to not be tied down to other page elements*/
     font-weight: 500;/*increasing the font weight to 500*/
     font-size: 96px;/*changing font size*/
     line-height: 55px;/*increasing line height for title*/
-    top: 580px;/*offsetting title 580 px of the margin box top*/
+    top: 400px;/*offsetting title 580 px of the margin box top*/
     left: 620px;/*offsetting title 620 px of the margin box left*/
     color: #FDECEF;/*changing color of title to a custom pink white*/
     line-height: 55px;/*increasing line height for title*/
@@ -758,7 +757,7 @@
 /*page numbers*/
 .page_n{
     width: 30vw;/*width of block increased to 30vw*/
-    height: 80px;/*height of block increased to 80px*/
+    height: 100px;/*height of block increased to 80px*/
     line-height: 80px;/*line-height set at 80px*/
     background-color: #9D6381;/*background color of box is a custom pink*/
     position: absolute;/*aboslute position so my page navigation won't be tied down by other elements*/
@@ -817,17 +816,18 @@
     top:30%;/*offsetting desc 30% of the margin box top*/
     left:10%;/*offsetting desc 10% px of the margin box left*/
 }
+
+
 .job_boxes .job_dets ul li{
     font-size: 12px;/*changing the font size*/
     font-weight: 300;/*changing the font weight to a slimmer style*/
     text-align: left;/*aligning text left*/
-    line-height: 15px;/*changing the line height to 15px*/
+    line-height: 0px;/*changing the line height to 0px*/
     letter-spacing: 0.5px;/*spacing out letterings for aesthetics*/
     position: relative;/*keeping the li relative to the parent*/
     display: block;/*display as block to make the element uniform*/
     bottom:120px;/*offsetting title 120 px of the margin box bottom*/
-    left:10%;/*offsetting title 10% of the margin box left*/
-    line-height: 0.5px;/*height of text line is 0.5px*/
+    right:10%;/*offsetting title 10% of the margin box left*/
 }
 
 .b1{
@@ -1477,6 +1477,7 @@ button:hover::before {
     }
 
 }
+
 
 
 
