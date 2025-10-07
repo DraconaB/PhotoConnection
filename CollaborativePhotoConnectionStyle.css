@@ -966,6 +966,35 @@ body {
 }
 
 /* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-purple);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+    border-bottom: 3px solid var(--dark-purple);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    background-color: var(--dark-purple);
+    transform: translateY(-2px);
+}
+
 
 /* LAYOUT */
 
@@ -1506,6 +1535,7 @@ button:hover::before {
     }
 
 }
+
 
 
 
