@@ -170,18 +170,21 @@
 <body>
     <!-- Header - Matching group member's style -->
     <header>
-        <a href="index.html">
-        <img class= "Logo" src="PhotoConnectionLogo.png" alt="Our logo. An image of a camera inside a circle surrounded by another circle with text saying Photo Connection and two stars on either side of the camera image in the outer ring." width="95" height="95">
+
+        <a href="index.html" aria-label="Click on our logo to get back to the home page.">
+        <img class= "Logo" src="PhotoConnectionLogo.png" alt="Our logo. An image of a camera inside a circle surrounded by another circle with text saying Photo Connection and two stars on either side of the camera image in the outer ring." width="168" height="168" style="position: relative; bottom: 80px;">
         </a>
-        <ul>
-            <li>Networking</li>
-            <li>Getting Started</li>
-            <li>Portfolios</li>
-            <li>About Us</li>
+
+        <ul class="hKnavStyle">
+            <li><a href="networkingPage.html">Networking</a></li>
+            <li style="margin-left: -20px;"><a href="getting_started.html">Getting Started</a></li>
+            <li style="padding: 0px; margin-left: 90px;"><a href="profilesPage.html">Portfolios</a></li>
+            <li><a href="AboutUsPage.html">About Us</a></li>
             <input type="text" placeholder="search">
             <button type="submit"><img src="searchIcon.jpg" alt="Magnifying glass icon" width="15" height="15"></button>
-            <li style="display: list-item; margin-left: 1065px; margin-top: -120px">Contact Us</li>
-        </ul>
+            <li style="display: list-item; margin-left: 1060px; margin-top: -130px;">Contact Us</li>
+        </ul>    
+        
     </header>
 
     <!-- Experience Header -->
@@ -290,26 +293,33 @@
 
     <!-- Footer - Matching group member's style -->
     <footer>
-        <img class="Logo" src="PhotoConnectionLogo.png" alt="Our logo. An image of a camera inside a circle surrounded by another circle with text saying Photo Connection and two stars on either side of the camera image in the outer ring." width="200" height="200">
 
-        <ul style="text-align: right;">
+        <img class= "Logo" src="PhotoConnectionLogo.png" alt="Our logo. An image of a camera inside a circle surrounded by another circle with text saying Photo Connection and two stars on either side of the camera image in the outer ring." width="230" height="230">
+
+        <ul class="hKnavStyle" style="text-align: right;">
+
             <li>Resources</li>   
-            <li>About Us</li>
+            <li><a href="AboutUsPage.html">About Us</a></li>
             <li>Contact Us</li>
+
         </ul>
 
-        <ol style="position: relative; padding: 0; margin: 0; left: 703px; bottom: 40px; display: inline-block;">
-            <li style="padding: 0; font-weight: normal;">Getting Started</li><br>
-            <li style="padding: 0; font-weight: normal;">Model Job Post</li><br>
-            <li style="padding: 0; font-weight: normal;">Portfolio Creation</li><br>
-            <li style="padding: 0; font-weight: normal;">Photographer Networking</li><br>
-            <li style="padding: 0; font-weight: normal;">Photographer Recommendations</li><br>
+        <ol style="position: relative; padding: 0; margin: 0; left: 690px; bottom: 40px; display: inline-block;">
+
+            <li style="padding: 0; font-weight: normal;"><a href="getting_started.html">Getting Started</a></li><br><!--Don't forget to make the links in the footer functional-->
+            <li style="padding: 0; font-weight: normal;"><a href="modeling_connections.html">Model Job Post</a></li><br>
+            <li style="padding: 0; font-weight: normal;"><a href="PortfolioCreationPage.html">Portfolio Creation</a></li><br>
+            <li style="padding: 0; font-weight: normal;"><a href="networkingPage.html">Photographer Networking</a></li><br>
+            <li style="padding: 0; font-weight: normal;"><a href="profilesPage.html">Photographer Reccomendations</a></li><br>
+
         </ol>
 
         <hr>
 
         <p style="font-weight: bold;">Photo Connection &copy; 2025</p>
+
     </footer>
 </body>
 
 </html>
+
