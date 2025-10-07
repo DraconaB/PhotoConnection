@@ -16,31 +16,33 @@
         }
         body {
             color: #0F110C;
-            display: flex;
         }
+        
         /*navigation bar - mei*/
         /* NAVIGATION - GLOBAL */
         #navigation_bar{
-            width: 100%;
-            height: 120px;
-            background-position: center;
-            background-size: cover;
             position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
             z-index: 1000;
+            background-color: #ffffff;
+            box-shadow: 6px 0.5px 20px #cecece;
+            border-radius: 4px;
+            
         }
         #mei_nav{
             display: flex;
-            padding: 2% 6%;
+            padding: 2% 2%;
             justify-content: space-between;
             align-items: center;
-            border: 2px solid #ffffff;/*5px thick solid border with a custom pink white color*/
-            background-color: #ffffff;/*custom pink white color border*/
-            border-radius: 4px;
-            box-shadow: 6px 0.5px 20px #cecece;
             height: 120px;
+            
         }
         #logo_nav{
-            width: 75%;
+            width: 100%;
         }
         #nav_links {
             flex: 1;
@@ -51,38 +53,64 @@
             display: inline-block;
             padding: 35px;
             margin-top: 1%;
-            margin-left: 2%;
-            margin-right: 5%;
+            margin-right: 4%;
             position: relative;
-        }
-        
+        } 
         #nav_links ul li a{
             color: #0F110C;
-            text-decoration: none;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 400;
+            display: block;
+            width: 100%;
+            left: -12px;
         }
         #nav_links ul li a:hover{
-            color:#612940;
+            background:#612940;
+            color: #FDECEF;
+            font-weight: bold;
         }
-        /*dropdown menu*/
-        #dropdown_menu li{
-            display:block;
+        /*dropdown menu start here*/
+        #nav_links ul li ul.dropdown_menu_sh li a{
+            font-size: 16px;
+            width: 100%;
+            padding: 9px 0px; 
+            line-height: 22px;
+            
         }
-        #dropdown_menu {
-            width:100%;
-            border: 2px solid #ffffff;/*5px thick solid border with a custom pink white color*/
+        ul li ul.dropdown_menu_sh {
+            width:700px;
+            height: 120px;
+            left: 15px;
+            border-radius: 30px;
             background-color: #ffffff;/*custom pink white color border*/
-            border-radius: 4px;
-            box-shadow: 6px 0.5px 20px #cecece;
+            position: absolute;
             z-index: 999;
-        {
-        #dropdown_menu li a:hover{
-            background: #ffffff;
+            display: none;
         }
-        #dropdown_menu li:hover ul #dropdown_menu {
-            display: block;
+        ul li:hover ul.dropdown_menu_sh {
+            display: flex;
         }
+        /*dropdown menu networking*/
+        #nav_links ul li ul.dropdown_menu_n li a{
+            font-size: 16px;
+            width: 100%;
+            padding: 9px 0px; 
+            line-height: 22px;
+        }
+        ul li ul.dropdown_menu_n {
+            width: 750px;
+            height: 120px;
+            left: 15px;
+            border-radius: 30px;
+            background-color: #ffffff;/*custom pink white color border*/
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+        ul li:hover ul.dropdown_menu_n {
+            display: flex;
+        }
+        
     /*rest of nav design*/
         #rightside{
            position: absolute;
@@ -90,27 +118,72 @@
         }
         #rightside img{
             position: relative;
-            width:100%;
-            left: 60px;
-            top:-2px; 
+            width:20px;
+            left: 180px;
+            top:10px; 
         }
         #contact_nav{
             position: absolute;
             text-decoration: none;
             color:#0F110C;
             font-weight: bold;
+            font-size: 20px;
             bottom: 10px;
-            right: -150px;
+            left: 70px;
+            width: 200px;
         }
         #searchbar_nav{
-            position: absolute;
-            left: 13px;
+            position: relative;
+            left: 120px;
             top: 30px;
         }
         #searchbar_nav input{
             border: 1px solid #B4B4B4;
+            height:30px;
             border-radius: 10px;
         }
+        /*Footer*/
+        footer{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background: #ffffff;
+            color: black;
+            padding: 100px 0 30px;
+            border-radius: 20px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        .row{
+            width: 85%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .col {
+            flex-basis: 25%;
+            padding: 10px;
+        }
+        .col h4{
+            width: fit-content;
+            margin-bottom: 40px;
+            position: relative;
+            font-size: 18px;
+        }
+        footer ul li{
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        footer ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        
+           
+
+        
         /*navigation box on the side of the page*/
         #page_nav_gs{
             position: absolute;
@@ -154,24 +227,40 @@
             border-radius: 4px;/*rounded border radius*/
             transition: 0.5s;/*0.5s transition for box when hovering*/
         }
+        .divider1_gs img {
+            position: absolute;/*keep the dividers in their own positioning, not dependent on other elements*/
+            display: inline;/*the divider image will stay within the default page width*/
+            width: 100%;/*the divider will fit the width of 100% of the page*/
+            background-size: cover;/*the image will cover the background of the page*/
+            background-position: center;/*the image divider will be in the center of the background of the page*/
+        }
+        
     </style>
 </head>
     <body>
         <div id="container">
-            <div id="main">
+            <main id="main">
                 <section id="navigation_bar">
                     <nav id="mei_nav">
                         <a href="index.html"><img src="photologo.svg" alt="logo" id="logo_nav"></a>
                             <!--navbar links-->
                             <div id="nav_links">
                                 <ul>
-                                    <li><a href="networkingPage.html">Networking</a></li>
-                                    <li><a href="getting_started.html">Getting Started</a></li>
-                                        <ul id="dropdown_menu">
-                                            <li><a href="getting_started.html">Photography Reccomendations</a></li>
-                                            <li><a href="model_form.html">Model Job Post Form</a></li>
-                                            <li><a href="modeling_connections.html">Portfolio Creation</a></li>
+                                    <li>
+                                        <a href="networkingPage.html">Experiences</a>
+                                        <ul class="dropdown_menu_n">
+                                            <li><a href="profilesPage.html">Portfolios</a></li>
+                                            <li><a href="networkingPage.html">Networking</a></li>
+                                            <li><a href="modeling_connections.html">Modeling Connections</a></li>
                                         </ul>
+                                    <li>
+                                        <a href="getting_started.html">Start Here</a>
+                                        <ul class="dropdown_menu_sh">
+                                            <li><a href="getting_started.html">Get Started</a></li>
+                                            <li><a href="model_form.html">Model Form</a></li>
+                                            <li><a href="PortfolioCreationPage.html" >Create Portfolio</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="PortfolioCreationPage.html">Portfolios</a></li>
                                     <li><a href="AboutUsPage.html">About Us</a></li>
                                 </ul>
@@ -195,8 +284,8 @@
                         <h1 id="getting_gs">Getting</h1>
                         <h1 id="started_gs">Started</h1>
                     </div>
-                    <img src="camera_gs.png" alt="camera picture for logo" class="camera_logo">
-                    <div id="pad_title_state">
+                    <img src="camera_gs.png" alt="camera picture for logo" class="camera_logo" style="transform: translate(625px, -100px);">
+                    <div id="pad_title_state" style="transform: translate(315px, 20px); width: 400px;">
                         <p id="title_statement">It is important to have the right tools when and practices when capturing your shots. This page will guide you on the best cameras, apps and tips to succeed in photography.
                         </p>
                     </div>
@@ -216,13 +305,13 @@
                     <img src="divider1_gs.svg" style="top: 75%;">
                 </div>
                 <!--What Camera Should I Use? Section 2-->
-                <section id="camera_use">
+                <section id="camera_use" style="position: relative; margin: 50px 0px; top: 300px; ">
                     <div id="intro_sec_1">
                         <h1>What Camera Should I Use?</h1>
                         <p>The most essential part of photography is the camera. While using your phone is a good option when starting out, you should branch out to more niche devices that will truly put you into the photographer life.</p>
                     </div>
 
-                    <table id="camera_rows">
+                    <table id="camera_rows" style="transform: translate(170px, 130px);">
                         <tr id="top_row">
                             <th><img src="Fujifilm_X-T50.png" alt="picture of a Fujifilm X-T50 camera"></th>
                             <th><img src="Fujifilm_X-T5.png" alt="picture of a Fujifilm X-T5 camera"></th>
@@ -257,25 +346,26 @@
                 <!--divider-->
                 <div class="divider1_gs">
                     <img src="divider2_gs.png" style="top: 205%;">
+                </div>
                 <!--What photo editing app should I Use?-->
-                <section id="edit_app_use">
+                <section id="edit_app_use" style="position: relative; top: 940px;">
                     <div class="edit_app_title">
                         <h2>What Photo Editing App Should I Use?</h2>
                         <p>Photo editing apps are a great software a photographer can use to set the mood and concept they want to convey towards their audience and themselves. It is important to utilize such apps to push your photography to the next level.</p>
                     </div>
-                    <div id="edit_app">
+                    <div id="edit_app" style=" width: 85%; transform: translate(250px, 90px);">
                         <div id="app_lit">
-                            <h3>Lightroom</h3>
-                            <img src="lightroom_logo.svg">
-                            <p>Lightweight app, equipped with a myriad of tools such as filters, masking, selection and AI healing tools.</p>
+                            <h3 style="width: 10px; left:205px;">Lightroom</h3>
+                            <img src="lightroom_logo.svg" >
+                            <p >Lightweight app, equipped with a myriad of tools such as filters, masking, selection and AI healing tools.</p>
                         </div>
                         <div id="app_pol">
-                            <h3>polarr</h3>
+                            <h3 style="width: 10px; left:220px;">polarr</h3>
                             <img src="polarr_logo.svg">
                             <p>Desktop quality tools that have the popular features of AI filters and editing.</p>
                         </div>
-                        <div id="app_phot">
-                            <h3>Photoshop</h3>
+                        <div id="app_phot" style="transform: translate(450px, 30px);">
+                            <h3 style="width: 10px; left:200px;">Photoshop</h3>
                             <img src="photoshop_logo.svg">
                             <p>While this app is more expensive than its competition, it is the industry standard, equipped with a lot more options than your typical photo editing app and higher res photos.</p>
                         </div>
@@ -284,45 +374,76 @@
                 <!--Divider 3-->
                 <div class="divider1_gs"><img src="divider3_gs.png" style="top: 320%;"></div>    
                 
-                <section id="imp_prac_tips">
+                <section id="imp_prac_tips" style="position: relative; top: 1450px;">
                     <div id="imp_prac_tips_title">
-                        <h2>Important Practices and Tips</h2>
-                        <p>Having the best camera and photo editing app in the world might help tremendously, but it won’t magically grant you those cherished pictures you seek. It is important to be knowledgeable about tips from experienced photographers and stick with best practices to capture those coveted photos.</p>
+                        <h2 style="font-size: 50px; text-align: center;">Important Practices and Tips</h2>
+                        <p style="font-size: 18px; text-align: center; padding: 0px 250px;">Having the best camera and photo editing app in the world might help tremendously, but it won’t magically grant you those cherished pictures you seek. It is important to be knowledgeable about tips from experienced photographers and stick with best practices to capture those coveted photos.</p>
                     </div>  
                          
-                    <div id="imp_prac_tips_rows">
+                    <div id="imprac_tips_rows">
                         <div id="imprac_text">
-                            <h3>Know Your Camera</h3>
+                            <span>1</span>
                             <img src="camera_gs.png" alt="a png of a non-specific camera">
+                            <h3>Know Your Camera</h3>
                             <p>Before jumping into taking photos, it is important to know the camera you are working with. Read the manual, analyze the features and get comfortable with the device. A tip from a national geographic photographer is to put the camera in “program” mode.</p>
                         </div>
                         <div id="imprac_text">
-                            <p>Cameras are notoriously expensive and that creates a barrier for those starting in photography to develop their passion. Both online and brick and mortars offer stunning cameras for rent at a fraction of the original cost! A well known site to offer such services is <strong>lensrentals</strong>.</p>
+                            <span>2</span>
+                            <img src="camera2_buylater.png" alt="choose to rent a camera before buying one visual" style="left: 300px;">
                             <h3>Rent First, You can Buy Later</h3>
-                            <img src="camera2_buylater.png" alt="choose to rent a camera before buying one visual">
+                            <p>Cameras are notoriously expensive and that creates a barrier for those starting in photography to develop their passion. Both online and brick and mortars offer stunning cameras for rent at a fraction of the original cost! A well known site to offer such services is <strong>lensrentals</strong>.</p>
+                           
                         </div>
                         <div id="imprac_text">
+                            <span>3</span>
+                            <img src="composition.png" alt="three bars representing composition" style="left: 290px;">
                             <h3>Understand the basics of composition</h3>
-                            <img src="composition.png" alt="three bars representing composition">
                             <p>It is essential to balance all of the elements you want to capture. This can be done by using negative space and distributing weight organically in photos with the rule of thirds. When taking in a frame, divide it horizontally in thirds to see where your photo can be obtained with the most value.</p>
                         </div>
                         <div id="imprac_text">
-                            <p>Most modern cameras have the ISO feature. This feature helps with exposure and it is essential when taking photos. For the best quality, put your camera in automatic-mode which is the “native ISO”.</p>
-                            <h3>Use auto ISO</h3>
+                            <span>4</span>
                             <img src="useiso.png" alt="camera ISO png">
+                            <h3>Use auto ISO</h3>
+                            <p>Most modern cameras have the ISO feature. This feature helps with exposure and it is essential when taking photos. For the best quality, put your camera in automatic-mode which is the “native ISO”.</p>
+            
                         </div>
                         <div id="imprac_text">
+                            <span>5</span>
+                            <img src="Smile.png" alt="smiley face" style="left: 400px;">
                             <h3>Have Fun!</h3>
-                            <img src="Smile.png" alt="smiley face">
                             <p>While photography is highly regarded as a professional hobby, it doesn't mean you can't have fun in the process. So many undiscovered photos are yet to be taken through playing around with your subject. Take shots from angles you wouldn’t usually consider, fill in spaces you ought to leave empty and try to get a reaction out of yourself when you take these photos.</p>
                         
                         </div>
                 </section>
-                <!--Closing tag for div "main"-->
-            </div>                    
+                <!--Closing tag for main "main"-->
+            </main>                    
     <!--Closing tag for div "container"-->
         </div>
       <!-- Footer - Matching group member's style -->
+       <!--FOOTER-->
+    <footer id="footer">
+        <div class="row">
+            <div class="col">
+                <img src="photologo.svg" alt="photo connection logo: a camera that has the curved text of photo connection around it">
+            </div>
+            <div class="col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="">Getting Started</a></li>
+                    <li><a href="">Modeling Connections</a></li>
+                    <li><a href="">Create Portfolio</a></li>
+                    <li><a href="">Portfolios</a></li>
+                    <li><a href="">Networking</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>About Us</h4>
+            </div>
+            <div class="col">
+                <h4>Contact Us</h4>
+            </div>
+        </div>
+    </footer>
     </body>
 
 </html>
