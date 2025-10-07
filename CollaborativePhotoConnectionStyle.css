@@ -437,18 +437,13 @@
 
 /*Mei Lan Bargas CSS*/
 /*Getting Started Introduction Section*/
-.divider1_gs img {
-    position: absolute;/*keep the dividers in their own positioning, not dependent on other elements*/
-    display: inline;/*the divider image will stay within the default page width*/
-    width: 100%;/*the divider will fit the width of 100% of the page*/
-    background-size: cover;/*the image will cover the background of the page*/
-    background-position: center;/*the image divider will be in the center of the background of the page*/
-}
 #title_gs{
     margin: /*t*/0px /*r*/10px/*b*/0px/*l*/160px;/*the title margin is 10 px right and 160 px for positioning*/
     left: 50px;/*title is moved 50 px from the left*/
     top: 130px;/*moving the title 50 px from the top of the page*/
     position: relative;/*position is made relative in order to move the title top and left*/
+    width: 400px;
+    display: block;
 }
 #getting_gs{
     font-weight: 400;/*slim down font weight*/
@@ -464,12 +459,6 @@
     font-size: 128px;/*increase font size*/
     transform: translate(70px, 20px);/*custom title move along the x and y axis*/
 }
-.camera_logo{
-    transform: translate(625px, -100px);/*moved the camera img into its custom spot next to the page title*/
-}
-#pad_title_state{
-    transform: translate(315px, 0px);/* p element move along the x and y axis*/
-}
 #title_statement{
     width:690px;/*width change in the p element to a custom length*/
     font-size: 18px;/*font size 18px*/
@@ -479,11 +468,6 @@
 
 /*------------------------------------------------*/
 /*What Camera Should I Use?*/
-#camera_use{
-    position: relative;/*keeping the camera section in its normal positioning compared to the elements before it + allowing for more customization with other declaratives*/
-    margin: 50px 0px;/*adding 50px margin to the top and bottom for breathability*/
-    top: 420px;/*aligning the section where I want it, 420 px from the top of the page*/
-}
 #intro_sec_1 h1{
     display: inline;/*keeping elements from veering off the page horizontally*/
     font-size: 50px;/*font size change*/
@@ -498,9 +482,6 @@
     border: 5px;/*border 5px increase*/
     width: 1000px;/*width of p changeed to 1000px*/
     transform: translate(450px, 0px);/*p element move along the x and y axis*/
-}
-#camera_rows{
-   transform: translate(170px, 150px);/*translating the camera rows 170px on the x axis and 150px on the y axis to provide centering and breathability for other elements*/
 }
 #camera_identifier{
     font-size: 20px;/*modifying font size to 20px*/
@@ -522,10 +503,6 @@
 
 /*------------------------------------------------*/
 /*What Photo Editing App Should I Use?*/
-#edit_app_use {
-    position: relative;/*keeping the position of the element where it would normally be to also allow for top declarative adjustment*/
-    top: 1000px;/*adjusting the section to be 1100 px from the top of the page*/
-}
 /*What Photo Editing App Should I Use? - Title*/
 .edit_app_title h2{
     display: inline;/*formating the H2 to stay within the flow of the page and fit on its line*/
@@ -536,7 +513,7 @@
     left: 500px;/*moving the h1 600px from the left of the screen*/
 }
 .edit_app_title p{
-    font-size: 16px;/*font size change to 16px*/
+    font-size: 18px;/*font size change to 16px*/
     text-align: center;/*aligning text to the center*/
     border: 5px;/*border 5px increase*/
     width: 1000px;/*width of p changeed to 1000px*/
@@ -548,9 +525,6 @@
     grid-template-columns: repeat(2, 1fr);/*using grid columns for divs to have 2 columns that have 1 fraction each*/
     column-gap: 150px;/*150px gap between columns*/
     transform: translate(170px, 100px);/*moving the div 240px on the x axis and 100px on the y axis*/
-}
-#edit_app #app_phot{
-    transform: translate(500px, 30px);/*the photoshop div veered too far the left, so it was translated 500px on the x axis and 30px on the y axis to give the other divs more breathing room*/
 }
 #edit_app h3{
     position: relative;/*the h3 is now relative to the placement of the div container, making it easier for me to center the text*/
@@ -572,44 +546,39 @@
 
 /*------------------------------------------------*/
 /*Important Practices and Tips*/
-#imp_prac_tips {
-    position: relative;
-    top: 1500px;
-}
-#imp_prac_tips_title h2{
-    font-size: 50px;
-    text-align: center;
-}
-#imp_prac_tips_title p{
-    font-size: 16px;
-    text-align: center;
-    padding: 0px 250px;
-}
-#imprac_text{
+#imprac_text {
     position: relative;
     display: grid;
-    margin: 10px 300px;
+    margin: 10px 0px /*bottom*/190px 0px;
+    padding: 10px 500px;
     top: 150px;
-    text-align: left;
-    grid-template-columns: 1fr 2fr;/*alternating the fraction space of the columns when alternating tips/practices*/
-    grid-template-rows: repeat(5, 1fr);
-}
-#imprac_text:nth-child(even){
-    text-align: right;/*every nth child with an even positioning will have their text aligned right*/
-    grid-template-columns: 2fr 1fr;/*alternating the fraction space of the columns when alternating tips/practices*/
-}
-
-#imprac_text h3{
-    transform: translate(0px, -40px);
-}
+    text-align: center;
+    grid-template: repeat(2fr, 1fr);
+ }
 #imprac_text img{
-    width: auto;
-    transform: translate(20px, 10px);
+    position: relative;
+    left: 390px;
+    margin: 10px 0px;
 }
-#imprac_text img:nth-child(odd){
-    transform: translate(1020px, 0px);
+#imprac_text h3{
+    padding: 10px 0px;
+    border-top: 1px solid black;
+    
 }
-
+#imprac_text span{
+    color: #FDECEF;
+    font-size: 45px;
+    transform: translate(410px, -30px);
+    width: 70px; /* Example width */
+    height: 70px; /* Same as width for a perfect circle */
+    background-color: #9D6381; /* Example color */
+    border-radius: 5%;
+    box-shadow: 2px 2px 2px #cac9c9;
+    display: inline;
+}
+#imprac_text p{
+    font-size: 18px;
+}
 
 /*------------------------------------------------*/
 /*Model Job Form page css code*/
@@ -1566,6 +1535,7 @@ button:hover::before {
     }
 
 }
+
 
 
 
