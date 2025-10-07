@@ -948,13 +948,6 @@ body {
     --medium-gray: #36343B;
 }
 
-/* NAVIGATION - GLOBAL */
-
-/* Logo */
-.Logo {
-    float: left;
-}
-
 /* LAYOUT */
 
 .container {
@@ -1484,6 +1477,7 @@ button:hover::before {
     }
 
 }
+
 
 
 
