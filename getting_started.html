@@ -66,18 +66,24 @@
             color:#612940;
         }
         /*dropdown menu*/
-        #dropdown{
+        #dropdown_menu li{
+            display:block;
+        }
+        #dropdown_menu {
             width:100%;
             border: 2px solid #ffffff;/*5px thick solid border with a custom pink white color*/
             background-color: #ffffff;/*custom pink white color border*/
             border-radius: 4px;
             box-shadow: 6px 0.5px 20px #cecece;
             z-index: 999;
-            
         {
-        #dropdown li{
-            display:block;
+        #dropdown_menu li a:hover{
+            background: #ffffff;
         }
+        #dropdown_menu li:hover ul #dropdown_menu {
+            display: block;
+        }
+    /*rest of nav design*/
         #rightside{
            position: absolute;
            margin-left: 1500px;  
@@ -161,7 +167,7 @@
                                 <ul>
                                     <li><a href="networkingPage.html">Networking</a></li>
                                     <li><a href="getting_started.html">Getting Started</a></li>
-                                        <ul id="dropdown menu">
+                                        <ul id="dropdown_menu">
                                             <li><a href="getting_started.html">Photography Reccomendations</a></li>
                                             <li><a href="model_form.html">Model Job Post Form</a></li>
                                             <li><a href="modeling_connections.html">Portfolio Creation</a></li>
@@ -320,6 +326,7 @@
     </body>
 
 </html>
+
 
 
 
