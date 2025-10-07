@@ -447,6 +447,7 @@
 #title_gs{
     margin: /*t*/0px /*r*/10px/*b*/0px/*l*/160px;/*the title margin is 10 px right and 160 px for positioning*/
     left: 50px;/*title is moved 50 px from the left*/
+    top: 50px;/*moving the title 50 px from the top of the page*/
     position: relative;/*position is made relative in order to move the title top and left*/
 }
 #getting_gs{
@@ -1565,6 +1566,7 @@ button:hover::before {
     }
 
 }
+
 
 
 
