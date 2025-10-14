@@ -1,56 +1,15 @@
-/* Deb Bhaumik, Halle Knape, Mei Lan Bargas */
-/* Date: 9/24/25 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/*CSS For Home Page-Halle Knape*/
+
+/*The ul and li css must also go in the other sections since the header and footer will also be in those pages*/
+
+/*Header and Footer for all my pages.*/
+
+.Logo {/*I have added the class Logo to the img element that has our logo in it in the html*/
+/*commit changes test*/
+    float:left;/*takes the img element of our logo and positions it to the left side of its container*/
+
 }
 
-body {
-    background-color: #f8f8f8;
-    color: #333333;
-    line-height: 1.6;
-    padding-top: 80px; /* Accounts for fixed nav */
-}
-
-/* COLORS */
-:root {
-    --primary-purple: #8B5A8C;
-    --light-purple: #C8A8C9;
-    --dark-purple: #6B4C6D;
-    --plum: #612940;
-    --brown: #6C534E;
-    --light-brown: #9D6381;
-    --white: #FFFFFF;
-    --light-gray: #F5F5F5;
-    --dark-gray: #333333;
-    --accent-pink: #D4A5B3;
-    --pink-white: #FDECEF;
-    --custom-black: #0F110C;
-    --medium-gray: #36343B;
-}
-
-/* LAYOUT */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-}
-.header::before {
-    content: "📸";
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 60px;
-    opacity: 0.2;
-    transform: rotate(15deg);
-}
-
-
-/*Navigation Bar*/
 
 .hKnavStyle ul, li{/*I have added the class hKnavStyle to the ul tags in my header and footer so that we can differentiate the nav styles between my pages and my group members rather than having to shuffle everythign around if we all went about styling the nav bar differently in regard to how we did it using CSS.*/
 
@@ -62,130 +21,6 @@ body {
     
 }
 
-#navigation_bar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000;
-    background-color: #ffffff;
-    box-shadow: 6px 0.5px 20px #cecece;
-    border-radius: 4px; 
-}
-#nav_ref{
-    display: flex;
-    padding: 2% 2%;
-    justify-content: space-between;
-    align-items: center;
-    height: 120px;
-    
-}
-#logo_nav{
-    width: 100%;
-}
-#nav_links {
-    flex: 1;
-    text-align: center;
-}
-#nav_links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 35px;
-    margin-top: 1%;
-    margin-right: 4%;
-    position: relative;
-} 
-#nav_links ul li a{
-    color: #0F110C;
-    font-size: 20px;
-    font-weight: 400;
-    display: block;
-    width: 100%;
-    left: -12px;
-}
-#nav_links ul li a:hover{
-    background:#612940;
-    color: #FDECEF;
-    font-weight: bold;
-}
-/*dropdown menu start here*/
-#nav_links ul li ul.dropdown_menu_sh li a{
-    font-size: 16px;
-    width: 100%;
-    padding: 9px 0px; 
-    line-height: 22px;
-    
-}
-ul li ul.dropdown_menu_sh {
-    width:700px;
-    height: 120px;
-    left: 15px;
-    border-radius: 30px;
-    background-color: #ffffff;/*custom pink white color border*/
-    position: absolute;
-    z-index: 999;
-    display: none;
-}
-ul li:hover ul.dropdown_menu_sh {
-    display: flex;
-}
-/*dropdown menu networking*/
-#nav_links ul li ul.dropdown_menu_n li a{
-    font-size: 16px;
-    width: 100%;
-    padding: 9px 0px; 
-    line-height: 22px;
-}
-ul li ul.dropdown_menu_n {
-    width: 480px;
-    height: 120px;
-    left: 15px;
-    border-radius: 30px;
-    background-color: #ffffff;/*custom pink white color border*/
-    position: absolute;
-    z-index: 999;
-    display: none;
-}
-ul li:hover ul.dropdown_menu_n {
-    display: flex;
-}
-
-/*rest of nav design*/
-#rightside{
-   position: absolute;
-   margin-left: 1500px;  
-}
-#rightside img{
-    position: relative;
-    width:20px;
-    left: 180px;
-    top:10px; 
-}
-#contact_nav{
-    position: absolute;
-    text-decoration: none;
-    color:#0F110C;
-    font-weight: bold;
-    font-size: 20px;
-    bottom: 10px;
-    left: 70px;
-    width: 200px;
-}
-#searchbar_nav{
-    position: relative;
-    left: 120px;
-    top: 30px;
-}
-#searchbar_nav input{
-    border: 1px solid #B4B4B4;
-    height:30px;
-    border-radius: 10px;
-}
-
-
-/*CSS For Home Page-Halle Knape*/
 /*Main*/
 
 /*Introduction seciton, brief introduction statement to what our website is for.*/
@@ -1079,6 +914,58 @@ ul li:hover ul.dropdown_menu_n {
  
 }
 
+/* Deb Bhaumik, Halle Knape, Mei Lan Bargas */
+/* Date: 9/24/25 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+    color: #333333;
+    line-height: 1.6;
+    padding-top: 80px; /* Accounts for fixed nav */
+}
+
+/* COLORS */
+:root {
+    --primary-purple: #8B5A8C;
+    --light-purple: #C8A8C9;
+    --dark-purple: #6B4C6D;
+    --plum: #612940;
+    --brown: #6C534E;
+    --light-brown: #9D6381;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --dark-gray: #333333;
+    --accent-pink: #D4A5B3;
+    --pink-white: #FDECEF;
+    --custom-black: #0F110C;
+    --medium-gray: #36343B;
+}
+
+/* LAYOUT */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.header::before {
+    content: "📸";
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 60px;
+    opacity: 0.2;
+    transform: rotate(15deg);
+}
 
 /* HOME PAGE */
 
@@ -1590,25 +1477,6 @@ button:hover::before {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
