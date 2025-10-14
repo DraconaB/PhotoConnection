@@ -1,3 +1,57 @@
+/* Deb Bhaumik, Halle Knape, Mei Lan Bargas */
+/* Date: 9/24/25 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+    color: #333333;
+    line-height: 1.6;
+    padding-top: 80px; /* Accounts for fixed nav */
+}
+
+/* COLORS */
+:root {
+    --primary-purple: #8B5A8C;
+    --light-purple: #C8A8C9;
+    --dark-purple: #6B4C6D;
+    --plum: #612940;
+    --brown: #6C534E;
+    --light-brown: #9D6381;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --dark-gray: #333333;
+    --accent-pink: #D4A5B3;
+    --pink-white: #FDECEF;
+    --custom-black: #0F110C;
+    --medium-gray: #36343B;
+}
+
+/* LAYOUT */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.header::before {
+    content: "📸";
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 60px;
+    opacity: 0.2;
+    transform: rotate(15deg);
+}
+
+
 /*Navigation Bar*/
 #navigation_bar{
     position: fixed;
@@ -1038,58 +1092,6 @@ ul li:hover ul.dropdown_menu_n {
  
 }
 
-/* Deb Bhaumik, Halle Knape, Mei Lan Bargas */
-/* Date: 9/24/25 */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f8f8;
-    color: #333333;
-    line-height: 1.6;
-    padding-top: 80px; /* Accounts for fixed nav */
-}
-
-/* COLORS */
-:root {
-    --primary-purple: #8B5A8C;
-    --light-purple: #C8A8C9;
-    --dark-purple: #6B4C6D;
-    --plum: #612940;
-    --brown: #6C534E;
-    --light-brown: #9D6381;
-    --white: #FFFFFF;
-    --light-gray: #F5F5F5;
-    --dark-gray: #333333;
-    --accent-pink: #D4A5B3;
-    --pink-white: #FDECEF;
-    --custom-black: #0F110C;
-    --medium-gray: #36343B;
-}
-
-/* LAYOUT */
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-}
-
-.header::before {
-    content: "📸";
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 60px;
-    opacity: 0.2;
-    transform: rotate(15deg);
-}
 
 /* HOME PAGE */
 
@@ -1601,6 +1603,7 @@ button:hover::before {
     }
 
 }
+
 
 
 
