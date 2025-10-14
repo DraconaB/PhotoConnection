@@ -33,14 +33,12 @@ body {
 }
 
 /* LAYOUT */
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     position: relative;
 }
-
 .header::before {
     content: "📸";
     position: absolute;
@@ -65,7 +63,7 @@ body {
     box-shadow: 6px 0.5px 20px #cecece;
     border-radius: 4px; 
 }
-#mei_nav{
+#nav_ref{
     display: flex;
     padding: 2% 2%;
     justify-content: space-between;
@@ -130,7 +128,7 @@ ul li:hover ul.dropdown_menu_sh {
     line-height: 22px;
 }
 ul li ul.dropdown_menu_n {
-    width: 750px;
+    width: 480px;
     height: 120px;
     left: 15px;
     border-radius: 30px;
@@ -1603,6 +1601,7 @@ button:hover::before {
     }
 
 }
+
 
 
 
