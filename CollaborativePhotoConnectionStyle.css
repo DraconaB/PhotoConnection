@@ -9,7 +9,6 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #f8f8f8;
     color: #333333;
     line-height: 1.6;
@@ -176,28 +175,6 @@ ul li:hover ul.dropdown_menu_n {
 
 
 /*CSS For Home Page-Halle Knape*/
-
-/*The ul and li css must also go in the other sections since the header and footer will also be in those pages*/
-
-/*Header and Footer for all my pages.*/
-
-.Logo {/*I have added the class Logo to the img element that has our logo in it in the html*/
-/*commit changes test*/
-    float:left;/*takes the img element of our logo and positions it to the left side of its container*/
-
-}
-
-
-.hKnavStyle ul, li{/*I have added the class hKnavStyle to the ul tags in my header and footer so that we can differentiate the nav styles between my pages and my group members rather than having to shuffle everythign around if we all went about styling the nav bar differently in regard to how we did it using CSS.*/
-
-    display: inline-flex;/*makes the list items display like an inline element putting them all on one horizontal line, the flex part controls how the children of this element (if there are any) appear*/
-    list-style-type: none;/*takes away the bullet points on each list item*/
-    padding: 40px;/*adds padding around each list item*/
-    padding-left: 100px;/*adds padding so that the list items are spaced out nicely*/
-    font-weight: bold;/*makes the text bold*/
-    
-}
-
 /*Main*/
 
 /*Introduction seciton, brief introduction statement to what our website is for.*/
@@ -1602,6 +1579,7 @@ button:hover::before {
     }
 
 }
+
 
 
 
