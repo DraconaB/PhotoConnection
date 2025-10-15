@@ -7,16 +7,19 @@
   <link href="CollaborativePhotoConnectionStyle.css" rel="stylesheet">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins');
-    body {
-    display: flex;
-		flex-direction: column;
-		min-height: 100%
-    }
     #container {
-      flex: 1 0 auto;
-		/* styling */
-		padding: 3rem;
+    position: relative;
+ 	min-height: 100vh;
     }
+    #main {
+      padding-bottom: 2.5rem;
+    }
+	footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 2.5rem;
+	}
   /* NAVIGATION - GLOBAL */
     #navigation_bar  {
         position: fixed;
@@ -278,6 +281,7 @@
 </body>
 
 </html>
+
 
 
 
