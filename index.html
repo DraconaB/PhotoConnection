@@ -1,0 +1,251 @@
+<!DOCTYPE html> <!--Halle Knape Page-->
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link href="CollaborativePhotoConnectionStyle.css" rel="stylesheet">
+
+    <style>
+
+        body{
+
+            font-family: Verdana;
+
+        }
+
+        a{
+
+            color: black;
+
+        }
+
+        a:hover{
+
+            color: #9D6381;
+
+        }
+
+        a:visited{
+
+            color: #6C534E;
+
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<!---The header and the footer sections will be universal between my three pages--->
+    <header>
+
+        <img class= "Logo" src="PhotoConnectionLogo.png" alt="Our logo. A camera inside two circles with text saying Photo Connection and two stars on either side of the camera." width="168" height="168" style="position: relative; bottom: 80px;">
+
+        <ul class="hKnavStyle">
+            <li><a href="networkingPage.html">Networking</a></li>
+            <li style="margin-left: -20px;"><a href="getting_started.html">Getting Started</a></li>
+            <li style="padding: 0px; margin-left: 90px;"><a href="profilesPage.html">Portfolios</a></li>
+            <li><a href="AboutUsPage.html">About Us</a></li>
+            <input type="text" placeholder="search">
+            <button type="submit"><img src="searchIcon.jpg" alt="Magnifying glass icon" width="15" height="15"></button>
+            <li style="display: list-item; margin-left: 1060px; margin-top: -130px;">Contact Us</li>
+        </ul>    
+        
+    </header>
+
+    <main> <!--Introduction Section-->
+
+        <div id="intro">
+
+            <h1 id="introHead" style="position: relative; text-align: center;">Join the Photo Connection</h1>
+            <h2 id="introSubHead">Connect with photographers, models, and clients here on Photo Connection</h2>
+
+        </div>
+
+        <hr>
+
+        <div style="background-color:#6C534E; padding: 30px; margin-top: 5px; margin-bottom: 5px;"><!--Slideshow Section-->
+
+            <h3 style="text-align: center; color: black; font-size: 35px; padding-bottom: 20px;">Our Photographer Highlights</h3>
+
+            <img style="display: flex; position: relative; left: 525px; border: 4px solid #FDECEF; border-radius: 4px;" class="slide" name="slide" width="30%" height="25%"> <!--img tag for the slideshow itself, the src attribute is taken care of by the imgs + array assignments--> 
+
+        </div>
+
+        <hr>
+
+        <!--JavaScript for the Slideshow Section-->
+        <script>
+
+                var i = 0; //Starting point for the slideshow images
+
+                var imgs = []; //empty array for imgs
+
+                var timeBetween = 3000; //time in milliseconds between the image switching
+
+                //Image list below. Array values that have paths to images.
+                
+                imgs[0] = "HKJavaScript_Imgs/HermyCheckSlide.JPG";
+                imgs[1] = "HKJavaScript_Imgs/JackWakeSlide.jpg";
+                imgs[2] = "HKJavaScript_Imgs/ThomSlide.JPG";
+                imgs[3] = "HKJavaScript_Imgs/ThomSurfSlide.jpg";
+                imgs[4] = "HKJavaScript_Imgs/DeskChairSlide.JPG";
+                imgs[5] = "HKJavaScript_Imgs/EvergreenSlide.JPG";
+                imgs[6] = "HKJavaScript_Imgs/PinkDaisySlide.jpg";
+                imgs[7] = "HKJavaScript_Imgs/TheaterArchSlide.jpg";
+                imgs[8] = "HKJavaScript_Imgs/TwistingTreeSlide.jpg";
+
+
+                //Function to change the image
+
+                function slideShow(){               //function for making the images change
+
+                    document.slide.src = imgs[i]; // having the i sets it to the first image in our slideshow 
+                                                  //document.slide because the name for the img tag in the html is slide
+
+                    if(i < imgs.length - 1){ //imgs.length will be 7 since there are seven images total4
+
+                        i++;
+
+                    } 
+
+                    else{
+
+                        i=0; //resets slide show to the beginning
+                    }
+
+                    setTimeout("slideShow()", timeBetween); //timeBetween calls the variable we set earlier that has it change images every 3 sec
+
+
+                }
+
+                window.onload = slideShow; //makes sure that the slideshow runs from when the page is loaded
+
+
+            </script>
+
+        <div id="bodyHead1"> <!--CTA section-->
+
+            <h3>Connect Your Work</h3>
+
+        </div>
+
+        <div> <!--Portfolio creation link + img-->
+
+            <p id="bodyContent1" style="border-radius: 4px;">
+            
+                Show us your work!<br> Create your profile and begin connecting <br> with other photographers in the<br> community.
+
+            </p>
+
+            <a href="PortfolioCreationPage.html" id="getStarted">Create Your Profile</a>
+
+            <img id="contImg1" src="IndexImgs/ConnectImg.JPG" alt="Image of a painting from the Chiang Kai Shek memorial in Taiwan" width="200" height="200">
+
+
+        </div>
+
+
+        <div id="bodyHead2"> <!--Modeling opportunities form-->
+
+            <h3>Connect With Opportunities</h3>
+
+        </div>
+
+
+        <div>
+
+            <p id="bodyContent2" style="border-radius: 4px;">
+            
+                Looking for a model?<br> Start here by filling out <br> a modeling opportunities form.
+
+            </p>
+
+            <a href="model_form.html" id="createPost">Create a Post</a>
+
+            <img id="contImg2" src="IndexImgs/Connect2Img.JPG" alt="Image of a street in Taiwan" width="250" height="300">
+        </div>
+
+        <div id="bodyHead3"> <!--Experience page (Deb)-->
+
+            <h3>Connect With Others</h3>
+
+        </div>
+
+        <div>
+
+            <p id="bodyContent3" style="border-radius: 4px;">
+            
+                Find a sense of community with other<br> photographers. Share tips and tricks <br> from your experience!
+
+            </p>
+
+            <a href="ExperiencePage.html" id="shareHere">Share Experience</a>
+
+            <img id="contImg3" src="IndexImgs/Connect3Img.JPG" alt="Image from outside of the Chiang Kai Shek Memorial in Taiwan" width="200" height="200">
+
+        </div>
+
+        <hr style="margin-top: 100px;">
+
+        <section id="finalSection"> <!--Experience page Deb-->
+
+            <div>
+
+                <h2 id="finalHead">New to Photography?</h2>
+                <h3 id="finalSubHead">View Our Experience Page</h3>
+
+
+            </div>
+
+            <div>
+
+                <p id="finalContent">Our Experience page is another place where you can connect with<br> other photographers! Whether you are a well seasoned photographer<br> offering help to people new to the community, or you are just getting<br> started and looking for tips and tricks, there is a space for everyone!</p>
+
+                <a href="ExperiencePage.html" id="ntwk" style="padding: 20px; padding-left: 40px; padding-right: 40px;">Share Experience</a>
+
+            </div>
+
+            
+
+        </section>
+
+    </main>
+    
+
+    <footer>
+
+        <img class= "Logo" src="PhotoConnectionLogo.png" alt="Our logo. A camera inside two circles with text saying Photo Connection and two stars on either side of the camera." width="230" height="230">
+
+        <ul class="hKnavStyle" style="text-align: right;">
+
+            <li>Resources</li>   
+            <li><a href="AboutUsPage.html">About Us</a></li>
+            <li>Contact Us</li>
+
+        </ul>
+
+        <ol style="position: relative; padding: 0; margin: 0; left: 690px; bottom: 40px; display: inline-block;">
+
+            <li style="padding: 0; font-weight: normal;"><a href="getting_started.html">Getting Started</a></li><br><!--Don't forget to make the links in the footer functional-->
+            <li style="padding: 0; font-weight: normal;"><a href="modeling_connections.html">Model Job Post</a></li><br>
+            <li style="padding: 0; font-weight: normal;"><a href="PortfolioCreationPage.html">Portfolio Creation</a></li><br>
+            <li style="padding: 0; font-weight: normal;"><a href="networkingPage.html">Photographer Networking</a></li><br>
+            <li style="padding: 0; font-weight: normal;"><a href="profilesPage.html">Photographer Reccomendations</a></li><br>
+
+        </ol>
+
+        <hr>
+
+        <p style="font-weight: bold;">Photo Connection &copy; 2025</p>
+
+    </footer>
+
+
+</body>
+
+</html>
