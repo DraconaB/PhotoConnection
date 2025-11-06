@@ -1,340 +1,360 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Model Form</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="CollaborativePhotoConnectionStyle.css" rel="stylesheet">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins');
-    .mjf_div{
-        position: relative;
-        width: 1400px;
-        left: 200px;
-        height: 1px;
-        background: #36343B;
-        background-size: cover;
-        background-position: center;
-    }
-    /*font size for the labels*/
-    #location, #overview, #specifications label{
-        font-size: 20px;
-    }
-    body {
- 	    background: #fff;
-      font-family: 'Poppins', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <link href="CollaborativePhotoConnectionStyle.css" rel="stylesheet">
+    <title>Model Job Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins');
 
-    .mei_footer{
-     position: relative;
-     left:0px;
-     bottom:0px;
-     height:100px;
-     width:100%;
-     top: 1200px;
-      background: #fff;
-    }
-    .mei_footer li a {
-     text-decoration: none;
-    }
-  /* NAVIGATION - GLOBAL */
-    #navigation_bar  {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 15px 0;
-        text-align: center;
-        z-index: 1000;
-        background-color: #ffffff;
-        box-shadow: 6px 0.5px 20px #131313;
-        border-radius: 4px;
+        * {
+            margin: 0 ;/*base margin*/
+            padding: 0;/*base padding*/
+            font-family: 'Poppins', sans-serif;/*font family set for entire stylesheet*/
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+        html{
+            scroll-padding-top: 70px;/*make sure my nav doesn't cover section titles*/
+        }
+        body{
+            padding-top: 80px;
+        }
+        #container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        #mei_main {
+            max-width: 2000px; 
+            margin: 1rem auto; 
+            flex: 1 1 auto;/*elements will fill up empty spaces as the page grows, elements will shrink when space starts running out*//**/
+        }
+        header {
+            position: fixed;
+            display: flex;
+            padding: 0rem 4%;
+            width: 100%;
+            height: 140px;
+            top:0;
+            background: white;
+            box-shadow: 0px 0.2px 4px black;
+            z-index: 999;
+        }
+        #mei_nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6rem;
+            font-size: 18px;
+            width: 100%;
+        }
+        #mei_nav ul{
+            display: flex;
+            gap: 6rem;
+            list-style: none;
+
+        }
+        #mei_nav a{
+            display: block;
+            font-size: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
         
-    }
-    #mei_nav  {
-        display: flex;
-        padding: 2% 2%;
-        justify-content: space-between;
-        align-items: center;
-        height: 120px;
-        
-    }
-    #logo_nav{
-        width: 100%;
-    }
-    #nav_links {
-        flex: 1;
-        text-align: center;
-    }
-    #nav_links ul li{
-        list-style: none;
-        display: inline-block;
-        padding: 35px;
-        margin-top: 1%;
-        margin-right: 4%;
-        position: relative;
-    } 
-    #nav_links ul li a{
-        text-decoration: none;
-        color: #0F110C;
-        font-size: 20px;
-        font-weight: 400;
-        display: block;
-        width: 100%;
-        left: -12px;
-    }
-    #nav_links ul li a:hover{
-        background:#612940;
-        color: #FFF;
-        border: 5px solid #612940; 
-        border-radius: 15px;
-        
-    }
-    /*dropdown menu start here*/
-    #nav_links ul li ul.dropdown_menu_sh li a{
-        font-size: 16px;
-        width: 100%;
-        padding: 9px 0px; 
-        line-height: 22px;
-        
-    }
-    ul li ul.dropdown_menu_sh {
-        width:700px;
-        height: 120px;
-        left: 15px;
-        border-radius: 30px;
-        background-color: #ffffff;/*custom pink white color border*/
-        position: absolute;
-        z-index: 999;
-        display: none;
-    }
-    ul li:hover ul.dropdown_menu_sh {
-        display: flex;
-    }
-    /*dropdown menu networking*/
-    #nav_links ul li ul.dropdown_menu_n li a{
-        font-size: 16px;
-        width: 100%;
-        padding: 9px 0px; 
-        line-height: 22px;
-    }
-    ul li ul.dropdown_menu_n {
-        width: 750px;
-        height: 120px;
-        left: 15px;
-        border-radius: 30px;
-        background-color: #ffffff;/*custom pink white color border*/
-        position: absolute;
-        z-index: 999;
-        display: none;
-    }
-    ul li:hover ul.dropdown_menu_n {
-        display: flex;
-    }
+        }
+        #mei_nav a:hover{
+            background: linear-gradient(265.27deg, #612940 20.55%, #e979ba 94.17%);
+            border-radius: 20px;
+            color: #fff;
+            width: 180px;
+            
+            transition: 1s ease;
+        }
+        /*dropdown*/
+        #mei_nav ul li ul.dropdown_menu_n, #mei_nav ul li ul.dropdown_menu_sh {
+            position: relative;
+            display: flex;
+            left: 30%;
+            height: 100px;
+            border-radius: 30px;
+            background-color: #ffffff;
+            border: 2px solid gray;
+            position: absolute;
+            z-index: 1000;
+            display: none;
+        }
+        #mei_nav ul li ul.dropdown_menu_n li, #mei_nav ul li ul.dropdown_menu_sh li{
+            height: 50px;
+            margin-top: 2rem;
+            margin-left: 1rem;
+            width: 100%;
+
+        }
+        #mei_nav ul li ul.dropdown_menu_n li a, #mei_nav ul li ul.dropdown_menu_sh li a{
+            font-size: 16px;
+            width: 10em;
+            line-height: 18px;
+        }
+
+        #mei_nav ul li:hover ul.dropdown_menu_n, #mei_nav ul li:hover ul.dropdown_menu_sh {
+            display: flex;
+        }
+        /*NAV END*/
+        #container {
+            display: flex;
+        }
+        #mei_footer {
+            font-size: 20px;
+            height: 6em;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #foot_col{
+            flex: 1 1 auto;
+            margin: 4rem;
+        }
+        #foot_col a{
+            text-decoration: none;
+            color: black;
+
+        }
+        /*footer end*/
+        #job_form {
+            position: relative;
+            max-width: 100%;
+            
+        }
+        #ove_section, #speci_section, #loc_section{
+            display: flex;
+            flex: 1 1 auto;
+            margin: 0em 14em;
+        }
+        #ove_section h2, #speci_section h2, #loc_section h2{
+            font-size: 40px;
+            font-weight: 300;
+            flex: 1 1 auto;
+            color: #612940;
+        }
+        #ove_section p, #speci_section p, #loc_section p{
+            margin: 2em;
+        }
+        #ove_section label, #speci_section label, #loc_section label{
+            display: block;
+        }
+        #ove_section input, #speci_section input, #loc_section input{
+            border-radius: 10px;
+            padding: 4px 4px;
+            border: 1px solid gray;
+            box-shadow: inset 0px 0px 2px rgb(129, 129, 129);
+        }
     
-/*rest of nav design*/
-    #rightside{
-       position: absolute;
-       margin-left: 1500px;  
-    }
-    #rightside img{
-        position: relative;
-        width:20px;
-        left: 180px;
-        top:10px; 
-    }
-    #contact_nav{
-        position: absolute;
-        text-decoration: none;
-        color:#0F110C;
-        font-weight: bold;
-        font-size: 20px;
-        bottom: 10px;
-        left: 70px;
-        width: 200px;
-    }
-    #searchbar_nav{
-        position: relative;
-        left: 120px;
-        top: 30px;
-    }
-    #searchbar_nav input{
-        border: 1px solid #B4B4B4;
-        height:30px;
-        border-radius: 10px;
-    }
-        
-  </style>
+    </style>
+    <link href="" rel="stylesheet">
 </head>
-  <body>
-      <div id="container">
-            <main id="main">
-                <section id="navigation_bar">
-                    <nav id="mei_nav">
-                        <a href="index.html"><img src="photologo.svg" alt="Photo Connections home" id="logo_nav"></a>
-                            <!--navbar links-->
-                            <div id="nav_links">
-                                <ul>
-                                    <li>
-                                        <a href="networkingPage.html">Experiences</a>
-                                        <ul class="dropdown_menu_n">
-                                            <li><a href="profilesPage.html">Portfolios</a></li>
-                                            <li><a href="networkingPage.html">Networking</a></li>
-                                            <li><a href="modeling_connections.html">Modeling Connections</a></li>
-                                        </ul>
-                                    <li>
-                                        <a href="getting_started.html">Start Here</a>
-                                        <ul class="dropdown_menu_sh">
-                                            <li><a href="getting_started.html">Get Started</a></li>
-                                            <li><a href="model_form.html">Model Form</a></li>
-                                            <li><a href="PortfolioCreationPage.html" >Create Portfolio</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="PortfolioCreationPage.html">Portfolios</a></li>
-                                    <li><a href="AboutUsPage.html">About Us</a></li>
-                                </ul>
-                            </div>
-                            <div id="rightside">
-                                <div>
-                                    <img src="mail.png" alt="contact mail icon">
-                                    <a href="" id="contact_nav">Contact Us</a>
-                                </div>
-                                <div id="searchbar_nav">
-                                    <input type="text" placeholder="search" style="left: 10px;">
-                                </div>
-                            </div>
-                    </nav>
-                        <!--Closing tag for section "navigation_bar"-->
-                </section>
-              </header>
-              <main>
-  <!--MODEL JOB FORM BEGINNING-->
-  <!--DIVIDIERs-->
-                  <div class="mjf_div" style="top: 440px"></div>
-                  <div class="mjf_div" style="top: 890px"></div>
-                  <div class="mjf_div" style="top: 1300px"></div>
-                  <div class="mjf_div" style="top: 1700px"></div>
-          <!--TITLE-->
-                  <div class="mjf_title">
-                      <h1>MODEL JOB FORM</h1>
-                  </div>
-                  <div class="req_stat">
-                      <p>(*)Required Information</p>
-                  </div>
-                      <!--FORM BEGINS-->
-                  <section id="form_container">
-                      <form action="#" id="mj_form">
-                              <!--OVERVIEW-->
-                          <div id="overview">
-                              <h2>Overview</h2>
-                              <div id="overview_input">
-                                  <label for="title" style="font-weight: bold; letter-spacing: 0.5px;">
-                                    Title*
-                                    <input type="text" placeholder="Title of Photoshoot" required>
-                                  </label>
-                              </div>
-                              <div id="overview_input" style="transform: translate(900px, 0px);">
-                                  <label for="Description" style="font-weight: bold; letter-spacing: 0.5px;">Description*</label>
-                                  <p style="width: 400px; font-size: 15px; font-style: italic; letter-spacing: 0.5px;">What does the photshoot entail?</p>
-                                  <textarea name="desc" rows="4" cols="50"></textarea>
-                              </div>
-                          </div>
-                              <!--LOCATION-->
-                          <div id="location">
-                              <h2>Location</h2>
-                              <div id="location_input">
-                                  <label for="state" style="font-weight: bold; letter-spacing: 0.5px;">
-                                    State*
-                                    <input type="text" placeholder="State" style="font-size: 20px" required>
-                                  </label>
-                              </div>
-                              <div id="location_input">
-                                  <label for="city" style="font-weight: bold; letter-spacing: 0.5px;">
-                                    City*
-                                    <input type="text" placeholder="City" style="font-size: 20px" required>
-                                  </label>
-                              </div>
-                              <div id="date_input">
-                                  <label for="date" style="font-weight: bold; letter-spacing: 0.5px;">
-                                    Date*
-                                    <input type="date" placeholder="mm/dd/yy" style="font-size: 20px; color: grey" required>
-                                </label>
-                              </div>
-                          </div>    
-                              <!--SPECIFICATIONS-->
-                          <div id="specifications">
-                              <h2>Specifications</h2>
-                              <div id="specifications_input">
-                                <p style="font-style: italic; font-size: 15px;">(can be an estimate)</p>
-                                  <label for="total_hours" style="font-weight: bolder; letter-spacing: 0.5px;">
-                                    Total Job Hours*
-                                    <input type="number" placeholder="Total Hours" style="font-size: 20px" required>
-                                  </label>
-                              </div>
-                              <div id="specifications_input">
-                                  <label for="total-pay" style="font-weight: bold; letter-spacing: 0.5px;">
-                                    Total Pay*
-                                    <input type="number" placeholder="$0" style="font-size: 20px" required>
-                                  </label>
-                              </div>
-                          </div>
-                                  <!--RADIO-->
-                          <div id="experience_input">
-                                  <label style="font-weight: bold; font-size: 20px; letter-spacing: 0.5px;">Experience Level</label>
-                              <div>
-                                  <input type="radio" name="experience" value="Beginner" id="beg">
-                                  <label for="beginner">Beginner</label>
-                                          
-                              </div>
-                              <div>
-                                  <input type="radio" name="experience" value="Intermediate" id="inter">
-                                  <label for="intermediate">Intermediate</label>
-                                          
-                              </div>
-                              <div>
-                                  <input type="radio" name="experience" value="Expert" id="exp">
-                                  <label for="expert">Expert</label>
-                                          
-                              </div>
-                                      <!---->
-                          </div>
-                          <div id="submission">
-                              <input type="submit">
-                          </div>
-                      </form>
-                  </section>
-              </main>
-          </div>
-      </div>
-          <!--FOOTER-->
-    <footer class="mei_footer">
-        <img class= "Logo" src="PhotoConnectionLogo.png" alt="Our logo. An image of a camera inside a circle surrounded by another circle with text saying Photo Connection and two stars on either side of the camera image in the outer ring." width="230" height="230">
-        <ul class="hKnavStyle" style="text-align: right;">
-            <li>Resources</li>   
-            <li><a href="AboutUsPage.html">About Us</a></li>
-            <li>Contact Us</li>
+<body>
+    <header>
+        <nav id="mei_nav">
+            <a href="" id="logo"><img src="photologo.svg" style="display: flex; flex: 1 1 auto; width: 140px;"></a>
+            <ul>
+                <li>
+                    <a href="">Experiences</a>
+                    <ul class="dropdown_menu_n">
+                        <li style="width: 100%; height: 10%;"><a href="networkingPage.html">Networking</a></li>
+                        <li style="width: 100%; height: 10%;"><a href="modeling_connections.html" style="position: relative; right: 20px;">Modeling Connections</a></li>
+                    </ul>
+                </li>
 
-        </ul>
-        <ol style="position: relative; padding: 0; margin: 0; left: 690px; bottom: 40px; display: inline-block; background: #fff;">
+                <li>
+                    <a href="">Start Here</a>
+                    <ul class="dropdown_menu_sh" style="width:800px;">
+                        <li style="width: 100%; height: 10%;"><a href="getting_started.html">Getting Started</a></li>
+                        <li style="width: 100%; height: 10%;"><a href="model_form.html">Model Form</a></li>
+                        <li style="width: 100%; height: 10%;"><a href="PortfolioCreationPage.html" >Portfolio Creation</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Portfolios</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+            <div id="side_bar">
+            <a href="" style="padding-left: 20%; font-size: 20px;"></a>
+            </div>
+        </nav> <!--nav end-->
+    </header><!--header end-->
 
-            <li style="padding: 0; font-weight: normal;"><a href="getting_started.html">Getting Started</a></li><br><!--Don't forget to make the links in the footer functional-->
-            <li style="padding: 0; font-weight: normal;"><a href="modeling_connections.html">Model Job Post</a></li><br>
-            <li style="padding: 0; font-weight: normal;"><a href="PortfolioCreationPage.html">Portfolio Creation</a></li><br>
-            <li style="padding: 0; font-weight: normal;"><a href="networkingPage.html">Photographer Networking</a></li><br>
-            <li style="padding: 0; font-weight: normal;"><a href="profilesPage.html">Photographer Reccomendations</a></li><br>
-        </ol>
-        <hr>
-        <p style="font-weight: bold;">Photo Connection &copy; 2025</p>
+    <div id="container"><!--div container begin-->
+        <main id="mei_main"><!--main begins-->
+            <div id="title_mod_form" style="position:relative; display: grid; margin-top: 12em; left: 10em; max-width: 50em;">
+                <h1 style="letter-spacing: 20px; font-size: 60px;
+                 margin-top: 5%; left: em;  max-width: 18em; color: #612940;">MODEL JOB FORM</h1>
+                <p style="position: relative; max-width: 18em;">(*) Required Information</p>
+            </div>
+            <hr style="position: relative; display: flex; margin: 2em 4em;">
+            
+            <!--Form Starts-->
+            <form action="" method="POST" id="job_form">
+                <div id="ove_section">
+                    <h2>Overview</h2>
+                    <div style="display: inline-block; margin-right: 18rem; ">
+                        <p>
+                            <label for="job_title">Title*</label>
+                            <input type="text" name="job_title" id="job_title" style="width: 300px;">
+                        </p>
+                        <p>
+                            <label for="job_desc">Description*</label>
+                            <textarea name="desc_area" id="job_desc" rows="6" cols="40" 
+                            style="border-radius: 10px;
+                                    padding: 4px 4px;
+                                    border: 1px solid gray;
+                                    box-shadow: inset 0px 0px 2px rgb(129, 129, 129);">
+                            </textarea>
+                        </p>
+                    </div>    
+                </div>
+                <!--overview section end-->
+                <hr style="position: relative; display: flex; margin: 2em 4em;">
+                <div id="loc_section">
+                    <h2>Location</h2>
+                    <p>
+                        <label for="job_state">State*</label>
+                        <select name="job_state" style="border-radius: 10px;padding: 4px 4px;border: 1px solid gray;box-shadow: inset 0px 0px 2px rgb(129, 129, 129);">
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>    
+                    </p>
+                    <p>
+                        <label for="job_city">City*</label>
+                        <input type="text" name="job_city" id="job_city">
+                    </p>
+                    <p>
+                        <label for="date">Date*</label>
+                        <input type="date" id="date" placeholder="mm/dd/yy" style=" color: black" required>  
+                    </p>
+                </div>
+                <!--location section end-->
+                <hr style="position: relative; display: flex; margin: 2em 4em;">
+                <div id="speci_section">
+                    <h2>Specifications</h2>
+                    <p>
+                        <label for="job_hours">Total Job Hours*</label>
+                        <input type="number" id="job_hours" name="job_hours">
+                    </p>
+                    <p>
+                        <label for="job_pay">Total Pay*</label>
+                        <input type="number" id="job_pay" name="job_pay">
+                    </p>
+                    <div id="radio_exp" style="position: relative;margin-top: 10rem; right: 28rem;">
+                        <span style="font-size: 20px;">Experience Level</span>
+                        <div>
+                            <input type="radio" name="experience" value="Beginner" id="beginner" >
+                            <label for="beginner" style="display: inline-block;
+  vertical-align: middle;">Beginner</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="experience" value="Intermediate" id="intermediate">
+                            <label for="intermediate" style="display: inline-block;
+  vertical-align: middle;">Intermediate</label>
+                        </div>  
+                        <div >
+                            <input type="radio" name="experience" value="Expert" id="expert">
+                            <label for="expert" style="display: inline-block;
+  vertical-align: middle;">Expert</label>
+                        </div>         
+                    </div>
+                </div>
+                <hr style="position: relative; display: flex; margin: 2em 4em;">
+            </form>
+            <button type ="submit" style="box-shadow: 0px 2px 4px rgb(104, 104, 104);
+             width: 180px; height: 50px; position: relative; border-radius: 20px;
+              border:2px solid #612940; background: #612940; color: #FDECEF; font-size: 20px; 
+              float: right; margin-right: 20rem; margin-bottom: 8rem;">Submit</button>
+        </main>
+    </div>
+    <footer id="mei_footer">
+        <div id="foot_col">
+            <img src="photologo.svg" style="padding: 0rem 4rem;">
+            
+        </div>
+        <div id="foot_col">
+        <span style="font-weight: bold;">Resources</span>
+            <ul style="list-style: none;">
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="modeling_connections.html">Model Connections</a></li>
+                <li><a href="PortfolioCreationPage.html">Portfolio Creation</a></li>
+                <li><a href="networkingPage.html">Photographer Networking</a></li>
+                <Li><a href="model_form.html">Model Form</a></Li>
+            </ul>
+        </div>
+        <div id="foot_col">
+            <span style="font-weight: bold;">About Us</span>
+        </div>
+        <div id="foot_col">
+            <span style="font-weight: bold;">Contact Us</span>
+        </div>
+        <div id="foot_col">
+            <img src="x.png">
+            <img src="youtube.png">
+            <img src="instagram.png">
+            <img src="linkedin.png">
+        </div>
+        <hr style="width:100%; ">
+        <p style="position: relative;padding:0; bottom:0; left:0; right:0;margin:auto; ">Photo Connection &copy; 2025</p> 
 
     </footer>
-  </body>
-
+</body>
 </html>
-
-
-
-
-
 
 
 
