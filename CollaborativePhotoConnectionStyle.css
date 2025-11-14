@@ -1188,8 +1188,41 @@ button:hover::before {
         transform: translate(20px, 200px);
         width: 200px;
     }
-
+    
+    /* global js styles */
+    .social-sharing {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
 }
+
+    .share-btn {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-family: Verdana, sans-serif;
+      font-size: 0.95em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+}
+
+    .share-btn:hover {
+      background-color: #555;
+}
+
+    #share-facebook { background-color: #3b5998; }
+    #share-facebook:hover { background-color: #2d4373; }
+
+    #share-twitter { background-color: #1da1f2; }
+    #share-twitter:hover { background-color: #0d8bd9; }
+
+    #share-native { background-color: #28a745; }
+    #share-native:hover { background-color: #218838; }
+}
+
 
 
 
