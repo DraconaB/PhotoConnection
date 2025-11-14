@@ -11,7 +11,7 @@
 }
 
 
-.hKnavStyle ul, li{/*I have added the class hKnavStyle to the ul tags in my header and footer so that we can differentiate the nav styles between my pages and my group members rather than having to shuffle everythign around if we all went about styling the nav bar differently in regard to how we did it using CSS.*/
+.hKnavStyle ul, .hKnavStyle li{/*I have added the class hKnavStyle to the ul tags in my header and footer so that we can differentiate the nav styles between my pages and my group members rather than having to shuffle everythign around if we all went about styling the nav bar differently in regard to how we did it using CSS.*/
 
     display: inline-flex;/*makes the list items display like an inline element putting them all on one horizontal line, the flex part controls how the children of this element (if there are any) appear*/
     list-style-type: none;/*takes away the bullet points on each list item*/
@@ -1190,6 +1190,7 @@ button:hover::before {
     }
 
 }
+
 
 
 
