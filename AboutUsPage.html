@@ -114,17 +114,20 @@
     #share-native { background-color: #28a745; }
     #share-native:hover { background-color: #218838; }
 
-    /* hover effect */
-    .bio {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    color: #555;
-    margin-top: 10px;
+    .team-member {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        text-align: center;
+        margin: 20px;
 }
 
-    .team-member:hover .bio {
-    max-height: 200px; 
+    .team-member:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 32px rgba(0,0,0,0.15);
+        border: 1px solid #007bff;
 }
     </style>
 </head>
@@ -165,7 +168,7 @@
             <div class="profile-card">
                 <div class="profile-content">
                     <div class="profile-description">
-                        <p class = "bio">Mei Lan Bargas developed her love for art and sewing at a young age, carrying it with her to adulthood. Her appreciation for photography stems from the simple moments in time that can captured in these individual mediums.</p>
+                        <p>Mei Lan Bargas developed her love for art and sewing at a young age, carrying it with her to adulthood. Her appreciation for photography stems from the simple moments in time that can captured in these individual mediums.</p>
                     </div>
                     <div class="profile-image">
                         <img src="AboutUsImgs/meilan.jpg" alt="Mei Lan Bargas" loading="lazy">
@@ -180,7 +183,7 @@
             <div class="profile-card">
                 <div class="profile-content reverse">
                     <div class="profile-description">
-                        <p class="bio">Deb Bhaumik grew up idolizing athletes in Sports Illustrated marveling at the snapshots of home runs and touchdowns. From this he curated an intense devotion for photography and capturing the perfect moment.</p>
+                        <p>Deb Bhaumik grew up idolizing athletes in Sports Illustrated marveling at the snapshots of home runs and touchdowns. From this he curated an intense devotion for photography and capturing the perfect moment.</p>
                     </div>
                     <div class="profile-image">
                         <img src="AboutUsImgs/deb.jpg" alt="Deb Bhaumik" loading="lazy">
@@ -195,7 +198,7 @@
             <div class="profile-card">
                 <div class="profile-content">
                     <div class="profile-description">
-                        <p class="bio">Halle Knape first encountered photography in her middle school photography class. She immediately fell in love and has continued to hone her craft over the last 12 years. She specializes in photographing people and has built a small business out of her hobby.</p>
+                        <p>Halle Knape first encountered photography in her middle school photography class. She immediately fell in love and has continued to hone her craft over the last 12 years. She specializes in photographing people and has built a small business out of her hobby.</p>
                     </div>
                     <div class="profile-image">
                         <img src="AboutUsImgs/halle.jpg" alt="Halle Knape" loading="lazy">
@@ -250,6 +253,7 @@
     <script src="global.js" defer></script>
 </body>
 </html>
+
 
 
 
