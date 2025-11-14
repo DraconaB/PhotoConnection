@@ -273,8 +273,19 @@
 
     </footer>
     <script src="global.js" defer></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(() => {
+            document.querySelectorAll('.loading').forEach(card => {
+                card.classList.remove('loading');
+                card.innerHTML = `<!-- Real content here -->`;
+            });
+        }, 800); // Simulate load time
+});
+</script>
 </body>
 </html>
+
 
 
 
