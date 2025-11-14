@@ -33,6 +33,144 @@
 
         }
 
+        /*The styling for the Nav from Mei*/
+
+         header {
+
+            position: fixed;
+
+            display: flex;
+
+            padding: 0rem 4%;
+
+            width: 100%;
+
+            height: 140px;
+
+            top:0;
+
+            background: white;
+
+            box-shadow: 0px 0.2px 4px black;
+
+            z-index: 999;
+
+    }
+
+         #mei_nav{
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 6rem;
+
+            font-size: 18px;
+
+            width: 100%;
+
+    }
+
+        #mei_nav ul{
+
+            display: flex;
+
+            gap: 6rem;
+
+            list-style: none;
+
+    }
+
+        #mei_nav a{
+
+            display: block;
+
+            font-size: 1.5rem;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            color: black;
+
+            font-size: 20px;
+
+
+    }
+
+        #mei_nav a:hover{
+
+            background: linear-gradient(265.27deg, #612940 20.55%, #e979ba 94.17%);
+
+            border-radius: 20px;
+
+            color: #fff;
+
+            width: 180px;
+
+
+            transition: 1s ease;
+
+    }
+
+/*dropdown*/
+
+        #mei_nav ul li ul.dropdown_menu_n, #mei_nav ul li ul.dropdown_menu_sh {
+
+            position: relative;
+
+            display: flex;
+
+            left: 30%;
+
+            height: 100px;
+
+            border-radius: 30px;
+
+            background-color: #ffffff;
+
+            border: 2px solid gray;
+
+            position: absolute;
+
+            z-index: 1000;
+
+            display: none;
+
+    }
+
+        #mei_nav ul li ul.dropdown_menu_n li, #mei_nav ul li ul.dropdown_menu_sh li{
+
+            height: 50px;
+
+            margin-top: 2rem;
+
+            margin-left: 1rem;
+
+            width: 100%;
+
+    }
+
+        #mei_nav ul li ul.dropdown_menu_n li a, #mei_nav ul li ul.dropdown_menu_sh li a{
+
+            font-size: 16px;
+
+            width: 10em;
+
+            line-height: 18px;
+
+    }
+
+    #mei_nav ul li:hover ul.dropdown_menu_n, #mei_nav ul li:hover ul.dropdown_menu_sh {
+
+            display: flex;
+
+    }
+
+/*NAV END*/
+
 
     </style>
 
@@ -259,3 +397,4 @@
 
 
 </html>
+
