@@ -130,6 +130,21 @@
             transform: translateY(0);
     }
 }
+
+    .skeleton {
+    background: #e0e0e0;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+    .skeleton-text { height: 16px; margin: 8px 0; }
+    .skeleton-image { height: 200px; width: 200px; border-radius: 50%; }
+
+    @keyframes pulse {
+        0% { background-color: #e0e0e0; }
+        50% { background-color: #f0f0f0; }
+        100% { background-color: #e0e0e0; }
+}
     </style>
 </head>
 <body>
@@ -162,6 +177,12 @@
 
     <!-- Team Profiles Section -->
     <section class="team-profiles">
+        <div class="profile-card loading">
+            <div class="skeleton skeleton-image"></div>
+            <h3 class="skeleton skeleton-text" style="width: 70%;"></h3>
+            <p class="skeleton skeleton-text" style="width: 90%;"></p>
+            <p class="skeleton skeleton-text" style="width: 80%;"></p>
+</div>
         <div class="container">
             <h2 style="text-align: center; color: #333; font-size: 2.2em; margin-bottom: 40px;">Meet Our Team</h2>
             
@@ -254,6 +275,7 @@
     <script src="global.js" defer></script>
 </body>
 </html>
+
 
 
 
