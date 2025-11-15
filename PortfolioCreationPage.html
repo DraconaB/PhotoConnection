@@ -56,6 +56,57 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('form');
+        const submitBtn = document.getElementById('submit-portfolio');
+        const draftBtn  = document.getElementById('save-draft');
+
+        if (!form || !submitBtn) return;
+
+        // --- Submit ---
+        submitBtn.addEventListener('click', () => {
+            // Trigger native validation
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                showToast('Please fill all required fields', 'error');
+                return;
+        }
+
+            // Add loading state
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+
+            // Simulate API call (replace with real fetch later)
+            setTimeout(() => {
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+                showToast('Portfolio submitted successfully!', 'success');
+
+                // Optional: reset form
+                // form.reset();
+            }, 1500);
+    });
+
+        // --- Save Draft (localStorage) ---
+        draftBtn?.addEventListener('click', () => {
+            const data = Object.fromEntries(new FormData(form));
+            localStorage.setItem('portfolioDraft', JSON.stringify(data));
+            showToast('Draft saved locally', 'info');
+        });
+
+        // --- Load draft on page load ---
+        const saved = localStorage.getItem('portfolioDraft');
+        if (saved) {
+            const data = JSON.parse(saved);
+            Object.entries(data).forEach(([key, val]) => {
+                const field = form.elements[key];
+                if (field) field.value = val;
+            });
+            showToast('Draft loaded', 'info');
+    }
+});
+</script>
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -183,6 +234,46 @@ document.addEventListener('DOMContentLoaded', () => {
         .field { margin-bottom: 1.2rem; position:relative; }
         .error { color:#d32f2f; font-size:0.85rem; display:block; margin-top:4px; }
         input.invalid, textarea.invalid, select.invalid { border-color:#d32f2f; }
+
+        .form-actions button {
+            padding: 0.75rem 1.8rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0 0.6rem;
+            transition: all 0.25s ease;
+}
+
+        .btn-primary {
+            background: #1976d2;
+            color: #fff;
+}
+        .btn-primary:hover { background: #1565c0; }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+}
+        .btn-secondary:hover { background: #d5d5d5; }
+
+        /* Loading state */
+        .btn-primary.loading {
+            position: relative;
+            color: transparent;
+}
+        .btn-primary.loading::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 20px; height: 20px;
+            border: 2px solid #fff;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+}
+        @keyframes spin { to { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
@@ -248,6 +339,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 </form>
             </div>
         </div>
+        <div class="form-actions" style="text-align:center; margin:2.5rem 0;">
+        <button type="button" id="save-draft" class="btn-secondary">
+            Save Draft
+        </button>
+        <button type="submit" id="submit-portfolio" class="btn-primary">
+            Submit Portfolio
+        </button>
+        </div>
     </section>
 
     <!-- White Spacer -->
@@ -304,9 +403,32 @@ document.addEventListener('DOMContentLoaded', () => {
         <p style="font-weight: bold;">Photo Connection &copy; 2025</p>
 
     </footer>
+    <div id="toast"></div>
+
+    <script>
+    function showToast(msg, type = 'info', duration = 3000) {
+        const toast = document.getElementById('toast');
+        toast.textContent = msg;
+        toast.className = `toast ${type} show`;
+        setTimeout(() => toast.className = toast.className.replace('show', ''), duration);
+}
+    </script>
+
+    <style>
+    #toast {
+        position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+        padding: 12px 24px; border-radius: 6px; color: #fff; font-weight: 500;
+        opacity: 0; transition: opacity .3s; z-index: 1000;
+}
+    #toast.show { opacity: 1; }
+    #toast.success { background: #4caf50; }
+    #toast.error   { background: #f44336; }
+    #toast.info    { background: #2196f3; }
+    </style>
 </body>
 
 </html>
+
 
 
 
