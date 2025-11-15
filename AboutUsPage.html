@@ -6,203 +6,129 @@
     <title>Photo Connection - About Us</title>
     <link rel="stylesheet" href="CollaborativePhotoConnectionStyle.css">
     <style>
-        body {
-            font-family: Verdana;
-        }
+        body { font-family: Verdana; margin: 0; }
+        .about-header { background-color: #f5f5f5; padding: 40px 0; border-bottom: 1px solid #ddd; }
+        .about-header h1 { font-size: 2.5em; color: #333; margin: 0; text-align: center; }
 
-        /* Internal CSS for About Page */
-        .about-header {
-            background-color: #f5f5f5;
-            padding: 40px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .about-header h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin: 0;
-        }
-        
-        .team-profiles {
-            padding: 60px 0;
-            background-color: #e8e8e8;
-        }
-        
+        .team-profiles { padding: 60px 0; background-color: #e8e8e8; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
         .profile-card {
             background: white;
             margin: 40px 0;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
         }
-        
+        .profile-card:nth-child(1) { animation-delay: 0.1s; }
+        .profile-card:nth-child(2) { animation-delay: 0.2s; }
+        .profile-card:nth-child(3) { animation-delay: 0.3s; }
+
         .profile-content {
             display: flex;
             align-items: flex-start;
             gap: 40px;
             padding: 40px;
         }
-        
         .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 8px;
-            flex-shrink: 0;
-            overflow: hidden;
+            width: 150px; height: 150px; border-radius: 8px; overflow: hidden; flex-shrink: 0;
         }
-        
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .profile-info {
-            flex: 1;
-        }
-        
-        .profile-info h3 {
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
+        .profile-image img { width: 100%; height: 100%; object-fit: cover; }
+        .profile-info { flex: 1; }
+        .profile-info h3 { font-size: 1.3em; margin: 15px 0; color: #333; }
         .profile-description {
-            background-color: #f8d7da;
-            padding: 20px;
-            border-radius: 8px;
-            line-height: 1.6;
-            color: #333;
+            background-color: #f8d7da; padding: 20px; border-radius: 8px; line-height: 1.6; color: #333;
         }
-        
-        .reverse {
-            flex-direction: row-reverse;
+        .reverse { flex-direction: row-reverse; }
+        .reverse .profile-description { background-color: #d1ecf1; }
+
+        /* Skeleton */
+        .skeleton { background: #e0e0e0; border-radius: 8px; animation: pulse 1.5s infinite ease-in-out; }
+        .skeleton-image { height: 150px; width: 150px; border-radius: 8px; }
+        .skeleton-text { height: 16px; margin: 8px 0; border-radius: 4px; }
+        .skeleton-text.w70 { width: 70%; } .skeleton-text.w90 { width: 90%; } .skeleton-text.w80 { width: 80%; }
+        @keyframes pulse {
+            0%, 100% { background-color: #e0e0e0; }
+            50% { background-color: #f0f0f0; }
         }
-        
-        .reverse .profile-description {
-            background-color: #d1ecf1;
+
+        /* Social Sharing */
+        .social-sharing { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+        .share-btn {
+            background-color: #333; color: white; border: none; padding: 10px 18px;
+            border-radius: 6px; font-family: Verdana; font-size: 0.95em; cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        .social-sharing {
-          display: flex;
-          gap: 15px;
-          justify-content: center;
-          flex-wrap: wrap;
-}
+        .share-btn:hover { background-color: #555; }
+        #share-facebook { background-color: #3b5998; } #share-facebook:hover { background-color: #2d4373; }
+        #share-twitter  { background-color: #1da1f2; } #share-twitter:hover  { background-color: #0d8bd9; }
+        #share-native   { background-color: #28a745; } #share-native:hover   { background-color: #218838; }
 
-    .share-btn {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-family: Verdana, sans-serif;
-      font-size: 0.95em;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-}
-
-    .share-btn:hover {
-      background-color: #555;
-}
-
-    #share-facebook { background-color: #3b5998; }
-    #share-facebook:hover { background-color: #2d4373; }
-
-    #share-twitter { background-color: #1da1f2; }
-    #share-twitter:hover { background-color: #0d8bd9; }
-
-    #share-native { background-color: #28a745; }
-    #share-native:hover { background-color: #218838; }
-
-    .profile-card {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeInUp 0.6s ease-out forwards;
-}
-
-    .profile-card:nth-child(1) { animation-delay: 0.1s; }
-    .profile-card:nth-child(2) { animation-delay: 0.2s; }
-    .profile-card:nth-child(3) { animation-delay: 0.3s; }
-
-    @keyframes fadeInUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-    }
-}
-
-    .skeleton {
-    background: #e0e0e0;
-    border-radius: 8px;
-    animation: pulse 1.5s infinite ease-in-out;
-}
-
-    .skeleton-text { height: 16px; margin: 8px 0; }
-    .skeleton-image { height: 200px; width: 200px; border-radius: 50%; }
-
-    @keyframes pulse {
-        0% { background-color: #e0e0e0; }
-        50% { background-color: #f0f0f0; }
-        100% { background-color: #e0e0e0; }
-}
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
-    <!-- Header - Matching group member's style -->
+
+    <!-- Header -->
     <header>
-
-        <a href="index.html" aria-label="Click on our logo to get back to the home page.">
-        <img class= "Logo" src="PhotoConnectionLogo.png" alt="Our logo. An image of a camera inside a circle surrounded by another circle with text saying Photo Connection and two stars on either side of the camera image in the outer ring." width="168" height="168" style="position: relative; bottom: 80px;">
+        <a href="index.html" aria-label="Home">
+            <img class="Logo" src="PhotoConnectionLogo.png" alt="Logo" width="168" height="168" style="position:relative; bottom:80px;">
         </a>
-
         <ul class="hKnavStyle">
             <li><a href="networkingPage.html">Networking</a></li>
-            <li style="margin-left: -20px;"><a href="getting_started.html">Getting Started</a></li>
-            <li style="padding: 0px; margin-left: 90px;"><a href="profilesPage.html">Portfolios</a></li>
+            <li style="margin-left:-20px;"><a href="getting_started.html">Getting Started</a></li>
+            <li style="padding:0; margin-left:90px;"><a href="profilesPage.html">Portfolios</a></li>
             <li><a href="AboutUsPage.html">About Us</a></li>
             <input type="text" placeholder="search">
-            <button type="submit"><img src="searchIcon.jpg" alt="Magnifying glass icon" width="15" height="15"></button>
-            
-        </ul>    
-        
+            <button type="submit"><img src="searchIcon.jpg" alt="Search" width="15" height="15"></button>
+        </ul>
     </header>
-
 
     <!-- About Header -->
     <section class="about-header">
-        <div class="container">
-            <h1>About Us</h1>
-        </div>
+        <div class="container"><h1>About Us</h1></div>
     </section>
 
-    <!-- Team Profiles Section -->
+    <!-- Team Profiles -->
     <section class="team-profiles">
-        <div class="profile-card loading">
-            <div class="skeleton skeleton-image"></div>
-            <h3 class="skeleton skeleton-text" style="width: 70%;"></h3>
-            <p class="skeleton skeleton-text" style="width: 90%;"></p>
-            <p class="skeleton skeleton-text" style="width: 80%;"></p>
-        </div>
         <div class="container">
-            <h2 style="text-align: center; color: #333; font-size: 2.2em; margin-bottom: 40px;">Meet Our Team</h2>
-            
-            <!-- Mei Lan Bargas Profile -->
-            <div class="profile-card">
+            <h2 style="text-align:center; color:#333; font-size:2.2em; margin-bottom:40px;">Meet Our Team</h2>
+
+            <!-- SKELETON (shown first) -->
+            <div class="profile-card loading" id="skeleton-mei">
+                <div class="profile-content">
+                    <div class="skeleton skeleton-image"></div>
+                    <div class="profile-info">
+                        <div class="skeleton skeleton-text w70"></div>
+                        <div class="skeleton skeleton-text w90"></div>
+                        <div class="skeleton skeleton-text w80"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-card loading" id="skeleton-deb" style="display:none;"></div>
+            <div class="profile-card loading" id="skeleton-halle" style="display:none;"></div>
+
+            <!-- REAL CARDS (hidden initially) -->
+            <div class="profile-card" id="real-mei" style="display:none;">
                 <div class="profile-content">
                     <div class="profile-description">
-                        <p>Mei Lan Bargas developed her love for art and sewing at a young age, carrying it with her to adulthood. Her appreciation for photography stems from the simple moments in time that can captured in these individual mediums.</p>
+                        <p>Mei Lan Bargas developed her love for art and sewing at a young age, carrying it with her to adulthood. Her appreciation for photography stems from the simple moments in time that can be captured in these individual mediums.</p>
                     </div>
                     <div class="profile-image">
                         <img src="AboutUsImgs/meilan.jpg" alt="Mei Lan Bargas" loading="lazy">
                     </div>
                 </div>
-                <div style="text-align: left; padding: 20px; font-weight: bold; color: #333;">
+                <div style="text-align:left; padding:20px; font-weight:bold; color:#333;">
                     <p>Mei Lan Bargas</p>
                 </div>
             </div>
 
-            <!-- Deb Bhaumik Profile -->
-            <div class="profile-card">
+            <div class="profile-card" id="real-deb" style="display:none;">
                 <div class="profile-content reverse">
                     <div class="profile-description">
                         <p>Deb Bhaumik grew up idolizing athletes in Sports Illustrated marveling at the snapshots of home runs and touchdowns. From this he curated an intense devotion for photography and capturing the perfect moment.</p>
@@ -211,13 +137,12 @@
                         <img src="AboutUsImgs/deb.jpg" alt="Deb Bhaumik" loading="lazy">
                     </div>
                 </div>
-                <div style="text-align: center; padding: 20px; font-weight: bold; color: #333;">
+                <div style="text-align:center; padding:20px; font-weight:bold; color:#333;">
                     <p>Deb Bhaumik</p>
                 </div>
             </div>
 
-            <!-- Halle Knape Profile -->
-            <div class="profile-card">
+            <div class="profile-card" id="real-halle" style="display:none;">
                 <div class="profile-content">
                     <div class="profile-description">
                         <p>Halle Knape first encountered photography in her middle school photography class. She immediately fell in love and has continued to hone her craft over the last 12 years. She specializes in photographing people and has built a small business out of her hobby.</p>
@@ -226,82 +151,86 @@
                         <img src="AboutUsImgs/halle.jpg" alt="Halle Knape" loading="lazy">
                     </div>
                 </div>
-                <div style="text-align: right; padding: 20px; font-weight: bold; color: #333;">
+                <div style="text-align:right; padding:20px; font-weight:bold; color:#333;">
                     <p>Halle Knape</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Social Media Section -->
-    <section class="social-sharing-section" style="padding: 40px 0; background-color: #f5f5f5; text-align: center;">
+
+    <!-- Social Sharing -->
+    <section style="padding:40px 0; background:#f5f5f5; text-align:center;">
         <div class="container">
-        <h3 style="margin-bottom: 20px; color: #333;">Share This Page</h3>
-        <div class="social-sharing">
-            <button id="share-facebook" class="share-btn">Share on Facebook</button>
-            <button id="share-twitter" class="share-btn">Share on Twitter</button>
-            <button id="share-native" class="share-btn">Share</button>
-        </div>
+            <h3 style="margin-bottom:20px; color:#333;">Share This Page</h3>
+            <div class="social-sharing">
+                <button id="share-facebook" class="share-btn">Share on Facebook</button>
+                <button id="share-twitter" class="share-btn">Share on Twitter</button>
+                <button id="share-native" class="share-btn">Share</button>
+            </div>
         </div>
     </section>
 
-    <!-- Footer - Matching group member's style -->
+    <!-- Footer -->
     <footer>
-
-        <img class= "Logo" src="PhotoConnectionLogo.png" alt="Our logo. An image of a camera inside a circle surrounded by another circle with text saying Photo Connection and two stars on either side of the camera image in the outer ring." width="230" height="230">
-
-        <ul class="hKnavStyle" style="text-align: right;">
-
-            <li>Resources</li>   
+        <img class="Logo" src="PhotoConnectionLogo.png" alt="Logo" width="230" height="230">
+        <ul class="hKnavStyle" style="text-align:right;">
+            <li>Resources</li>
             <li><a href="AboutUsPage.html">About Us</a></li>
             <li>Contact Us</li>
-
         </ul>
-
-        <ol style="position: relative; padding: 0; margin: 0; left: 690px; bottom: 40px; display: inline-block;">
-
-            <li style="padding: 0; font-weight: normal;"><a href="getting_started.html">Getting Started</a></li><br><!--Don't forget to make the links in the footer functional-->
-            <li style="padding: 0; font-weight: normal;"><a href="modeling_connections.html">Model Job Post</a></li><br>
-            <li style="padding: 0; font-weight: normal;"><a href="PortfolioCreationPage.html">Portfolio Creation</a></li><br>
-            <li style="padding: 0; font-weight: normal;"><a href="networkingPage.html">Photographer Networking</a></li><br>
-            <li style="padding: 0; font-weight: normal;"><a href="profilesPage.html">Photographer Reccomendations</a></li><br>
-
+        <ol style="position:relative; padding:0; margin:0; left:690px; bottom:40px; display:inline-block;">
+            <li style="padding:0; font-weight:normal;"><a href="getting_started.html">Getting Started</a></li><br>
+            <li style="padding:0; font-weight:normal;"><a href="modeling_connections.html">Model Job Post</a></li><br>
+            <li style="padding:0; font-weight:normal;"><a href="PortfolioCreationPage.html">Portfolio Creation</a></li><br>
+            <li style="padding:0; font-weight:normal;"><a href="networkingPage.html">Photographer Networking</a></li><br>
+            <li style="padding:0; font-weight:normal;"><a href="profilesPage.html">Photographer Recommendations</a></li><br>
         </ol>
-
         <hr>
-
-        <p style="font-weight: bold;">Photo Connection &copy; 2025</p>
-
+        <p style="font-weight:bold;">Photo Connection &copy; 2025</p>
     </footer>
-    <script src="global.js" defer></script>
+
+    <!-- JS: Skeleton → Real Content + Sharing -->
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(() => {
-            document.querySelectorAll('.loading').forEach(card => {
-                card.classList.remove('loading');
-                card.innerHTML = `<!-- Real content here -->`;
+        document.addEventListener("DOMContentLoaded", () => {
+            // === 1. Replace Skeleton with Real Content ===
+            const replacements = [
+                { skeleton: 'skeleton-mei', real: 'real-mei' },
+                { skeleton: 'skeleton-deb', real: 'real-deb' },
+                { skeleton: 'skeleton-halle', real: 'real-halle' }
+            ];
+
+            setTimeout(() => {
+                replacements.forEach(pair => {
+                    const skel = document.getElementById(pair.skeleton);
+                    const real = document.getElementById(pair.real);
+                    if (skel && real) {
+                        skel.style.display = 'none';
+                        real.style.display = 'block';
+                    }
+                });
+            }, 800); // Simulate load
+
+            // === 2. Social Sharing ===
+            const pageUrl = encodeURIComponent(window.location.href);
+            const pageTitle = encodeURIComponent(document.title);
+
+            document.getElementById('share-facebook').addEventListener('click', () => {
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`, '_blank');
             });
-        }, 800); // Simulate load time
-});
-</script>
+
+            document.getElementById('share-twitter').addEventListener('click', () => {
+                window.open(`https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`, '_blank');
+            });
+
+            document.getElementById('share-native').addEventListener('click', () => {
+                if (navigator.share) {
+                    navigator.share({ title: document.title, url: window.location.href })
+                        .catch(() => alert('Sharing failed'));
+                } else {
+                    alert('Web Share API not supported. Copy link instead.');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
