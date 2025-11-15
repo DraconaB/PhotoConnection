@@ -1,6 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+/* ---------- 1. FORM VALIDATION ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    if (!form) return;
+
+    // Helper: show/hide error
+    const setError = (input, msg) => {
+        const err = input.parentNode.querySelector('.error');
+        if (err) err.textContent = msg;
+        input.classList.toggle('invalid', !!msg);
+    };
+
+    // Real-time checks
+    form.querySelectorAll('input, textarea, select').forEach(field => {
+        field.addEventListener('input', () => validateField(field));
+        field.addEventListener('blur', () => validateField(field));
+    });
+
+    const validateField = (field) => {
+        let msg = '';
+        const val = field.value.trim();
+
+        if (field.required && !val) {
+            msg = 'This field is required';
+        } else if (field.type === 'email' && val && !/^\S+@\S+\.\S+$/.test(val)) {
+            msg = 'Enter a valid email';
+        } else if (field.name.includes('phone') && val && !/^\d{10}$/.test(val.replace(/\D/g,''))) {
+            msg = '10-digit phone number';
+        } else if (field.name === 'portfolio-url' && val && !/^https?:\/\//i.test(val)) {
+            msg = 'URL must start with http:// or https://';
+        }
+
+        setError(field, msg);
+        return !msg;
+    };
+
+    // Submit handler
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        let allValid = true;
+
+        form.querySelectorAll('input, textarea, select').forEach(f => {
+            if (!validateField(f)) allValid = false;
+        });
+
+        if (allValid) {
+            showToast('Portfolio saved! (demo)', 'success');
+            // ----> Replace with real fetch/AJAX later
+            // fetch('/api/save', {method:'POST', body:new FormData(form)})
+        } else {
+            showToast('Please fix the errors', 'error');
+        }
+    });
+});
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Connection - Create Your Portfolio</title>
@@ -124,6 +180,9 @@
             height: 60px;
             background: white;
         }
+        .field { margin-bottom: 1.2rem; position:relative; }
+        .error { color:#d32f2f; font-size:0.85rem; display:block; margin-top:4px; }
+        input.invalid, textarea.invalid, select.invalid { border-color:#d32f2f; }
     </style>
 </head>
 <body>
@@ -168,18 +227,22 @@
                         <div class="form-group">
                             <label for="name">Name*</label>
                             <input type="text" id="name" class="form-input" required>
+                            <small class="error"></small>
                         </div>
                         <div class="form-group">
                             <label for="social-media">Social Media</label>
                             <input type="text" id="social-media" class="form-input">
+                            <small class="error"></small>
                         </div>
                         <div class="form-group">
                             <label for="business-name">Business name*</label>
                             <input type="text" id="business-name" class="form-input" required>
+                            <small class="error"></small>
                         </div>
                         <div class="form-group">
                             <label for="business-email">Business email*</label>
                             <input type="email" id="business-email" class="form-input" required>
+                            <small class="error"></small>
                         </div>
                     </div>
                 </form>
@@ -244,6 +307,7 @@
 </body>
 
 </html>
+
 
 
 
