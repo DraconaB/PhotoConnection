@@ -89,7 +89,7 @@
         </ul>
     </header>
 
-    <!-- About Header -->
+    <!-- About -->
     <section class="about-header">
         <div class="container"><h1>About Us</h1></div>
     </section>
@@ -99,7 +99,7 @@
         <div class="container">
             <h2 style="text-align:center; color:#333; font-size:2.2em; margin-bottom:40px;">Meet Our Team</h2>
 
-            <!-- SKELETON (shown first) -->
+            <!-- SKELETON -->
             <div class="profile-card loading" id="skeleton-mei">
                 <div class="profile-content">
                     <div class="skeleton skeleton-image"></div>
@@ -113,7 +113,7 @@
             <div class="profile-card loading" id="skeleton-deb" style="display:none;"></div>
             <div class="profile-card loading" id="skeleton-halle" style="display:none;"></div>
 
-            <!-- REAL CARDS (hidden initially) -->
+            <!-- REAL CARDS -->
             <div class="profile-card" id="real-mei" style="display:none;">
                 <div class="profile-content">
                     <div class="profile-description">
@@ -189,10 +189,9 @@
         <p style="font-weight:bold;">Photo Connection &copy; 2025</p>
     </footer>
 
-    <!-- JS: Skeleton → Real Content + Sharing -->
+    <!-- JS: Skeleton -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // === 1. Replace Skeleton with Real Content ===
             const replacements = [
                 { skeleton: 'skeleton-mei', real: 'real-mei' },
                 { skeleton: 'skeleton-deb', real: 'real-deb' },
@@ -208,9 +207,9 @@
                         real.style.display = 'block';
                     }
                 });
-            }, 800); // Simulate load
+            }, 800); // To simulate load
 
-            // === 2. Social Sharing ===
+            // Social Media 
             const pageUrl = encodeURIComponent(window.location.href);
             const pageTitle = encodeURIComponent(document.title);
 
@@ -234,3 +233,4 @@
     </script>
 </body>
 </html>
+
