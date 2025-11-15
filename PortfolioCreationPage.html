@@ -6,7 +6,7 @@
     <title>Photo Connection - Create Your Portfolio</title>
     <link rel="stylesheet" href="CollaborativePhotoConnectionStyle.css">
     <style>
-        /* ==== CORE STYLES ==== */
+        /* STYLE */
         body { font-family: Verdana; margin: 0; background: #f9f9f9; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
@@ -95,7 +95,7 @@
         </ul>
     </header>
 
-    <!-- Page Title -->
+    <!-- Title -->
     <section class="portfolio-header">
         <div class="container"><h1>Create Your Portfolio</h1></div>
     </section>
@@ -190,7 +190,7 @@
     <!-- Toast -->
     <div id="toast"></div>
 
-    <!-- SINGLE SCRIPT: ALL JS -->
+    <!-- SCRIPT -->
     <script>
         // Toast
         function showToast(message, type = 'info', duration = 3000) {
@@ -217,7 +217,7 @@
             const MAX_FILES = 12;
             let selectedFiles = [];
 
-            // === FORM VALIDATION ===
+            // FORM VALIDATION 
             const setError = (input, msg) => {
                 const err = input.parentNode.querySelector('.error');
                 if (err) err.textContent = msg;
@@ -238,7 +238,7 @@
                 f.addEventListener('blur', () => validateField(f));
             });
 
-            // === UPLOAD LOGIC ===
+            // UPLOAD
             uploadTrigger.addEventListener('click', () => fileInput.click());
 
             fileInput.addEventListener('change', () => {
@@ -305,7 +305,7 @@
                 updateCounter();
             });
 
-            // === SUBMIT ===
+            // SUBMIT 
             form.addEventListener('submit', e => {
                 e.preventDefault();
                 let valid = true;
@@ -325,7 +325,7 @@
                 }, 1500);
             });
 
-            // === SAVE DRAFT ===
+            // SAVE DRAFT
             draftBtn.addEventListener('click', () => {
                 const data = Object.fromEntries(new FormData(form));
                 data._files = selectedFiles.map(f => f.name);
@@ -333,7 +333,7 @@
                 showToast('Draft saved!', 'info');
             });
 
-            // === LOAD DRAFT ===
+            // LOAD DRAFT
             const saved = localStorage.getItem('portfolioDraft');
             if (saved) {
                 try {
@@ -345,9 +345,9 @@
                 } catch (e) { console.error(e); }
             }
 
-            // Test toast
-            setTimeout(() => showToast('Page ready!', 'info'), 800);
+
         });
     </script>
 </body>
 </html>
+
