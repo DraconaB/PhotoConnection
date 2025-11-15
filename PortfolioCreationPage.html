@@ -6,48 +6,81 @@
     <title>Photo Connection - Create Your Portfolio</title>
     <link rel="stylesheet" href="CollaborativePhotoConnectionStyle.css">
     <style>
-        /* ==== YOUR ORIGINAL STYLES (unchanged) ==== */
-        body {font-family: Verdana;}
-        .portfolio-header {background: linear-gradient(135deg, #a569a5, #8e4a8e); color: white; padding: 60px 0;}
-        .portfolio-header h1 {font-size: 2.5em; margin: 0;}
-        .form-section {background: linear-gradient(135deg, #a569a5, #8e4a8e); padding: 40px 0;}
-        .form-container {background: rgba(255,255,255,0.1); border-radius: 12px; padding: 40px; backdrop-filter: blur(10px);}
-        .section-title {color: white; font-size: 1.5em; margin-bottom: 30px; display: flex; align-items: center; gap: 10px;}
-        .form-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;}
-        .form-group {display: flex; flex-direction: column;}
-        .form-group label {color: white; margin-bottom: 8px; font-weight: 500;}
-        .form-input {padding: 12px; border: none; border-radius: 6px; font-size: 1em; background-color: rgba(255,255,255,0.9);}
-        .upload-section {background: linear-gradient(135deg, #a569a5, #8e4a8e); padding: 60px 0;}
-        .upload-container {background: rgba(255,255,255,0.1); border-radius: 12px; padding: 40px; backdrop-filter: blur(10px);}
-        .upload-area {background: white; border: 2px dashed #ccc; border-radius: 12px; padding: 60px; text-align: center; margin-top: 30px;}
-        .upload-button {background-color: #87ceeb; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-size: 1em; cursor: pointer; margin-bottom: 20px;}
-        .spacer {height: 60px; background: white;}
+        /* ==== CORE STYLES ==== */
+        body { font-family: Verdana; margin: 0; background: #f9f9f9; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* ==== VALIDATION & BUTTON STYLES ==== */
-        .field {margin-bottom: 1.2rem; position:relative;}
-        .error {color:#d32f2f; font-size:0.85rem; display:block; margin-top:4px;}
-        input.invalid, textarea.invalid {border-color:#d32f2f;}
-        .form-actions {text-align:center; margin:2.5rem 0;}
-        .form-actions button {padding:0.75rem 1.8rem; font-size:1rem; border:none; border-radius:6px; cursor:pointer; margin:0 0.6rem; transition:all .25s;}
-        .btn-primary {background:#1976d2; color:#fff;}
-        .btn-primary:hover {background:#1565c0;}
-        .btn-secondary {background:#e0e0e0; color:#333;}
-        .btn-secondary:hover {background:#d5d5d5;}
-        .btn-primary.loading {position:relative; color:transparent;}
-        .btn-primary.loading::after {content:''; position:absolute; inset:0; margin:auto; width:20px; height:20px; border:2px solid #fff; border-top-color:transparent; border-radius:50%; animation:spin .8s linear infinite;}
-        @keyframes spin {to {transform:rotate(360deg)}}
+        /* Header */
+        .portfolio-header { background: linear-gradient(135deg, #a569a5, #8e4a8e); color: white; padding: 60px 0; text-align: center; }
+        .portfolio-header h1 { font-size: 2.5em; margin: 0; }
 
-        /* ==== TOAST ==== */
-        #toast {position:fixed; bottom:20px; left:50%; transform:translateX(-50%); min-width:200px; padding:12px 24px; border-radius:6px; color:#fff; font-weight:500; text-align:center; opacity:0; transition:opacity .3s; z-index:1000;}
-        #toast.show {opacity:1;}
-        #toast.success {background:#4caf50;}
-        #toast.error   {background:#f44336;}
-        #toast.info    {background:#2196f3;}
+        /* Form Section */
+        .form-section { background: linear-gradient(135deg, #a569a5, #8e4a8e); padding: 40px 0; }
+        .form-container { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 40px; backdrop-filter: blur(10px); }
+        .section-title { color: white; font-size: 1.5em; margin-bottom: 30px; display: flex; align-items: center; gap: 10px; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group label { color: white; margin-bottom: 8px; font-weight: 500; }
+        .form-input { padding: 12px; border: none; border-radius: 6px; font-size: 1em; background-color: rgba(255,255,255,0.9); }
+        .field { margin-bottom: 1.2rem; position: relative; }
+        .error { color: #d32f2f; font-size: 0.85rem; display: block; margin-top: 4px; }
+        input.invalid, textarea.invalid { border-color: #d32f2f; }
+
+        /* Upload Section */
+        .upload-section { background: linear-gradient(135deg, #a569a5, #8e4a8e); padding: 60px 0; }
+        .upload-container { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 40px; backdrop-filter: blur(10px); }
+        .upload-area {
+            background: white; border: 2px dashed #ccc; border-radius: 12px; padding: 60px; text-align: center; margin-top: 30px;
+            transition: border-color 0.3s;
+        }
+        .upload-area.dragover { border-color: #1976d2; }
+        .upload-button { background-color: #87ceeb; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-size: 1em; cursor: pointer; margin-bottom: 20px; }
+        .upload-info { color: #666; margin-bottom: 20px; }
+        .file-limit { color: #333; font-weight: 500; }
+
+        /* Preview Grid */
+        #preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 12px; margin-top: 20px; justify-items: center; }
+        .preview-item { position: relative; width: 100px; height: 100px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background: #f0f0f0; }
+        .preview-item img, .preview-item .pdf-icon { width: 100%; height: 100%; object-fit: cover; }
+        .pdf-icon { display: flex; align-items: center; justify-content: center; background: #d32f2f; color: white; font-weight: bold; font-size: 0.8em; }
+        .remove-file {
+            position: absolute; top: 4px; right: 4px; background: rgba(0,0,0,0.6); color: white; border: none;
+            width: 20px; height: 20px; border-radius: 50%; font-size: 12px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .remove-file:hover { background: rgba(0,0,0,0.9); }
+
+        /* Buttons */
+        .form-actions { text-align: center; margin: 2.5rem 0; }
+        .form-actions button { padding: 0.75rem 1.8rem; font-size: 1rem; border: none; border-radius: 6px; cursor: pointer; margin: 0 0.6rem; transition: all 0.25s; }
+        .btn-primary { background: #1976d2; color: #fff; }
+        .btn-primary:hover { background: #1565c0; }
+        .btn-secondary { background: #e0e0e0; color: #333; }
+        .btn-secondary:hover { background: #d5d5d5; }
+        .btn-primary.loading { position: relative; color: transparent; }
+        .btn-primary.loading::after {
+            content: ''; position: absolute; inset: 0; margin: auto; width: 20px; height: 20px;
+            border: 2px solid #fff; border-top-color: transparent; border-radius: 50%; animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Toast */
+        #toast {
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+            min-width: 200px; padding: 12px 24px; border-radius: 6px; color: #fff; font-weight: 500;
+            text-align: center; opacity: 0; transition: opacity 0.3s; z-index: 1000;
+        }
+        #toast.show { opacity: 1; }
+        #toast.success { background: #4caf50; }
+        #toast.error   { background: #f44336; }
+        #toast.info    { background: #2196f3; }
+
+        .spacer { height: 60px; background: white; }
     </style>
 </head>
 <body>
 
-    <!-- ==== HEADER ==== -->
+    <!-- Header -->
     <header>
         <a href="index.html" aria-label="Home">
             <img class="Logo" src="PhotoConnectionLogo.png" alt="Logo" width="168" height="168" style="position:relative; bottom:80px;">
@@ -62,19 +95,18 @@
         </ul>
     </header>
 
-    <!-- ==== PAGE TITLE ==== -->
+    <!-- Page Title -->
     <section class="portfolio-header">
         <div class="container"><h1>Create Your Portfolio</h1></div>
     </section>
 
-    <!-- ==== FORM SECTION ==== -->
+    <!-- Form Section -->
     <section class="form-section">
         <div class="container">
             <div class="form-container">
                 <h2 style="color:white; font-size:2em; margin-bottom:20px;">Portfolio Information</h2>
                 <div class="section-title"><span>Required Information</span></div>
 
-                <!-- ==== FORM STARTS HERE ==== -->
                 <form id="portfolio-form">
                     <div class="form-grid">
                         <div class="form-group field">
@@ -99,34 +131,44 @@
                         </div>
                     </div>
 
-                    <!-- ==== SUBMIT BUTTONS (inside the form) ==== -->
+                    <!-- Submit Buttons -->
                     <div class="form-actions">
                         <button type="button" id="save-draft" class="btn-secondary">Save Draft</button>
                         <button type="submit" id="submit-portfolio" class="btn-primary">Submit Portfolio</button>
                     </div>
                 </form>
-                <!-- ==== END OF FORM ==== -->
             </div>
         </div>
     </section>
 
     <div class="spacer"></div>
 
-    <!-- ==== UPLOAD SECTION ==== -->
+    <!-- Upload Section -->
     <section class="upload-section">
         <div class="container">
             <div class="upload-container">
                 <h2 style="color:white; font-size:2em; margin:0 0 30px 0;">Upload Your Photos</h2>
-                <div class="upload-area">
-                    <button class="upload-button">Upload files</button>
-                    <div class="upload-info"><p>Supported file formats: PDF, JPG, GIF, PNG</p></div>
-                    <div class="file-limit"><p><strong>0 / 12 File Limit</strong></p></div>
+
+                <div class="upload-area" id="upload-area">
+                    <input type="file" id="photo-upload" accept="image/jpeg,image/png,image/gif,application/pdf" multiple style="display:none;">
+
+                    <button type="button" class="upload-button" id="upload-trigger">Upload files</button>
+
+                    <div class="upload-info">
+                        <p>Supported file formats: PDF, JPG, GIF, PNG</p>
+                    </div>
+
+                    <div class="file-limit">
+                        <p><strong id="file-counter">0 / 12</strong> File Limit</p>
+                    </div>
+
+                    <div id="preview-grid"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==== FOOTER ==== -->
+    <!-- Footer -->
     <footer>
         <img class="Logo" src="PhotoConnectionLogo.png" alt="Logo" width="230" height="230">
         <ul class="hKnavStyle" style="text-align:right;">
@@ -145,12 +187,12 @@
         <p style="font-weight:bold;">Photo Connection &copy; 2025</p>
     </footer>
 
-    <!-- ==== TOAST CONTAINER ==== -->
+    <!-- Toast -->
     <div id="toast"></div>
 
-    <!-- ==== SINGLE SCRIPT (everything together) ==== -->
+    <!-- SINGLE SCRIPT: ALL JS -->
     <script>
-        // ---- 1. TOAST FUNCTION (must be first) ----
+        // Toast
         function showToast(message, type = 'info', duration = 3000) {
             const toast = document.getElementById('toast');
             if (!toast) return;
@@ -162,18 +204,20 @@
             }, duration);
         }
 
-        // ---- 2. MAIN LOGIC ----
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('portfolio-form');
             const submitBtn = document.getElementById('submit-portfolio');
-            const draftBtn  = document.getElementById('save-draft');
+            const draftBtn = document.getElementById('save-draft');
+            const uploadTrigger = document.getElementById('upload-trigger');
+            const fileInput = document.getElementById('photo-upload');
+            const previewGrid = document.getElementById('preview-grid');
+            const fileCounter = document.getElementById('file-counter');
+            const uploadArea = document.getElementById('upload-area');
 
-            if (!form || !submitBtn) {
-                console.error('Form or submit button missing');
-                return;
-            }
+            const MAX_FILES = 12;
+            let selectedFiles = [];
 
-            // ----- VALIDATION HELPERS -----
+            // === FORM VALIDATION ===
             const setError = (input, msg) => {
                 const err = input.parentNode.querySelector('.error');
                 if (err) err.textContent = msg;
@@ -183,74 +227,127 @@
             const validateField = (field) => {
                 let msg = '';
                 const val = field.value.trim();
-
-                if (field.required && !val) {
-                    msg = 'This field is required';
-                } else if (field.type === 'email' && val && !/^\S+@\S+\.\S+$/.test(val)) {
-                    msg = 'Enter a valid email';
-                }
-
+                if (field.required && !val) msg = 'This field is required';
+                else if (field.type === 'email' && val && !/^\S+@\S+\.\S+$/.test(val)) msg = 'Enter a valid email';
                 setError(field, msg);
                 return !msg;
             };
 
-            // Attach real-time validation
             form.querySelectorAll('input, textarea').forEach(f => {
                 f.addEventListener('input', () => validateField(f));
-                f.addEventListener('blur',  () => validateField(f));
+                f.addEventListener('blur', () => validateField(f));
             });
 
-            // ----- SUBMIT HANDLER -----
-            form.addEventListener('submit', e => {
-                e.preventDefault();
-                let allValid = true;
+            // === UPLOAD LOGIC ===
+            uploadTrigger.addEventListener('click', () => fileInput.click());
 
-                form.querySelectorAll('input, textarea').forEach(f => {
-                    if (!validateField(f)) allValid = false;
-                });
-
-                if (!allValid) {
-                    showToast('Please fix the errors', 'error');
+            fileInput.addEventListener('change', () => {
+                const newFiles = Array.from(fileInput.files);
+                const available = MAX_FILES - selectedFiles.length;
+                if (newFiles.length > available) {
+                    showToast(`Only ${available} more file(s) allowed.`, 'error');
                     return;
                 }
+                selectedFiles.push(...newFiles);
+                updatePreview();
+                updateCounter();
+            });
 
-                // Loading spinner
+            function updatePreview() {
+                previewGrid.innerHTML = '';
+                selectedFiles.forEach((file, i) => {
+                    const item = document.createElement('div');
+                    item.className = 'preview-item';
+
+                    if (file.type.startsWith('image/')) {
+                        const img = document.createElement('img');
+                        img.src = URL.createObjectURL(file);
+                        item.appendChild(img);
+                    } else if (file.type === 'application/pdf') {
+                        const pdf = document.createElement('div');
+                        pdf.className = 'pdf-icon';
+                        pdf.textContent = 'PDF';
+                        item.appendChild(pdf);
+                    }
+
+                    const removeBtn = document.createElement('button');
+                    removeBtn.className = 'remove-file';
+                    removeBtn.innerHTML = '×';
+                    removeBtn.onclick = () => {
+                        selectedFiles.splice(i, 1);
+                        updatePreview();
+                        updateCounter();
+                    };
+                    item.appendChild(removeBtn);
+
+                    previewGrid.appendChild(item);
+                });
+            }
+
+            function updateCounter() {
+                fileCounter.textContent = `${selectedFiles.length} / ${MAX_FILES}`;
+            }
+
+            // Drag & Drop
+            ['dragover', 'dragenter'].forEach(e => uploadArea.addEventListener(e, ev => { ev.preventDefault(); uploadArea.classList.add('dragover'); }));
+            ['dragleave', 'dragend', 'drop'].forEach(e => uploadArea.addEventListener(e, () => uploadArea.classList.remove('dragover')));
+            uploadArea.addEventListener('drop', e => {
+                e.preventDefault();
+                const files = Array.from(e.dataTransfer.files).filter(f =>
+                    ['image/jpeg','image/png','image/gif','application/pdf'].includes(f.type)
+                );
+                if (files.length + selectedFiles.length > MAX_FILES) {
+                    showToast(`Max ${MAX_FILES} files allowed.`, 'error');
+                    return;
+                }
+                selectedFiles.push(...files);
+                updatePreview();
+                updateCounter();
+            });
+
+            // === SUBMIT ===
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                let valid = true;
+                form.querySelectorAll('input, textarea').forEach(f => { if (!validateField(f)) valid = false; });
+                if (!valid) { showToast('Please fix errors', 'error'); return; }
+
                 submitBtn.classList.add('loading');
                 submitBtn.disabled = true;
 
-                // Simulate API call
+                const formData = new FormData(form);
+                selectedFiles.forEach((f, i) => formData.append(`photo_${i}`, f));
+
                 setTimeout(() => {
                     submitBtn.classList.remove('loading');
                     submitBtn.disabled = false;
-                    showToast('Portfolio submitted successfully!', 'success');
-                    // form.reset(); // uncomment to clear
+                    showToast('Portfolio submitted!', 'success');
                 }, 1500);
             });
 
-            // ----- SAVE DRAFT -----
-            draftBtn?.addEventListener('click', () => {
+            // === SAVE DRAFT ===
+            draftBtn.addEventListener('click', () => {
                 const data = Object.fromEntries(new FormData(form));
+                data._files = selectedFiles.map(f => f.name);
                 localStorage.setItem('portfolioDraft', JSON.stringify(data));
-                showToast('Draft saved locally', 'info');
+                showToast('Draft saved!', 'info');
             });
 
-            // ----- LOAD DRAFT -----
+            // === LOAD DRAFT ===
             const saved = localStorage.getItem('portfolioDraft');
             if (saved) {
                 try {
                     const data = JSON.parse(saved);
                     Object.entries(data).forEach(([k, v]) => {
-                        const el = form.elements[k];
-                        if (el) el.value = v;
+                        if (k !== '_files' && form.elements[k]) form.elements[k].value = v;
                     });
                     setTimeout(() => showToast('Draft loaded', 'info'), 600);
                 } catch (e) { console.error(e); }
             }
 
-
+            // Test toast
+            setTimeout(() => showToast('Page ready!', 'info'), 800);
         });
     </script>
 </body>
 </html>
-
-
