@@ -28,17 +28,17 @@
 #intro{/*I have added the ID intro for the div that holds the introduction section of this page*/
 
     background-color: #FDECEF;/*changes the background color*/
-    padding-top: 10px;/*adds padding internally from the top so that elements aren't so close to the top of the div container*/
-    padding-bottom: 10px;/*adds padding internally from the bottom so that elements have space from the bottom of the div container*/
+    padding-top: 30px;/*adds padding internally from the top so that elements aren't so close to the top of the div container*/ /*originally 10px*/
+    padding-bottom: 20px;/*adds padding internally from the bottom so that elements have space from the bottom of the div container*/ /*originally 10px*/
     
 }
 
 #introHead{/*I have added the ID introHead to the h1 in the introduction section of this page*/
 
     text-align: center;/*aligns the text for #introHead to the center of the element*/
-    font-size: 96px;/*makes the font larger for #introHead*/
-    padding-top: 30px;/*provides internal padding above the words in #introHead to make it more visually spaced out and less cramped*/
-    padding-bottom: 30px;/*provides internal padding below the words in #introHead to make it more visually spaced out and less cramped*/
+    font-size: 76px;/*makes the font larger for #introHead*/ /*originally 96 px*/
+    padding-top: 60px;/*provides internal padding above the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
+    padding-bottom: 60px;/*provides internal padding below the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
     margin: 0;/*removes margin around the #introHead*/
 
 }
@@ -46,9 +46,9 @@
 #introSubHead{/*I have added the ID introSubHead in the h2 element in the introduction section of this page*/
 
     text-align: center;/*aligns the text in the #introSubHead in the center of the element*/
-    font-size: 45px;/*makes the font larger for #introSubHead*/
-    padding-top: 30px;/*provides internal padding above the words in #introHead to make it more visually spaced out and less cramped*/
-    padding-bottom: 30px;/*provides internal padding below the words in #introHead to make it more visually spaced out and less cramped*/
+    font-size: 35px;/*makes the font larger for #introSubHead*/ /*originally 45 px*/
+    padding-top: 50px;/*provides internal padding above the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
+    padding-bottom: 50px;/*provides internal padding below the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
     margin: 0;/*removes margin around the #introSubHead*/
 
 }
@@ -1190,6 +1190,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
