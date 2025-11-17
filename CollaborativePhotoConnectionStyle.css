@@ -36,8 +36,8 @@
 #introHead{/*I have added the ID introHead to the h1 in the introduction section of this page*/
 
     text-align: center;/*aligns the text for #introHead to the center of the element*/
-    font-size: 76px;/*makes the font larger for #introHead*/ /*originally 96 px*/
-    padding-top: 60px;/*provides internal padding above the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
+    font-size: 45px;/*makes the font larger for #introHead*/ /*originally 96 px*/
+    padding-top: 100px;/*provides internal padding above the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
     padding-bottom: 60px;/*provides internal padding below the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
     margin: 0;/*removes margin around the #introHead*/
 
@@ -46,7 +46,7 @@
 #introSubHead{/*I have added the ID introSubHead in the h2 element in the introduction section of this page*/
 
     text-align: center;/*aligns the text in the #introSubHead in the center of the element*/
-    font-size: 35px;/*makes the font larger for #introSubHead*/ /*originally 45 px*/
+    font-size: 25px;/*makes the font larger for #introSubHead*/ /*originally 45 px*/
     padding-top: 50px;/*provides internal padding above the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
     padding-bottom: 50px;/*provides internal padding below the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
     margin: 0;/*removes margin around the #introSubHead*/
@@ -1190,6 +1190,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
