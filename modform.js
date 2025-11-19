@@ -116,10 +116,13 @@ const validateInputs = () => {
         setError(title, 'Title is required');
     } 
     else if (!isNaN(titleValue)) {
-        setError(title, 'Title cannot have numbers')
+        setError(title, 'Title cannot have numbers');
     }
-    else if (titleValue.length < 50) {
-        setError(title, 'Title cannot be longer than 30 characters')
+    else if (titleValue.length <= 59) {
+        setError(title, 'Title is too long(60 characeters max)');
+    }
+    else if (titleValue.length >= 9) {
+        setError(title, 'Title is too short(10 characeters min)');
     }
     else {
         setSuccess(title);
@@ -181,4 +184,5 @@ const validateInputs = () => {
         setSuccess(pay);
     }
 };
+
 
