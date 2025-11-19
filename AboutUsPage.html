@@ -70,26 +70,75 @@
         @keyframes fadeInUp {
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Footer Alignment */
+        footer {
+            position: relative; /* Ensures child positioning works */
+            padding: 20px 0; /* Add some breathing room */
+            text-align: center; /* Base alignment for logo/hr/copyright */
+        }
+
+        .footer-left {
+            position: absolute;
+            left: 20px;
+            top: 50%; /* Vertically center with logo */
+            transform: translateY(-50%);
+            text-align: left !important; /* Override hKnavStyle */
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-right {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: right !important; /* Keep original right alignment */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Ensure vertical ol doesn't overlap */
+        footer ol {
+            margin-left: 300px; /* Adjust if needed to avoid left ul overlap; 690px was too far right */
+            bottom: 20px; /* Slight tweak for balance */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .footer-left, .footer-right {
+                position: static;
+                transform: none;
+                text-align: center;
+                margin: 10px 0;
+            }
+            footer ol {
+                margin-left: 0;
+                left: 0;
+                display: block;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- HEADER (Exact Match from index.html) -->
     <header>
-        <a href="index.html" aria-label="Home">
-            <img class="Logo" src="PhotoConnectionLogo.png" alt="Logo" width="168" height="168" style="position:relative; bottom:80px;">
+        <a href="index.html" aria-label="Click on our logo to get back to the home page.">
+            <img class="Logo" src="PhotoConnectionLogo.png" alt="Our logo. An image of a camera inside a circle surrounded by another circle with text saying Photo Connection and two stars on either side of the camera image in the outer ring." width="168" height="168" style="position: relative; bottom: 80px;">
         </a>
         <ul class="hKnavStyle">
             <li><a href="networkingPage.html">Networking</a></li>
-            <li style="margin-left:-20px;"><a href="getting_started.html">Getting Started</a></li>
-            <li style="padding:0; margin-left:90px;"><a href="profilesPage.html">Portfolios</a></li>
+            <li style="margin-left: -20px;"><a href="getting_started.html">Getting Started</a></li>
+            <li style="padding: 0px; margin-left: 90px;"><a href="profilesPage.html">Portfolios</a></li>
             <li><a href="AboutUsPage.html">About Us</a></li>
             <input type="text" placeholder="search">
-            <button type="submit"><img src="searchIcon.jpg" alt="Search" width="15" height="15"></button>
+            <button type="submit"><img src="searchIcon.jpg" alt="Magnifying glass icon" width="15" height="15"></button>
         </ul>
     </header>
 
-    <!-- About -->
+    <!-- About Header -->
     <section class="about-header">
         <div class="container"><h1>About Us</h1></div>
     </section>
@@ -99,7 +148,7 @@
         <div class="container">
             <h2 style="text-align:center; color:#333; font-size:2.2em; margin-bottom:40px;">Meet Our Team</h2>
 
-            <!-- SKELETON -->
+            <!-- SKELETON (shown first) -->
             <div class="profile-card loading" id="skeleton-mei">
                 <div class="profile-content">
                     <div class="skeleton skeleton-image"></div>
@@ -113,7 +162,7 @@
             <div class="profile-card loading" id="skeleton-deb" style="display:none;"></div>
             <div class="profile-card loading" id="skeleton-halle" style="display:none;"></div>
 
-            <!-- REAL CARDS -->
+            <!-- REAL CARDS (hidden initially) -->
             <div class="profile-card" id="real-mei" style="display:none;">
                 <div class="profile-content">
                     <div class="profile-description">
@@ -170,27 +219,37 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- UPDATED FOOTER -->
     <footer>
-        <img class="Logo" src="PhotoConnectionLogo.png" alt="Logo" width="230" height="230">
-        <ul class="hKnavStyle" style="text-align:right;">
+        <img class="Logo" src="PhotoConnectionLogo.png" alt="Our logo. An image of a camera inside a circle surrounded by another circle with text saying Photo Connection and two stars on either side of the camera image in the outer ring." width="230" height="230">
+        
+        <!-- NEW: Left-aligned "Resources" ul -->
+        <ul class="hKnavStyle footer-left">
             <li>Resources</li>
-            <li><a href="AboutUsPage.html">About Us</a></li>
         </ul>
-        <ol style="position:relative; padding:0; margin:0; left:690px; bottom:40px; display:inline-block;">
-            <li style="padding:0; font-weight:normal;"><a href="getting_started.html">Getting Started</a></li><br>
-            <li style="padding:0; font-weight:normal;"><a href="modeling_connections.html">Model Job Post</a></li><br>
-            <li style="padding:0; font-weight:normal;"><a href="PortfolioCreationPage.html">Portfolio Creation</a></li><br>
-            <li style="padding:0; font-weight:normal;"><a href="networkingPage.html">Photographer Networking</a></li><br>
-            <li style="padding:0; font-weight:normal;"><a href="profilesPage.html">Photographer Recommendations</a></li><br>
+        
+        <!-- Original: Right-aligned ul for other links -->
+        <ul class="hKnavStyle footer-right">
+            <li><a href="AboutUsPage.html">About Us</a></li>
+            <li>Contact Us</li>
+        </ul>
+        
+        <!-- Vertical links (unchanged) -->
+        <ol style="position: relative; padding: 0; margin: 0; left: 690px; bottom: 40px; display: inline-block;">
+            <li style="padding: 0; font-weight: normal;"><a href="getting_started.html">Getting Started</a></li><br>
+            <li style="padding: 0; font-weight: normal;"><a href="modeling_connections.html">Model Job Post</a></li><br>
+            <li style="padding: 0; font-weight: normal;"><a href="PortfolioCreationPage.html">Portfolio Creation</a></li><br>
+            <li style="padding: 0; font-weight: normal;"><a href="networkingPage.html">Photographer Networking</a></li><br>
+            <li style="padding: 0; font-weight: normal;"><a href="profilesPage.html">Photographer Recommendations</a></li><br>
         </ol>
         <hr>
-        <p style="font-weight:bold;">Photo Connection &copy; 2025</p>
+        <p style="font-weight: bold;">Photo Connection &copy; 2025</p>
     </footer>
 
-    <!-- JS: Skeleton -->
+    <!-- JS: Skeleton → Real Content + Sharing -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // Replace Skeleton with Real Content
             const replacements = [
                 { skeleton: 'skeleton-mei', real: 'real-mei' },
                 { skeleton: 'skeleton-deb', real: 'real-deb' },
@@ -206,21 +265,21 @@
                         real.style.display = 'block';
                     }
                 });
-            }, 800); // To simulate load
+            }, 800);
 
-            // Social Media 
+            // Social Sharing
             const pageUrl = encodeURIComponent(window.location.href);
             const pageTitle = encodeURIComponent(document.title);
 
-            document.getElementById('share-facebook').addEventListener('click', () => {
+            document.getElementById('share-facebook')?.addEventListener('click', () => {
                 window.open(`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`, '_blank');
             });
 
-            document.getElementById('share-twitter').addEventListener('click', () => {
+            document.getElementById('share-twitter')?.addEventListener('click', () => {
                 window.open(`https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`, '_blank');
             });
 
-            document.getElementById('share-native').addEventListener('click', () => {
+            document.getElementById('share-native')?.addEventListener('click', () => {
                 if (navigator.share) {
                     navigator.share({ title: document.title, url: window.location.href })
                         .catch(() => alert('Sharing failed'));
@@ -232,5 +291,3 @@
     </script>
 </body>
 </html>
-
-
