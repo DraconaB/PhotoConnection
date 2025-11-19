@@ -118,7 +118,7 @@ const validateInputs = () => {
     else if (!isNaN(titleValue)) {
         setError(title, 'Title cannot have numbers')
     }
-    else if (titleValue.length > 50) {
+    else if (titleValue.length < 50) {
         setError(title, 'Title cannot be longer than 30 characters')
     }
     else {
@@ -181,3 +181,4 @@ const validateInputs = () => {
         setSuccess(pay);
     }
 };
+
