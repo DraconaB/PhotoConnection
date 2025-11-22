@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /*CSS For Home Page-Halle Knape*/
 
@@ -1372,6 +1372,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
