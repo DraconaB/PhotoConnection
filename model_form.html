@@ -53,6 +53,152 @@
             box-shadow: 0px 0.2px 4px black;
             z-index: 999;
         }
+        #mei_nav{
+            display: flex;/*responsive display*/
+            align-items: center;
+            justify-content: space-between;
+            gap: 6rem;
+            font-size: 18px;
+            width: 100%;
+        }
+        #mei_nav ul{
+            display: flex;/*responsive display*/
+            gap: 6rem;
+            list-style: none;
+
+        }
+        #mei_nav a{
+            display: block;/*structured block design for my a elements*/
+            font-size: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        
+        }
+        #mei_nav ul li a:hover{
+            transform: scale(1.05);/*where there is a mouse hover on my a elements it will scale increase by 1.05*/
+            color: #581f32;
+            font-weight: bold;
+            transition: 0.5s ease;
+        }
+        #mei_nav a img:hover{
+            background: none;/*stop the a hover effects changing the logo hover*/
+        }
+        /*dropdown*/
+        #mei_nav ul li ul.dropdown_menu_n, #mei_nav ul li ul.dropdown_menu_sh {
+            position: relative;
+            display: flex;/*responsive display*/
+            left: 30%;
+            height: 100px;
+            border-radius: 30px;
+            background-color: #ffffff;
+            border: 2px solid gray;
+            position: absolute;
+            z-index: 1000;
+            display: none;
+        }
+        #mei_nav ul li ul.dropdown_menu_n li, #mei_nav ul li ul.dropdown_menu_sh li{
+            height: 50px;
+            margin-top: 2rem;
+            margin-left: 1rem;
+            width: 100%;
+
+        }
+        #mei_nav ul li ul.dropdown_menu_n li a, #mei_nav ul li ul.dropdown_menu_sh li a{
+            font-size: 16px;
+            width: 10em;
+            line-height: 18px;
+        }
+
+        #mei_nav ul li:hover ul.dropdown_menu_n, #mei_nav ul li:hover ul.dropdown_menu_sh {
+            display: flex;
+        }
+        /*NAV END*/
+         #mei_footer {
+            margin-top: 8em;
+            background: white;
+            font-size: 20px;
+            height: 18em;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #foot_col{
+            flex: 1 1 auto;/*page will grow to fill space and shrink when there is not enough*/
+            margin: 4rem;/*margin has 4rem all around*/
+        }
+        #foot_col a{
+            text-decoration: none;/*removes the default underline on links*/
+            color: black;/*setting the font color to black*/
+
+        }
+        /*footer end*/
+
+    #form {
+        width: 800px;/*keeping the form at a max width of 800px*/
+        margin: 20vh auto 0 auto;/*top has 20view height, left and right are default and bottom is 0*/
+        padding: 20px;/*20px padding all around*/
+        background-color: #ffff;/*white background color*/
+        border-radius: 4px;/*the form background has a radius of 4px*/
+        font-size: 12px;/*font is 12px*/
+        box-shadow: 0px 0.2px 10px black;/*decorative shadow*/
+    }
+
+    #form h2 {
+        color: #0f2027;
+        text-align: left;
+        font-size: 26px;
+    }
+
+    #form button {
+        padding: 10px;
+        margin-top: 10px;
+        width: 100%;
+        color: white;
+        background-color: rgb(110, 41, 73);
+        border: none;
+        border-radius: 4px;
+    }
+   
+    .input-control {
+        display: flex;/*responsive display*/
+        flex-direction: column;/*responsive display set in column styling*/
+    }
+    .input-control label{
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .input-control input {
+        border: 2px solid #f0f0f0;
+        border-radius: 4px;
+        display: block;
+        font-size: 12px;
+        padding: 10px;
+        width: 100%;
+        
+    }
+    input[type="radio"]{
+        accent-color: rgb(124, 51, 131);
+    }
+    .input-control input:focus,  .input-control select:focus, .input-control textarea:focus{
+        outline-color: blue;
+        box-shadow: 0px 0.2px 4px black;
+    }
+
+    .input-control.success input, .input-control.success select, .input-control.success textarea{
+        border-color: #09c372;
+    }
+
+    .input-control.error input, .input-control.error select, .input-control.error textarea{
+        border-color: #ff3860;
+    }
+
+    .input-control .error {
+        color: #ff3860;
+        font-size: 9px;
+        height: 13px;
+    }
     </style>
 </head>
 <body>
@@ -196,6 +342,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
