@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
 /*CSS For Home Page-Halle Knape*/
 
 /*The ul and li css must also go in the other sections since the header and footer will also be in those pages*/
@@ -438,7 +440,7 @@
 /*.............................................................*/
 /*Mei Lan A. Bargas*/
 /*Model Form CSS Code*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
 #container_mei{
     max-width: 2000px; 
     display: flex;
@@ -1370,6 +1372,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
