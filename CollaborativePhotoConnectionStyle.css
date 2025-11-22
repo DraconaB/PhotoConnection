@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 /*CSS For Home Page-Halle Knape*/
 
 /*The ul and li css must also go in the other sections since the header and footer will also be in those pages*/
@@ -20,19 +18,14 @@
     padding: 40px;/*adds padding around each list item*/
     padding-left: 100px;/*adds padding so that the list items are spaced out nicely*/
     font-weight: bold;/*makes the text bold*/
-    
 }
-
 /*Main*/
-
 /*Introduction seciton, brief introduction statement to what our website is for.*/
 
 #intro{/*I have added the ID intro for the div that holds the introduction section of this page*/
-
     background-color: #FDECEF;/*changes the background color*/
     padding-top: 10px;/*adds padding internally from the top so that elements aren't so close to the top of the div container*/ /*originally 10px*/
-    padding-bottom: 10px;/*adds padding internally from the bottom so that elements have space from the bottom of the div container*/ /*originally 10px*/
-    
+    padding-bottom: 10px;/*adds padding internally from the bottom so that elements have space from the bottom of the div container*/ /*originally 10px*/ 
 }
 
 #introHead{/*I have added the ID introHead to the h1 in the introduction section of this page*/
@@ -42,7 +35,6 @@
     padding-top: 30px;/*provides internal padding above the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
     padding-bottom: 30px;/*provides internal padding below the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
     margin: 0;/*removes margin around the #introHead*/
-
 }
 
 #introSubHead{/*I have added the ID introSubHead in the h2 element in the introduction section of this page*/
@@ -52,7 +44,6 @@
     padding-top: 30px;/*provides internal padding above the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
     padding-bottom: 30px;/*provides internal padding below the words in #introHead to make it more visually spaced out and less cramped*/ /*originally 30px*/
     margin: 0;/*removes margin around the #introSubHead*/
-
 }
 
 /*Main content of the page, has CTA and breif information about where each link will (technically, since we still need to link all our pages to the correct html files) take visitors*/
@@ -173,13 +164,11 @@
     position: relative;/*positions the link relative to its normal position in the html document flow*/
     left: 150px;/*moves #shareHere left in the page*/
     top: 100px;/*moves #shareHere lower in the page*/
-
 }
 
 /*New to Photography and Networking section*/
 
 #finalSection{/*I added the ID finalSection to the section tag for the last section of the main content in this page*/
-
     background-color:#FDECEF;/*changes the background color of #finalSection*/
     margin: 0;/*removes the margin*/
 }
@@ -193,23 +182,18 @@
 }
 
 #finalSubHead{/*I added the ID finalSubHead to the h3 element in this section element on the page*/
-
     text-align: left;/*aligns the text for #finalSubHead to the left in the element*/
     font-size: 35px;/*makes the font for #finalSubHead bigger*/
     padding-bottom: 20px;/*adds internal space from the bottom of the element to #finalSubHead*/
-
 }
 
 #finalContent{/*I added the ID finalContent to the p element of the last div in the final section*/
-
     text-align: center;/*aligns the text for #finalContent to the center of the element*/
     font-size: 25px;/*makes the font for #finalContent larger*/
     padding-bottom: 150px;/*adds internal space from the bottom of hte element for #finalContent*/
-
 }
 
 #ntwk{/*I added the ID ntwk to the button (currently represented by an a element) in the final section for the main content of this page*/
-
     text-align: center;/*aligns the text for #ntwk in the center*/
     font-size: 35px;/*makes the font for #ntwk larger*/
     background-color: #612940;/*changes the background color for #ntwk*/
@@ -220,8 +204,7 @@
     color: #FFFFFF;/*changes the text color of #ntwk*/
     position: relative;/*positions the link relative to its normal position in the html document flow*/
     left: 1000px;/*moves #ntwk left on the page*/
-    bottom: 100px;/*moves #ntwk up on the page*/
-    
+    bottom: 100px;/*moves #ntwk up on the page*/ 
 }
 
 /*CSS For Networking Page- Halle Knape*/
@@ -229,57 +212,44 @@
 /*Other user profile previews*/
 
 #profilePreviews{/*I added the ID profilePreviews to the section tag for the portion of the page that has the profile previews*/
-
     background-color:#9D6381;/*this changes the background color for #profilePreviews*/
-
 }
 
 #leeThomp{/*I added the ID leeThomp to the first img tag in this section*/
-
     position: relative;/*positions the image relative to its normal position in the html document flow*/
     left: 250px;/*moves #leeThomp to the left on the page*/
     top: 50px;/*moves #leeThomp down on the page*/
     margin: 0;/*removes the margin around #leeThomp*/
-
 }
 
 #kayVar{/*I added the ID kayVar to the second img tag in this section*/
-
     position: relative;/*positions the image relative to its normal position in the html document flow*/
     left: 650px;/*moves #kayVar to the left on the page*/
     top: 50px;/*moves #kayVar down on the page*/
     margin: 0;/*removes the margin around #kayVar*/
-
 }
 
 #photographerPreviewsHead{/*I added the ID photographerPreviewsHead to the div tag that each photographer name is in*/
-
     font-size: 45px;/*changes the font size of #photographerPreviewsHead*/
     color: white;/*changes the text color of #photographerPreviewsHead*/
     margin: 0;/*removes the margin around #photographerPreviewsHead*/
-
 }
 
 #prevDescript1{/*I added the ID prevDescript1 to the div for the first biography example*/
-
     text-align: center;/*aligns the text for #prevDescript1 to the center*/
     font-size: 20px;/*makes the font for #prevDescript1 larger*/
     display: inline;/*makes the text display as though it were an inline element*/
     margin: 0;/*removes the margin around #prevDescript1*/
-
 }
 
 #prevDescript2{/*I added the ID prevDescript2 to the div for the second biography example*/
-
     text-align: center;/*aligns the text for #prevDescript2 to the center*/
     font-size: 20px;/*makes the font for #prevDescript2 larger*/
     display: inline;/*makes the text display as though it were an inline element*/
     margin: 0;/*removes the margin around #prevDescript2*/
-
 }
 
 #previewButton1{/*I added the ID #previewButtion for the a element that aligns with the first photographer biography example*/
-
     text-align: center;/*aligns the text for #previewButton1 in the center*/
     background-color: #612940;/*changes the background color for #previewButton1*/
     padding: 10px;/*adds padding around the text for #previewButton1*/
@@ -288,11 +258,9 @@
     position: relative;/*positions the link relative to its normal position in the html document flow*/
     right: -65px;/*moves #previewButton1 to the left on the page*/
     top: -235px;/*moves #previewButton1 up on the page*/    
-
 }
 
 #previewButton2{/*I added the ID #previewButtion2 for the a element that aligns with the section photographer biography example*/
-
     text-align: center;/*aligns the text for #previewButton2 in the center*/
     background-color: #612940;/*changes the background color for #previewButton2*/
     padding: 10px;/*adds padding around the text for #previewButton 2*/
@@ -1372,6 +1340,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
