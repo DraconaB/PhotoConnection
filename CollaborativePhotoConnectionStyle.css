@@ -704,49 +704,10 @@ input[type="radio"]{
     background-color: rgba(255,255,255,0.25);/*hover has a glass tint*/
 }
 
-.job_boxes{
+.b0{
     position:absolute;/*keeps jobs boxes absolute*/
     top:90%;/*offsetting title 90% of the margin box top*/
     left:10%;/*offsetting title 10% px of the margin box left*/
-}
-.job_boxes .user{
-    font-size: 13px;/*changing the font size to 13px*/
-    font-style: italic;/*font is now italicized*/
-    font-weight: 300;/*weight of font is 300px*/
-    position: absolute;/*box is not dependent on other page elements*/
-    line-height: 15px;/*height of text line is 15px*/
-    top:7%;/*offsetting title 7% of the margin box top*/
-    left:14%;/*offsetting title 14% px of the margin box left*/
-}
-.job_boxes .job_title h3{
-    font-size: 20px;/*changing the font size to 20px*/
-    top:15%;/*offsetting title 15% of the margin box top*/
-    left:10%;/*offsetting title 10% px of the margin box left*/
-    font-weight: 400;/*weight of font is 400px*/
-    position: absolute;/*title is not dependent on other page elements*/
-    line-height: 15px;/*height of text line is 15px*/
-}
-.job_boxes .job_desc p{
-    font-size: 13px;/*changing the font size to 13px*/
-    font-style: italic;/*font is now italicized*/
-    font-weight: 300;/*weight of font is 300px*/
-    position: absolute;/*desc is not dependent on other page elements*/
-    line-height: 15px;/*height of text line is 15px*/
-    top:30%;/*offsetting desc 30% of the margin box top*/
-    left:10%;/*offsetting desc 10% px of the margin box left*/
-}
-
-
-.job_boxes .job_dets ul li{
-    font-size: 12px;/*changing the font size*/
-    font-weight: 300;/*changing the font weight to a slimmer style*/
-    text-align: left;/*aligning text left*/
-    line-height: 0px;/*changing the line height to 0px*/
-    letter-spacing: 0.5px;/*spacing out letterings for aesthetics*/
-    position: relative;/*keeping the li relative to the parent*/
-    display: block;/*display as block to make the element uniform*/
-    bottom:120px;/*offsetting title 120 px of the margin box bottom*/
-    right:10%;/*offsetting title 10% of the margin box left*/
 }
 
 .b1{
@@ -1396,6 +1357,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
