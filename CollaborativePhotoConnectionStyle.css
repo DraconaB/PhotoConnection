@@ -458,7 +458,7 @@
     padding: 2rem;
     margin: 1rem 2rem; 
     text-align: center;
-    width: 4rem;
+    width: 4fr;
 }
 #sec1_col:hover{
     transform: scale(1.2);
@@ -1396,6 +1396,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
