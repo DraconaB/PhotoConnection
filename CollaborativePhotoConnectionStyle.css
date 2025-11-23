@@ -659,6 +659,7 @@ input[type="radio"]{
     top: 250px;/*offsetting title 350 px of the margin box top*/
     left: 625px;/*offsetting title 625 px of the margin box left*/
     color: #FDECEF;/*changing color of title to a custom pink white*/
+    width: 400px;
 }
 .connections{
 
@@ -671,6 +672,7 @@ input[type="radio"]{
     color: #FDECEF;/*changing color of title to a custom pink white*/
     line-height: 55px;/*increasing line height for title*/
     letter-spacing: 0.5px;/*spacing out letters for stylistic purposes*/
+    width: 400px;
 }
 
 /*page numbers*/
@@ -699,63 +701,55 @@ input[type="radio"]{
     transition: 0.5s ease;/*transition the list item by 0.5s with an ease effect*/
     cursor: pointer;/*the pointer effects the element*/
     user-select: none;/*sets the user selection to nothing*/
+
 }
 .page_n ul li:hover{
     background-color: rgba(255,255,255,0.25);/*hover has a glass tint*/
 }
 
-.b0{
-    position: relative;/*move the element around*/
-    top:90%;/*offsetting title 90% of the margin box top*/
-    left:10%;/*offsetting title 10% px of the margin box left*/
-}
 
-.b1{
-    position: relative;/*move the element around*/
-    top:90%;/*offsetting 90% of the margin box top*/
-    left:40%;/*offsetting 40% px of the margin box left*/
-}
-.b2{
-    position: relative;/*move the element around*/
-    top:90%;/*offsetting 90% of the margin box top*/
-    left:70%;/*offsetting 40% px of the margin box left*/
-}
-.b3{
-    position: relative;/*move the element around*/
-    top:140%;/*offsetting 140% of the margin box top*/
-    left:40%;/*offsetting 40% px of the margin box left*/
-}
-.b4{
-    position: relative;/*move the element around*/
-    top:140%;/*offsetting 140% of the margin box top*/
-    left:10%;/*offsetting 40% px of the margin box left*/
-}
-.b5{
-    position: relative;/*move the element around*/
-    top:140%;/*offsetting 140% of the margin box top*/
-    left:70%;/*offsetting 40% px of the margin box left*/
-}
+#job_boxes{
 
-
+  display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 4rem 6rem;
+}
+#box{
+   flex: 1 1 calc(30% - 40px);
+            padding: 2rem;
+            margin: 1rem 2rem; 
+            text-align: center;
+            width: 4fr;
+}
 /*Bottom Box Form*/
 
 .box_model_req{
     position: relative;/*move the element around*/
-    margin-left:30%;/*increasing left margin size by 30%*/
-    margin-top: 80%;/*increasing top margin size by 80%*/
+
+    top: 600px;
+    left: 800px;
+     width: 200px;
     align-items: center;/*aligning items center*/
     justify-content: center;/*justifying content to the center with the use of flex*/
     display: flex;/*allowing my container to be flexible*/
 }
 .header_box p{
+     width: 400px;
+     top: 400px;
+    left: 60px;
     position:relative;/*the p element is relative to its parent*/
-    font-size: 64px;/*font size is increased to 64px*/
+    font-size: 50px;/*font size is increased to 64px*/
     color: #6C534E ;/*custom plum color*/
     font-weight: 600;/*font weight increased*/
     margin-left:32%;/*increasing left margin size by 32%*/
-    margin-top: 80%;/*increasing top margin size by 80%*/
+
 }
 .de_box p{
+
+     width: 200px;
+     top: 400px;
+     left: 100px;
     position:relative;/*the p element is relative to its parent*/
     font-size: 24px;/*font size is increased to 24px*/
     color: #6C534E;/*custom plum color*/
@@ -763,19 +757,12 @@ input[type="radio"]{
     margin-top: -0.5%;/*increasing top margin size by -0.5%*/
 
 }
-.mc_div1 {
-    position: relative;/*move the element around*/
-    margin-top: 1350px;
-    width:85%;
-    margin-left: 5%;
-    height: 1px;
-    background: #36343B;
-    background-size: cover;
-    background-position: center;
-}
+
 .model_form{
+
+     width: 200px;
+     top:350px;
     position: relative;/*move the element around*/
-    top: 254%;/*offset the margin top by 254%*/
     left:55%;/*offset the margin left by 55%*/
     font-size: 20px ;/*change font size to 20px*/
 
@@ -1357,6 +1344,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
