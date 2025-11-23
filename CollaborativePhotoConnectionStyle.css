@@ -658,7 +658,7 @@ input[type="radio"]{
     letter-spacing: 36px;/*spacing out letters for stylistic purposes*/
     top: 250px;/*offsetting title 350 px of the margin box top*/
     left: 625px;/*offsetting title 625 px of the margin box left*/
-    color: #FDECEF;/*changing color of title to a custom pink white*/
+    color: #fff;/*changing color of title to a custom pink white*/
     width: 400px;
 }
 .connections{
@@ -669,7 +669,7 @@ input[type="radio"]{
     line-height: 55px;/*increasing line height for title*/
     top: 400px;/*offsetting title 580 px of the margin box top*/
     left: 620px;/*offsetting title 620 px of the margin box left*/
-    color: #FDECEF;/*changing color of title to a custom pink white*/
+    color: #fff;/*changing color of title to a custom pink white*/
     line-height: 55px;/*increasing line height for title*/
     letter-spacing: 0.5px;/*spacing out letters for stylistic purposes*/
     width: 400px;
@@ -1344,6 +1344,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
