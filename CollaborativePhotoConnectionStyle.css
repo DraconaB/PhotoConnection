@@ -775,7 +775,7 @@ input[type="radio"]{
     height: 70px;/*increasing the height of the button*/
     width: 180px;/*modifying button width*/
     border: 1px solid #9D6381;/*1px border that is solid with a custom plum color*/
-    color:#FDECEF;/*font color custom pink white*/
+    color:#fff;/*font color custom pink white*/
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);/*custom box shadow*/
     border-radius: 13px;/*changing border radius*/
  
@@ -1344,6 +1344,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
