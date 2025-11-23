@@ -705,33 +705,33 @@ input[type="radio"]{
 }
 
 .b0{
-    position:absolute;/*keeps jobs boxes absolute*/
+    position: relative;/*move the element around*/
     top:90%;/*offsetting title 90% of the margin box top*/
     left:10%;/*offsetting title 10% px of the margin box left*/
 }
 
 .b1{
-    position: absolute;/*box is not dependent on other page elements*/
+    position: relative;/*move the element around*/
     top:90%;/*offsetting 90% of the margin box top*/
     left:40%;/*offsetting 40% px of the margin box left*/
 }
 .b2{
-    position: absolute;/*box is not dependent on other page elements*/
+    position: relative;/*move the element around*/
     top:90%;/*offsetting 90% of the margin box top*/
     left:70%;/*offsetting 40% px of the margin box left*/
 }
 .b3{
-    position: absolute;/*box is not dependent on other page elements*/
+    position: relative;/*move the element around*/
     top:140%;/*offsetting 140% of the margin box top*/
     left:40%;/*offsetting 40% px of the margin box left*/
 }
 .b4{
-    position: absolute;/*box is not dependent on other page elements*/
+    position: relative;/*move the element around*/
     top:140%;/*offsetting 140% of the margin box top*/
     left:10%;/*offsetting 40% px of the margin box left*/
 }
 .b5{
-    position: absolute;/*box is not dependent on other page elements*/
+    position: relative;/*move the element around*/
     top:140%;/*offsetting 140% of the margin box top*/
     left:70%;/*offsetting 40% px of the margin box left*/
 }
@@ -740,7 +740,7 @@ input[type="radio"]{
 /*Bottom Box Form*/
 
 .box_model_req{
-    position: absolute;/*box is not dependent on other page elements*/
+    position: relative;/*move the element around*/
     margin-left:30%;/*increasing left margin size by 30%*/
     margin-top: 80%;/*increasing top margin size by 80%*/
     align-items: center;/*aligning items center*/
@@ -764,7 +764,7 @@ input[type="radio"]{
 
 }
 .mc_div1 {
-    position: absolute;/*box is not dependent on other page elements*/
+    position: relative;/*move the element around*/
     margin-top: 1350px;
     width:85%;
     margin-left: 5%;
@@ -774,7 +774,7 @@ input[type="radio"]{
     background-position: center;
 }
 .model_form{
-    position: absolute;/*box is depending on itself and not other page elements*/
+    position: relative;/*move the element around*/
     top: 254%;/*offset the margin top by 254%*/
     left:55%;/*offset the margin left by 55%*/
     font-size: 20px ;/*change font size to 20px*/
@@ -1357,6 +1357,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
