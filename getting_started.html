@@ -32,155 +32,6 @@
             margin: 1rem auto; 
             flex: 1 1 auto;/*elements will fill up empty spaces as the page grows, elements will shrink when space starts running out*//**/
         }
-        #gets_intro {
-            display: grid;
-            grid-template-columns: 0.6fr 2fr 1.2fr;
-            grid-template-areas: 
-            "none side_title side_nav";
-        }
-        #side_intro {
-            grid-area: side_title;
-            margin: 0% 2%;
-            padding: 2% 10%;
-
-        }
-        #side_sectnav{
-            grid-area: side_nav;
-            margin: 20% 2%;
-            padding: 2% 10%;
-            margin-left: 1em;
-        }
-        #side_sectnav li{
-            position: relative;
-            display: inline-block;
-            padding: 2%;
-            gap: 20%;
-        }
-        #side_sectnav a{
-            text-decoration: none;
-            color: purple;
-        }
-        #side_sectnav a:hover{
-            color: #FDECEF;
-            border: 6px solid #612940; 
-            display: flex;
-            flex-wrap: wrap;
-            background: #612940;
-            border-radius: 20px;
-        }
-        #title_intro h1{
-            font-size: 100px;
-            font-weight: 500;
-        }
-        #flex_sec1 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 6rem 4rem;
-            /*grid-template-columns: repeat(3, 8fr, minmax(200px, 1fr));*//*save this for the last section*/
-        }
-
-        #sec1_col{ 
-            flex: 1 1 calc(30% - 40px);
-            padding: 2rem;
-            margin: 1rem 2rem; 
-            text-align: center;
-            width: 4fr;
-        }
-        #sec1_col:hover{
-            transform: scale(1.2);
-            transition: ease 0.5s;
-        }
-        #sec1_col img{
-            width: 160px;
-        }
-        /*What Camera Should I Use?*/
-        #flex_sec2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 6rem 10rem;
-            /*grid-template-columns: repeat(3, 8fr, minmax(200px, 1fr));*//*save this for the last section*/
-        }
-
-        #sec2_col{ 
-            flex: 1 1 calc(40% - 30px);
-            padding: 1rem 10rem;
-            margin: 1rem 2rem; 
-            text-align: center;
-            width: 40%;
-        }
-        #sec2_col:hover{
-            transform: scale(1.2);
-            transition: ease 0.5s;
-        }
-        #sec2_col img{
-            width: 120px;
-        }
-        /*Important Tips and Practices*/
-        #flex_sec3 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin:  4rem 10rem;
-            /*grid-template-columns: repeat(3, 8fr, minmax(200px, 1fr));*//*save this for the last section*/
-        }
-        #sec3_col{ 
-            flex: 1 1 auto;
-            padding: 4rem 10rem;
-            margin: 1rem 2rem; 
-            text-align: center;
-        }
-        #sec3_col:hover{
-            transform: scale(1.2);
-            transition: ease 0.5s;
-        }
-        #sec2_col img{
-            width: 120px;
-        }
-        #sec3_col h3{ 
-            margin: 2%;
-            font-size: 18px;
-        }
-        #sec3_col p{
-            font-size: 16px;
-        }
-        /*Ref*/
-        #flex_ref {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin:  4rem 10rem;
-            text-align: center;
-            gap: 2rem;
-            /*grid-template-columns: repeat(3, 8fr, minmax(200px, 1fr));*//*save this for the last section*/
-        }
-        #ref_col{ 
-            flex: 1 1 calc(80% - 40px);
-            text-align: left;
-            background: white;
-            border: 6px solid white;
-            box-shadow: 0px 0px 4px black;
-            border-radius: 20px;
-            padding: 2rem 2rem;
-        }
-        #ref_col h3{
-            font-size: 28px;
-        }
-        #ref_col a{
-            color:black;
-            text-decoration: none;
-            display: flex;
-            padding: 0rem 2rem;
-            width:48%;
-        }
-        #ref_col a:hover{
-            transform: scale(1.1);
-            transition: ease 1s;
-            color: purple;
-            padding-left: 12rem;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body id="mei_body">
@@ -390,16 +241,13 @@
             <span style="font-weight: bold;">Contact Us</span>
         </div>
         <div id="foot_col">
-            <img src="x.png">
-            <img src="youtube.png">
-            <img src="instagram.png">
-            <img src="linkedin.png">
         </div>
         <hr style="width:100%; ">
         <p style="position: relative;padding:0; bottom:0; left:0; right:0;margin:auto; ">Photo Connection &copy; 2025</p>
     </footer>
 </body>
 </html>
+
 
 
 
