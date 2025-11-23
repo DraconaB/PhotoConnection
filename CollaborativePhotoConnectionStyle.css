@@ -734,7 +734,7 @@ input[type="radio"]{
     justify-content: center;/*justifying content to the center with the use of flex*/
     display: flex;/*allowing my container to be flexible*/
 }
-.header_box p{
+.header_box h2{
      width: 400px;
      top: 400px;
     left: 60px;
@@ -745,7 +745,7 @@ input[type="radio"]{
     margin-left:32%;/*increasing left margin size by 32%*/
 
 }
-.de_box p{
+.de_box h3{
 
      width: 200px;
      top: 400px;
@@ -1344,6 +1344,7 @@ button:hover::before {
     }
     
 }
+
 
 
 
